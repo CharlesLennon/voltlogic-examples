@@ -1,0 +1,351 @@
+{
+  "id": "preset_rc_led",
+  "title": "RC Capacitor Charge & LED Flow",
+  "description": "EveryCircuit-style live current dot animation with wireless \u23da grounds: toggle POWER switch to watch the capacitor charge/discharge through the LED.",
+  "components": [
+    {
+      "id": "rc_dc",
+      "type": "DC_VOLTAGE",
+      "label": "9V DC",
+      "x": 60.0,
+      "y": 200.0,
+      "pins": [
+        {
+          "id": "NEG",
+          "name": "-",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "POS",
+          "name": "+",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "voltage": 9.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#43A047",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "rc_gnd_dc",
+      "type": "GROUND",
+      "label": "GND",
+      "x": 60.0,
+      "y": 320.0,
+      "pins": [
+        {
+          "id": "GND",
+          "name": "0V",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#546E7A",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "rc_sw",
+      "type": "SPST_SWITCH",
+      "label": "POWER",
+      "x": 340.0,
+      "y": 140.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "1",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "2",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": true,
+      "subCircuitId": null,
+      "chipColorHex": "#EC407A",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "rc_res",
+      "type": "RESISTOR",
+      "label": "330\u03a9",
+      "x": 620.0,
+      "y": 140.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "1",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "2",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "resistanceOhms": 330.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#8D6E63",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "rc_cap",
+      "type": "CAPACITOR",
+      "label": "47\u00b5F",
+      "x": 900.0,
+      "y": 260.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "+",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "-",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "capacitanceUf": 47.0,
+        "prevV": 0.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#26A69A",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "rc_gnd_cap",
+      "type": "GROUND",
+      "label": "GND",
+      "x": 900.0,
+      "y": 360.0,
+      "pins": [
+        {
+          "id": "GND",
+          "name": "0V",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#546E7A",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "rc_led",
+      "type": "LED",
+      "label": "LED",
+      "x": 1160.0,
+      "y": 160.0,
+      "pins": [
+        {
+          "id": "ANODE",
+          "name": "+",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "CATHODE",
+          "name": "-",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#00E676",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "rc_gnd",
+      "type": "GROUND",
+      "label": "GND",
+      "x": 1420.0,
+      "y": 160.0,
+      "pins": [
+        {
+          "id": "GND",
+          "name": "0V",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#546E7A",
+      "ledBrightness": 0.0
+    }
+  ],
+  "wires": [
+    {
+      "id": "rc_w1",
+      "fromComponentId": "rc_dc",
+      "fromPinId": "POS",
+      "toComponentId": "rc_sw",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#EF5350",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "rc_w2",
+      "fromComponentId": "rc_sw",
+      "fromPinId": "B",
+      "toComponentId": "rc_res",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#FFA726",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "rc_w3",
+      "fromComponentId": "rc_res",
+      "fromPinId": "B",
+      "toComponentId": "rc_cap",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#66BB6A",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "rc_w4",
+      "fromComponentId": "rc_res",
+      "fromPinId": "B",
+      "toComponentId": "rc_led",
+      "toPinId": "ANODE",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#66BB6A",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "rc_w5",
+      "fromComponentId": "rc_cap",
+      "fromPinId": "B",
+      "toComponentId": "rc_gnd_cap",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#90A4AE",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "rc_w6",
+      "fromComponentId": "rc_led",
+      "fromPinId": "CATHODE",
+      "toComponentId": "rc_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#90A4AE",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "rc_w7",
+      "fromComponentId": "rc_dc",
+      "fromPinId": "NEG",
+      "toComponentId": "rc_gnd_dc",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#90A4AE",
+      "busMode": "AUTO",
+      "busZoneId": null
+    }
+  ],
+  "busZones": []
+}

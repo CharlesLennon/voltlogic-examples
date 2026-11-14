@@ -1,0 +1,1034 @@
+{
+  "id": "preset_300a_relay_interlock",
+  "title": "D366 300A Contactor Hold-On Interlock",
+  "description": "Path 1: 400A Mega Fuse -> D366 300A -> 300A Contactor -> Loads. Path 2: 5A Inline Fuse -> small Dash Switch + 4-Pin Hold Relay routed through the PLC Control Bus Duct. Contactor only listens to Dash Switch to turn OFF when D366 < 300A.",
+  "components": [
+    {
+      "id": "p0_bat",
+      "type": "DC_VOLTAGE",
+      "label": "12V BUS",
+      "x": 60.0,
+      "y": 200.0,
+      "pins": [
+        {
+          "id": "NEG",
+          "name": "-",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "POS",
+          "name": "+",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "voltage": 12.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#43A047",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "p0_gnd_bat",
+      "type": "GROUND",
+      "label": "GND",
+      "x": 60.0,
+      "y": 340.0,
+      "pins": [
+        {
+          "id": "GND",
+          "name": "0V",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#546E7A",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "p0_mega_fuse",
+      "type": "FUSE",
+      "label": "400A MEGA",
+      "x": 340.0,
+      "y": 40.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "1",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "2",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "ratingAmps": 400.0,
+        "recommendedAmps": 10.0,
+        "measuredAmps": 0.0,
+        "autoSize": 0.0
+      },
+      "boolState": true,
+      "subCircuitId": null,
+      "chipColorHex": "#FF7043",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "p0_ctrl_fuse",
+      "type": "FUSE",
+      "label": "5A INLINE",
+      "x": 340.0,
+      "y": 360.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "1",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "2",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "ratingAmps": 5.0,
+        "recommendedAmps": 10.0,
+        "measuredAmps": 0.0,
+        "autoSize": 0.0
+      },
+      "boolState": true,
+      "subCircuitId": null,
+      "chipColorHex": "#FF7043",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "p0_sensor",
+      "type": "CURRENT_SENSOR",
+      "label": "D366 300A",
+      "x": 680.0,
+      "y": 40.0,
+      "pins": [
+        {
+          "id": "IN_P",
+          "name": "CL_IN",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "PWR_P",
+          "name": "DC+ (1)",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 1,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "PWR_N",
+          "name": "DC- (2)",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 2,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "COM",
+          "name": "COM (5)",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 3,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "OUT_M",
+          "name": "CL_OUT",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "NO",
+          "name": "NO (3)",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 1,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "NC",
+          "name": "NC (4)",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 2,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "thresholdAmps": 300.0,
+        "shuntOhms": 0.001,
+        "measuredAmps": 380.0
+      },
+      "boolState": true,
+      "subCircuitId": null,
+      "chipColorHex": "#0288D1",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "p0_gnd_sns",
+      "type": "GROUND",
+      "label": "GND",
+      "x": 680.0,
+      "y": 240.0,
+      "pins": [
+        {
+          "id": "GND",
+          "name": "0V",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#546E7A",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "p0_main_sw",
+      "type": "SPST_SWITCH",
+      "label": "DASH SW",
+      "x": 680.0,
+      "y": 460.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "1",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "2",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": true,
+      "subCircuitId": null,
+      "chipColorHex": "#EC407A",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "p0_relay",
+      "type": "RELAY_SPST",
+      "label": "300A CONTACTOR",
+      "x": 1120.0,
+      "y": 40.0,
+      "pins": [
+        {
+          "id": "COIL_P",
+          "name": "COIL+ (86)",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "COIL_N",
+          "name": "COIL- (85)",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 1,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "COM",
+          "name": "COM (30)",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 2,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "NO",
+          "name": "NO (87)",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "pullInVolts": 2.5,
+        "coilOhms": 100.0
+      },
+      "boolState": true,
+      "subCircuitId": null,
+      "chipColorHex": "#D81B60",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "p0_gnd_rly",
+      "type": "GROUND",
+      "label": "GND",
+      "x": 1120.0,
+      "y": 180.0,
+      "pins": [
+        {
+          "id": "GND",
+          "name": "0V",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#546E7A",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "p0_hold_relay",
+      "type": "RELAY_SPST",
+      "label": "HOLD RLY",
+      "x": 1120.0,
+      "y": 280.0,
+      "pins": [
+        {
+          "id": "COIL_P",
+          "name": "COIL+ (86)",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "COIL_N",
+          "name": "COIL- (85)",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 1,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "COM",
+          "name": "COM (30)",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 2,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "NO",
+          "name": "NO (87)",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "pullInVolts": 2.5,
+        "coilOhms": 100.0
+      },
+      "boolState": true,
+      "subCircuitId": null,
+      "chipColorHex": "#D81B60",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "p0_gnd_hold",
+      "type": "GROUND",
+      "label": "GND",
+      "x": 1120.0,
+      "y": 420.0,
+      "pins": [
+        {
+          "id": "GND",
+          "name": "0V",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#546E7A",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "p0_base_load",
+      "type": "RESISTOR",
+      "label": "100m\u03a9 BASE",
+      "x": 1520.0,
+      "y": 40.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "1",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "2",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "resistanceOhms": 0.1
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#8D6E63",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "p0_gnd_base",
+      "type": "GROUND",
+      "label": "GND",
+      "x": 1820.0,
+      "y": 40.0,
+      "pins": [
+        {
+          "id": "GND",
+          "name": "0V",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#546E7A",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "p0_boost_sw",
+      "type": "SPST_SWITCH",
+      "label": "BOOST +260A",
+      "x": 1520.0,
+      "y": 150.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "1",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "2",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": true,
+      "subCircuitId": null,
+      "chipColorHex": "#EC407A",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "p0_boost_load",
+      "type": "RESISTOR",
+      "label": "42m\u03a9 HEAVY",
+      "x": 1820.0,
+      "y": 150.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "1",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "2",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "resistanceOhms": 0.042
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#8D6E63",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "p0_gnd_boost",
+      "type": "GROUND",
+      "label": "GND",
+      "x": 2120.0,
+      "y": 150.0,
+      "pins": [
+        {
+          "id": "GND",
+          "name": "0V",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#546E7A",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "p0_warn_led",
+      "type": "LED",
+      "label": "LOCK >300A",
+      "x": 1120.0,
+      "y": 540.0,
+      "pins": [
+        {
+          "id": "ANODE",
+          "name": "+",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "CATHODE",
+          "name": "-",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#00E676",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "p0_safe_led",
+      "type": "LED",
+      "label": "SAFE <300A",
+      "x": 1120.0,
+      "y": 640.0,
+      "pins": [
+        {
+          "id": "ANODE",
+          "name": "+",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "CATHODE",
+          "name": "-",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#00E676",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "p0_gnd",
+      "type": "GROUND",
+      "label": "GND",
+      "x": 1420.0,
+      "y": 590.0,
+      "pins": [
+        {
+          "id": "GND",
+          "name": "0V",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#546E7A",
+      "ledBrightness": 0.0
+    }
+  ],
+  "wires": [
+    {
+      "id": "p0_w1",
+      "fromComponentId": "p0_bat",
+      "fromPinId": "POS",
+      "toComponentId": "p0_mega_fuse",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#EF5350",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "p0_w2",
+      "fromComponentId": "p0_mega_fuse",
+      "fromPinId": "B",
+      "toComponentId": "p0_sensor",
+      "toPinId": "IN_P",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#EF5350",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "p0_w3",
+      "fromComponentId": "p0_sensor",
+      "fromPinId": "OUT_M",
+      "toComponentId": "p0_relay",
+      "toPinId": "COM",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#EF5350",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "p0_w4",
+      "fromComponentId": "p0_relay",
+      "fromPinId": "NO",
+      "toComponentId": "p0_base_load",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#EF5350",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "p0_w5",
+      "fromComponentId": "p0_relay",
+      "fromPinId": "NO",
+      "toComponentId": "p0_boost_sw",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#EF5350",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "p0_w6",
+      "fromComponentId": "p0_boost_sw",
+      "fromPinId": "B",
+      "toComponentId": "p0_boost_load",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#FFA726",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "p0_w7",
+      "fromComponentId": "p0_base_load",
+      "fromPinId": "B",
+      "toComponentId": "p0_gnd_base",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#90A4AE",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "p0_w8",
+      "fromComponentId": "p0_boost_load",
+      "fromPinId": "B",
+      "toComponentId": "p0_gnd_boost",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#90A4AE",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "p0_w9",
+      "fromComponentId": "p0_bat",
+      "fromPinId": "NEG",
+      "toComponentId": "p0_gnd_bat",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#90A4AE",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "p0_w10",
+      "fromComponentId": "p0_bat",
+      "fromPinId": "POS",
+      "toComponentId": "p0_ctrl_fuse",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#EF5350",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "p0_w11",
+      "fromComponentId": "p0_ctrl_fuse",
+      "fromPinId": "B",
+      "toComponentId": "p0_sensor",
+      "toPinId": "PWR_P",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#EF5350",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "p0_w12",
+      "fromComponentId": "p0_sensor",
+      "fromPinId": "PWR_N",
+      "toComponentId": "p0_gnd_sns",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#90A4AE",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "p0_w13",
+      "fromComponentId": "p0_ctrl_fuse",
+      "fromPinId": "B",
+      "toComponentId": "p0_sensor",
+      "toPinId": "COM",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#EF5350",
+      "busMode": "VIA_BUS",
+      "busZoneId": "p0_ctrl_bus"
+    },
+    {
+      "id": "p0_w14",
+      "fromComponentId": "p0_ctrl_fuse",
+      "fromPinId": "B",
+      "toComponentId": "p0_main_sw",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#EF5350",
+      "busMode": "VIA_BUS",
+      "busZoneId": "p0_ctrl_bus"
+    },
+    {
+      "id": "p0_w15",
+      "fromComponentId": "p0_main_sw",
+      "fromPinId": "B",
+      "toComponentId": "p0_relay",
+      "toPinId": "COIL_P",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#FFA726",
+      "busMode": "VIA_BUS",
+      "busZoneId": "p0_ctrl_bus"
+    },
+    {
+      "id": "p0_w16",
+      "fromComponentId": "p0_ctrl_fuse",
+      "fromPinId": "B",
+      "toComponentId": "p0_hold_relay",
+      "toPinId": "COM",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#EF5350",
+      "busMode": "VIA_BUS",
+      "busZoneId": "p0_ctrl_bus"
+    },
+    {
+      "id": "p0_w17",
+      "fromComponentId": "p0_hold_relay",
+      "fromPinId": "NO",
+      "toComponentId": "p0_relay",
+      "toPinId": "COIL_P",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#42A5F5",
+      "busMode": "VIA_BUS",
+      "busZoneId": "p0_ctrl_bus"
+    },
+    {
+      "id": "p0_w18",
+      "fromComponentId": "p0_sensor",
+      "fromPinId": "NO",
+      "toComponentId": "p0_hold_relay",
+      "toPinId": "COIL_P",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#42A5F5",
+      "busMode": "VIA_BUS",
+      "busZoneId": "p0_ctrl_bus"
+    },
+    {
+      "id": "p0_w19",
+      "fromComponentId": "p0_hold_relay",
+      "fromPinId": "COIL_N",
+      "toComponentId": "p0_gnd_hold",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#90A4AE",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "p0_w20",
+      "fromComponentId": "p0_relay",
+      "fromPinId": "COIL_N",
+      "toComponentId": "p0_gnd_rly",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#90A4AE",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "p0_w21",
+      "fromComponentId": "p0_sensor",
+      "fromPinId": "NO",
+      "toComponentId": "p0_warn_led",
+      "toPinId": "ANODE",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#FFEE58",
+      "busMode": "VIA_BUS",
+      "busZoneId": "p0_ctrl_bus"
+    },
+    {
+      "id": "p0_w22",
+      "fromComponentId": "p0_warn_led",
+      "fromPinId": "CATHODE",
+      "toComponentId": "p0_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#90A4AE",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "p0_w23",
+      "fromComponentId": "p0_sensor",
+      "fromPinId": "NC",
+      "toComponentId": "p0_safe_led",
+      "toPinId": "ANODE",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#26C6DA",
+      "busMode": "VIA_BUS",
+      "busZoneId": "p0_ctrl_bus"
+    },
+    {
+      "id": "p0_w24",
+      "fromComponentId": "p0_safe_led",
+      "fromPinId": "CATHODE",
+      "toComponentId": "p0_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#90A4AE",
+      "busMode": "AUTO",
+      "busZoneId": null
+    }
+  ],
+  "busZones": [
+    {
+      "id": "p0_ctrl_bus",
+      "label": "PLC CONTROL BUS DUCT",
+      "x": 320.0,
+      "y": 740.0,
+      "width": 1220.0,
+      "height": 160.0,
+      "orientation": "HORIZONTAL",
+      "attractByDefault": false,
+      "laneSpacing": 20.0
+    }
+  ]
+}

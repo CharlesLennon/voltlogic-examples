@@ -1,0 +1,78 @@
+{
+  "id": "preset_sandbox",
+  "title": "Blank Sub-Circuit Sandbox",
+  "description": "Wire gates or analog components between IN and OUT pins, then tap CREATE CHIP to save as a custom IC.",
+  "components": [
+    {
+      "id": "sb_a",
+      "type": "INPUT_PIN",
+      "label": "A",
+      "x": 60.0,
+      "y": 180.0,
+      "pins": [
+        {
+          "id": "OUT",
+          "name": "OUT",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#00E676",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "sb_b",
+      "type": "INPUT_PIN",
+      "label": "B",
+      "x": 60.0,
+      "y": 340.0,
+      "pins": [
+        {
+          "id": "OUT",
+          "name": "OUT",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#00E676",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "sb_out",
+      "type": "OUTPUT_PIN",
+      "label": "OUT",
+      "x": 1040.0,
+      "y": 260.0,
+      "pins": [
+        {
+          "id": "IN",
+          "name": "IN",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#00E5FF",
+      "ledBrightness": 0.0
+    }
+  ],
+  "wires": [],
+  "busZones": []
+}

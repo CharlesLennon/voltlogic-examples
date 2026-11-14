@@ -1,0 +1,301 @@
+{
+  "id": "preset_nmos_inverter",
+  "title": "NMOS Transistor Logic Inverter",
+  "description": "See how digital logic works physically with an N-Channel MOSFET, 1k\u03a9 pull-up resistor, and wireless \u23da ground symbols.",
+  "components": [
+    {
+      "id": "nm_in",
+      "type": "INPUT_PIN",
+      "label": "GATE IN",
+      "x": 60.0,
+      "y": 320.0,
+      "pins": [
+        {
+          "id": "OUT",
+          "name": "OUT",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#00E676",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "nm_dc",
+      "type": "DC_VOLTAGE",
+      "label": "5V VDD",
+      "x": 60.0,
+      "y": 100.0,
+      "pins": [
+        {
+          "id": "NEG",
+          "name": "-",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "POS",
+          "name": "+",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "voltage": 5.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#43A047",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "nm_gnd_dc",
+      "type": "GROUND",
+      "label": "GND",
+      "x": 60.0,
+      "y": 200.0,
+      "pins": [
+        {
+          "id": "GND",
+          "name": "0V",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#546E7A",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "nm_r",
+      "type": "RESISTOR",
+      "label": "1k\u03a9 Pull-Up",
+      "x": 380.0,
+      "y": 100.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "1",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "2",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "resistanceOhms": 1000.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#8D6E63",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "nm_fet",
+      "type": "NMOS_TRANSISTOR",
+      "label": "NMOS",
+      "x": 680.0,
+      "y": 280.0,
+      "pins": [
+        {
+          "id": "G",
+          "name": "G",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "D",
+          "name": "D",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "S",
+          "name": "S",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 1,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#26C6DA",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "nm_out",
+      "type": "OUTPUT_PIN",
+      "label": "INV OUT",
+      "x": 980.0,
+      "y": 180.0,
+      "pins": [
+        {
+          "id": "IN",
+          "name": "IN",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#00E5FF",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "nm_gnd",
+      "type": "GROUND",
+      "label": "GND",
+      "x": 980.0,
+      "y": 360.0,
+      "pins": [
+        {
+          "id": "GND",
+          "name": "0V",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#546E7A",
+      "ledBrightness": 0.0
+    }
+  ],
+  "wires": [
+    {
+      "id": "nm_w1",
+      "fromComponentId": "nm_in",
+      "fromPinId": "OUT",
+      "toComponentId": "nm_fet",
+      "toPinId": "G",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#42A5F5",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "nm_w2",
+      "fromComponentId": "nm_dc",
+      "fromPinId": "POS",
+      "toComponentId": "nm_r",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#EF5350",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "nm_w3",
+      "fromComponentId": "nm_dc",
+      "fromPinId": "NEG",
+      "toComponentId": "nm_gnd_dc",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#90A4AE",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "nm_w4",
+      "fromComponentId": "nm_r",
+      "fromPinId": "B",
+      "toComponentId": "nm_fet",
+      "toPinId": "D",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#FFA726",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "nm_w5",
+      "fromComponentId": "nm_fet",
+      "fromPinId": "D",
+      "toComponentId": "nm_out",
+      "toPinId": "IN",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#66BB6A",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "nm_w6",
+      "fromComponentId": "nm_fet",
+      "fromPinId": "S",
+      "toComponentId": "nm_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#90A4AE",
+      "busMode": "AUTO",
+      "busZoneId": null
+    }
+  ],
+  "busZones": []
+}

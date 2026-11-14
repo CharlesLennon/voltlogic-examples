@@ -1,0 +1,266 @@
+{
+  "id": "preset_hex_counter",
+  "title": "4-Bit Counter & 7-Seg Hex Display",
+  "description": "Live binary counter pulsing current particles into a 4-bit hexadecimal 7-segment display.",
+  "components": [
+    {
+      "id": "c_clk",
+      "type": "CLOCK_GEN",
+      "label": "CLK 1.5Hz",
+      "x": 60.0,
+      "y": 180.0,
+      "pins": [
+        {
+          "id": "CLK",
+          "name": "CLK",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "frequencyHz": 1.5
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#FB8C00",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "c_rst",
+      "type": "INPUT_PIN",
+      "label": "RESET",
+      "x": 60.0,
+      "y": 340.0,
+      "pins": [
+        {
+          "id": "OUT",
+          "name": "OUT",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#00E676",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "c_cnt",
+      "type": "COUNTER_4BIT",
+      "label": "CNT4",
+      "x": 420.0,
+      "y": 220.0,
+      "pins": [
+        {
+          "id": "CLK",
+          "name": ">",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "RST",
+          "name": "R",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 1,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "Q3",
+          "name": "Q3",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "Q2",
+          "name": "Q2",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 1,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "Q1",
+          "name": "Q1",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 2,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "Q0",
+          "name": "Q0",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 3,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#00ACC1",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "c_hex",
+      "type": "HEX_DISPLAY",
+      "label": "HEX",
+      "x": 800.0,
+      "y": 200.0,
+      "pins": [
+        {
+          "id": "B3",
+          "name": "8",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B2",
+          "name": "4",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 1,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B1",
+          "name": "2",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 2,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B0",
+          "name": "1",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 3,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#FF2A54",
+      "ledBrightness": 0.0
+    }
+  ],
+  "wires": [
+    {
+      "id": "cw1",
+      "fromComponentId": "c_clk",
+      "fromPinId": "CLK",
+      "toComponentId": "c_cnt",
+      "toPinId": "CLK",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#26C6DA",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "cw2",
+      "fromComponentId": "c_rst",
+      "fromPinId": "OUT",
+      "toComponentId": "c_cnt",
+      "toPinId": "RST",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#FFA726",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "cw3",
+      "fromComponentId": "c_cnt",
+      "fromPinId": "Q3",
+      "toComponentId": "c_hex",
+      "toPinId": "B3",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#66BB6A",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "cw4",
+      "fromComponentId": "c_cnt",
+      "fromPinId": "Q2",
+      "toComponentId": "c_hex",
+      "toPinId": "B2",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#42A5F5",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "cw5",
+      "fromComponentId": "c_cnt",
+      "fromPinId": "Q1",
+      "toComponentId": "c_hex",
+      "toPinId": "B1",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#AB47BC",
+      "busMode": "AUTO",
+      "busZoneId": null
+    },
+    {
+      "id": "cw6",
+      "fromComponentId": "c_cnt",
+      "fromPinId": "Q0",
+      "toComponentId": "c_hex",
+      "toPinId": "B0",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "userSelectedGaugeId": null,
+      "lengthMeters": 1.0,
+      "colorHex": "#26C6DA",
+      "busMode": "AUTO",
+      "busZoneId": null
+    }
+  ],
+  "busZones": []
+}
