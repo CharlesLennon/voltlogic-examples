@@ -1,0 +1,6396 @@
+{
+  "schemaVersion": 7,
+  "presets": [
+    {
+      "id": "preset_300a_relay_interlock",
+      "title": "D366 300A Contactor Hold-On Interlock",
+      "description": "Path 1: 400A Mega Fuse -> D366 300A -> 300A Contactor -> Loads. Path 2: 5A Inline Fuse -> small Dash Switch + 4-Pin Hold Relay routed through the PLC Control Bus Duct. Contactor only listens to Dash Switch to turn OFF when D366 < 300A.",
+      "components": [
+        {
+          "id": "p0_bat",
+          "type": "DC_VOLTAGE",
+          "label": "12V BUS",
+          "x": 60.0,
+          "y": 200.0,
+          "pins": [
+            {
+              "id": "NEG",
+              "name": "-",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "POS",
+              "name": "+",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "voltage": 12.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#43A047",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p0_gnd_bat",
+          "type": "GROUND",
+          "label": "GND",
+          "x": 60.0,
+          "y": 340.0,
+          "pins": [
+            {
+              "id": "GND",
+              "name": "0V",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#546E7A",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p0_mega_fuse",
+          "type": "FUSE",
+          "label": "400A MEGA",
+          "x": 340.0,
+          "y": 40.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "ratingAmps": 400.0,
+            "recommendedAmps": 10.0,
+            "measuredAmps": 0.0,
+            "autoSize": 0.0
+          },
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "#FF7043",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p0_ctrl_fuse",
+          "type": "FUSE",
+          "label": "5A INLINE",
+          "x": 340.0,
+          "y": 360.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "ratingAmps": 5.0,
+            "recommendedAmps": 10.0,
+            "measuredAmps": 0.0,
+            "autoSize": 0.0
+          },
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "#FF7043",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p0_sensor",
+          "type": "CURRENT_SENSOR",
+          "label": "D366 300A",
+          "x": 680.0,
+          "y": 40.0,
+          "pins": [
+            {
+              "id": "IN_P",
+              "name": "CL_IN",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "PWR_P",
+              "name": "DC+ (1)",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 1,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "PWR_N",
+              "name": "DC- (2)",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 2,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "COM",
+              "name": "COM (5)",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 3,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "OUT_M",
+              "name": "CL_OUT",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "NO",
+              "name": "NO (3)",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 1,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "NC",
+              "name": "NC (4)",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 2,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "thresholdAmps": 300.0,
+            "shuntOhms": 0.001,
+            "measuredAmps": 380.0
+          },
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "#0288D1",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p0_gnd_sns",
+          "type": "GROUND",
+          "label": "GND",
+          "x": 680.0,
+          "y": 240.0,
+          "pins": [
+            {
+              "id": "GND",
+              "name": "0V",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#546E7A",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p0_main_sw",
+          "type": "SPST_SWITCH",
+          "label": "DASH SW",
+          "x": 680.0,
+          "y": 460.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "#EC407A",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p0_relay",
+          "type": "RELAY_SPST",
+          "label": "300A CONTACTOR",
+          "x": 1120.0,
+          "y": 40.0,
+          "pins": [
+            {
+              "id": "COIL_P",
+              "name": "COIL+ (86)",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "COIL_N",
+              "name": "COIL- (85)",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 1,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "COM",
+              "name": "COM (30)",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 2,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "NO",
+              "name": "NO (87)",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "pullInVolts": 2.5,
+            "coilOhms": 100.0
+          },
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "#D81B60",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p0_gnd_rly",
+          "type": "GROUND",
+          "label": "GND",
+          "x": 1120.0,
+          "y": 180.0,
+          "pins": [
+            {
+              "id": "GND",
+              "name": "0V",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#546E7A",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p0_hold_relay",
+          "type": "RELAY_SPST",
+          "label": "HOLD RLY",
+          "x": 1120.0,
+          "y": 280.0,
+          "pins": [
+            {
+              "id": "COIL_P",
+              "name": "COIL+ (86)",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "COIL_N",
+              "name": "COIL- (85)",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 1,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "COM",
+              "name": "COM (30)",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 2,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "NO",
+              "name": "NO (87)",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "pullInVolts": 2.5,
+            "coilOhms": 100.0
+          },
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "#D81B60",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p0_gnd_hold",
+          "type": "GROUND",
+          "label": "GND",
+          "x": 1120.0,
+          "y": 420.0,
+          "pins": [
+            {
+              "id": "GND",
+              "name": "0V",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#546E7A",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p0_base_load",
+          "type": "RESISTOR",
+          "label": "100m\u03a9 BASE",
+          "x": 1520.0,
+          "y": 40.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "resistanceOhms": 0.1
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#8D6E63",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p0_gnd_base",
+          "type": "GROUND",
+          "label": "GND",
+          "x": 1820.0,
+          "y": 40.0,
+          "pins": [
+            {
+              "id": "GND",
+              "name": "0V",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#546E7A",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p0_boost_sw",
+          "type": "SPST_SWITCH",
+          "label": "BOOST +260A",
+          "x": 1520.0,
+          "y": 150.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "#EC407A",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p0_boost_load",
+          "type": "RESISTOR",
+          "label": "42m\u03a9 HEAVY",
+          "x": 1820.0,
+          "y": 150.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "resistanceOhms": 0.042
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#8D6E63",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p0_gnd_boost",
+          "type": "GROUND",
+          "label": "GND",
+          "x": 2120.0,
+          "y": 150.0,
+          "pins": [
+            {
+              "id": "GND",
+              "name": "0V",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#546E7A",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p0_warn_led",
+          "type": "LED",
+          "label": "LOCK >300A",
+          "x": 1120.0,
+          "y": 540.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "+",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "-",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#00E676",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p0_safe_led",
+          "type": "LED",
+          "label": "SAFE <300A",
+          "x": 1120.0,
+          "y": 640.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "+",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "-",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#00E676",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p0_gnd",
+          "type": "GROUND",
+          "label": "GND",
+          "x": 1420.0,
+          "y": 590.0,
+          "pins": [
+            {
+              "id": "GND",
+              "name": "0V",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#546E7A",
+          "ledBrightness": 0.0
+        }
+      ],
+      "wires": [
+        {
+          "id": "p0_w1",
+          "fromComponentId": "p0_bat",
+          "fromPinId": "POS",
+          "toComponentId": "p0_mega_fuse",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#EF5350",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "p0_w2",
+          "fromComponentId": "p0_mega_fuse",
+          "fromPinId": "B",
+          "toComponentId": "p0_sensor",
+          "toPinId": "IN_P",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#EF5350",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "p0_w3",
+          "fromComponentId": "p0_sensor",
+          "fromPinId": "OUT_M",
+          "toComponentId": "p0_relay",
+          "toPinId": "COM",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#EF5350",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "p0_w4",
+          "fromComponentId": "p0_relay",
+          "fromPinId": "NO",
+          "toComponentId": "p0_base_load",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#EF5350",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "p0_w5",
+          "fromComponentId": "p0_relay",
+          "fromPinId": "NO",
+          "toComponentId": "p0_boost_sw",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#EF5350",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "p0_w6",
+          "fromComponentId": "p0_boost_sw",
+          "fromPinId": "B",
+          "toComponentId": "p0_boost_load",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#FFA726",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "p0_w7",
+          "fromComponentId": "p0_base_load",
+          "fromPinId": "B",
+          "toComponentId": "p0_gnd_base",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#90A4AE",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "p0_w8",
+          "fromComponentId": "p0_boost_load",
+          "fromPinId": "B",
+          "toComponentId": "p0_gnd_boost",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#90A4AE",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "p0_w9",
+          "fromComponentId": "p0_bat",
+          "fromPinId": "NEG",
+          "toComponentId": "p0_gnd_bat",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#90A4AE",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "p0_w10",
+          "fromComponentId": "p0_bat",
+          "fromPinId": "POS",
+          "toComponentId": "p0_ctrl_fuse",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#EF5350",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "p0_w11",
+          "fromComponentId": "p0_ctrl_fuse",
+          "fromPinId": "B",
+          "toComponentId": "p0_sensor",
+          "toPinId": "PWR_P",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#EF5350",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "p0_w12",
+          "fromComponentId": "p0_sensor",
+          "fromPinId": "PWR_N",
+          "toComponentId": "p0_gnd_sns",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#90A4AE",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "p0_w13",
+          "fromComponentId": "p0_ctrl_fuse",
+          "fromPinId": "B",
+          "toComponentId": "p0_sensor",
+          "toPinId": "COM",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#EF5350",
+          "busMode": "VIA_BUS",
+          "busZoneId": "p0_ctrl_bus"
+        },
+        {
+          "id": "p0_w14",
+          "fromComponentId": "p0_ctrl_fuse",
+          "fromPinId": "B",
+          "toComponentId": "p0_main_sw",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#EF5350",
+          "busMode": "VIA_BUS",
+          "busZoneId": "p0_ctrl_bus"
+        },
+        {
+          "id": "p0_w15",
+          "fromComponentId": "p0_main_sw",
+          "fromPinId": "B",
+          "toComponentId": "p0_relay",
+          "toPinId": "COIL_P",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#FFA726",
+          "busMode": "VIA_BUS",
+          "busZoneId": "p0_ctrl_bus"
+        },
+        {
+          "id": "p0_w16",
+          "fromComponentId": "p0_ctrl_fuse",
+          "fromPinId": "B",
+          "toComponentId": "p0_hold_relay",
+          "toPinId": "COM",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#EF5350",
+          "busMode": "VIA_BUS",
+          "busZoneId": "p0_ctrl_bus"
+        },
+        {
+          "id": "p0_w17",
+          "fromComponentId": "p0_hold_relay",
+          "fromPinId": "NO",
+          "toComponentId": "p0_relay",
+          "toPinId": "COIL_P",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#42A5F5",
+          "busMode": "VIA_BUS",
+          "busZoneId": "p0_ctrl_bus"
+        },
+        {
+          "id": "p0_w18",
+          "fromComponentId": "p0_sensor",
+          "fromPinId": "NO",
+          "toComponentId": "p0_hold_relay",
+          "toPinId": "COIL_P",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#42A5F5",
+          "busMode": "VIA_BUS",
+          "busZoneId": "p0_ctrl_bus"
+        },
+        {
+          "id": "p0_w19",
+          "fromComponentId": "p0_hold_relay",
+          "fromPinId": "COIL_N",
+          "toComponentId": "p0_gnd_hold",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#90A4AE",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "p0_w20",
+          "fromComponentId": "p0_relay",
+          "fromPinId": "COIL_N",
+          "toComponentId": "p0_gnd_rly",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#90A4AE",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "p0_w21",
+          "fromComponentId": "p0_sensor",
+          "fromPinId": "NO",
+          "toComponentId": "p0_warn_led",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#FFEE58",
+          "busMode": "VIA_BUS",
+          "busZoneId": "p0_ctrl_bus"
+        },
+        {
+          "id": "p0_w22",
+          "fromComponentId": "p0_warn_led",
+          "fromPinId": "CATHODE",
+          "toComponentId": "p0_gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#90A4AE",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "p0_w23",
+          "fromComponentId": "p0_sensor",
+          "fromPinId": "NC",
+          "toComponentId": "p0_safe_led",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#26C6DA",
+          "busMode": "VIA_BUS",
+          "busZoneId": "p0_ctrl_bus"
+        },
+        {
+          "id": "p0_w24",
+          "fromComponentId": "p0_safe_led",
+          "fromPinId": "CATHODE",
+          "toComponentId": "p0_gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#90A4AE",
+          "busMode": "AUTO",
+          "busZoneId": null
+        }
+      ],
+      "busZones": [
+        {
+          "id": "p0_ctrl_bus",
+          "label": "PLC CONTROL BUS DUCT",
+          "x": 320.0,
+          "y": 740.0,
+          "width": 1220.0,
+          "height": 160.0,
+          "orientation": "HORIZONTAL",
+          "attractByDefault": false,
+          "laneSpacing": 20.0
+        }
+      ]
+    },
+    {
+      "id": "preset_automotive_relays",
+      "title": "Automotive 4-Pin & 5-Pin Relay Harness",
+      "description": "Native Bosch/ISO relays (COIL+ (86), COIL- (85), COM (30), NO (87), NC (87a)) with local wireless \u23da grounds: switch closes K1, K1 energizes K2 which moves load from DRL NC (87a) to HIGH BEAM NO (87).",
+      "components": [
+        {
+          "id": "ar_bat",
+          "type": "BATTERY_CAR_12V",
+          "label": "12V BATTERY",
+          "x": 60.0,
+          "y": 100.0,
+          "pins": [
+            {
+              "id": "NEG",
+              "name": "-",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "POS",
+              "name": "+",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "voltage": 12.6,
+            "internalOhms": 0.005,
+            "capacityAh": 60.0,
+            "maxAmps": 600.0,
+            "chargePct": 100.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#43A047",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "ar_gnd",
+          "type": "GROUND",
+          "label": "CHASSIS GND",
+          "x": 60.0,
+          "y": 220.0,
+          "pins": [
+            {
+              "id": "GND",
+              "name": "0V",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#546E7A",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "ar_sw",
+          "type": "SPST_SWITCH",
+          "label": "HI_BEAM_SW",
+          "x": 360.0,
+          "y": 60.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "#EC407A",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "ar_k4",
+          "type": "RELAY_SPST",
+          "label": "K1 4-PIN",
+          "x": 640.0,
+          "y": 100.0,
+          "pins": [
+            {
+              "id": "COIL_P",
+              "name": "COIL+ (86)",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "COIL_N",
+              "name": "COIL- (85)",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 1,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "COM",
+              "name": "COM (30)",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 2,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "NO",
+              "name": "NO (87)",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "pullInVolts": 2.5,
+            "coilOhms": 100.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#D81B60",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "ar_gnd_k4",
+          "type": "GROUND",
+          "label": "GND",
+          "x": 640.0,
+          "y": 260.0,
+          "pins": [
+            {
+              "id": "GND",
+              "name": "0V",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#546E7A",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "ar_k5",
+          "type": "RELAY_SPDT",
+          "label": "K2 5-PIN",
+          "x": 960.0,
+          "y": 180.0,
+          "pins": [
+            {
+              "id": "COIL_P",
+              "name": "COIL+ (86)",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "COIL_N",
+              "name": "COIL- (85)",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 1,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "COM",
+              "name": "COM (30)",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 2,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "NO",
+              "name": "NO (87)",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "NC",
+              "name": "NC (87a)",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 1,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "pullInVolts": 2.5,
+            "coilOhms": 100.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#AD1457",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "ar_gnd_k5",
+          "type": "GROUND",
+          "label": "GND",
+          "x": 960.0,
+          "y": 340.0,
+          "pins": [
+            {
+              "id": "GND",
+              "name": "0V",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#546E7A",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "ar_beam",
+          "type": "RESISTOR",
+          "label": "2.4\u03a9 HIGH BEAM",
+          "x": 1280.0,
+          "y": 140.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "resistanceOhms": 2.4
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#8D6E63",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "ar_gnd_beam",
+          "type": "GROUND",
+          "label": "GND",
+          "x": 1560.0,
+          "y": 140.0,
+          "pins": [
+            {
+              "id": "GND",
+              "name": "0V",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#546E7A",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "ar_drl",
+          "type": "RESISTOR",
+          "label": "12\u03a9 DRL",
+          "x": 1280.0,
+          "y": 280.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "resistanceOhms": 12.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#8D6E63",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "ar_gnd_drl",
+          "type": "GROUND",
+          "label": "GND",
+          "x": 1560.0,
+          "y": 280.0,
+          "pins": [
+            {
+              "id": "GND",
+              "name": "0V",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#546E7A",
+          "ledBrightness": 0.0
+        }
+      ],
+      "wires": [
+        {
+          "id": "ar_w1",
+          "fromComponentId": "ar_bat",
+          "fromPinId": "NEG",
+          "toComponentId": "ar_gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#90A4AE",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "ar_w2",
+          "fromComponentId": "ar_bat",
+          "fromPinId": "POS",
+          "toComponentId": "ar_sw",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#EF5350",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "ar_w3",
+          "fromComponentId": "ar_sw",
+          "fromPinId": "B",
+          "toComponentId": "ar_k4",
+          "toPinId": "COIL_P",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#FFA726",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "ar_w4",
+          "fromComponentId": "ar_k4",
+          "fromPinId": "COIL_N",
+          "toComponentId": "ar_gnd_k4",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#90A4AE",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "ar_w5",
+          "fromComponentId": "ar_bat",
+          "fromPinId": "POS",
+          "toComponentId": "ar_k4",
+          "toPinId": "COM",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#EF5350",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "ar_w6",
+          "fromComponentId": "ar_k4",
+          "fromPinId": "NO",
+          "toComponentId": "ar_k5",
+          "toPinId": "COIL_P",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#42A5F5",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "ar_w7",
+          "fromComponentId": "ar_k5",
+          "fromPinId": "COIL_N",
+          "toComponentId": "ar_gnd_k5",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#90A4AE",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "ar_w8",
+          "fromComponentId": "ar_bat",
+          "fromPinId": "POS",
+          "toComponentId": "ar_k5",
+          "toPinId": "COM",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#EF5350",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "ar_w9",
+          "fromComponentId": "ar_k5",
+          "fromPinId": "NO",
+          "toComponentId": "ar_beam",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#66BB6A",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "ar_w10",
+          "fromComponentId": "ar_k5",
+          "fromPinId": "NC",
+          "toComponentId": "ar_drl",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#26C6DA",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "ar_w11",
+          "fromComponentId": "ar_beam",
+          "fromPinId": "B",
+          "toComponentId": "ar_gnd_beam",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#90A4AE",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "ar_w12",
+          "fromComponentId": "ar_drl",
+          "fromPinId": "B",
+          "toComponentId": "ar_gnd_drl",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#90A4AE",
+          "busMode": "AUTO",
+          "busZoneId": null
+        }
+      ],
+      "busZones": []
+    },
+    {
+      "id": "preset_full_adder",
+      "title": "Full Adder Sub-Circuit Hierarchy",
+      "description": "Double-tap FULL ADDER to peek inside its nested HALF ADDER sub-circuits with live electrical flow.",
+      "components": [
+        {
+          "id": "p1_a",
+          "type": "INPUT_PIN",
+          "label": "A",
+          "x": 60.0,
+          "y": 140.0,
+          "pins": [
+            {
+              "id": "OUT",
+              "name": "OUT",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "#00E676",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p1_b",
+          "type": "INPUT_PIN",
+          "label": "B",
+          "x": 60.0,
+          "y": 280.0,
+          "pins": [
+            {
+              "id": "OUT",
+              "name": "OUT",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "#00E676",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p1_cin",
+          "type": "INPUT_PIN",
+          "label": "Cin",
+          "x": 60.0,
+          "y": 420.0,
+          "pins": [
+            {
+              "id": "OUT",
+              "name": "OUT",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#00E676",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p1_fa",
+          "type": "SUB_CIRCUIT",
+          "label": "FULL ADDER",
+          "x": 400.0,
+          "y": 220.0,
+          "pins": [
+            {
+              "id": "IN_0",
+              "name": "A",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "IN_1",
+              "name": "B",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 1,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "IN_2",
+              "name": "Cin",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 2,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "OUT_0",
+              "name": "SUM",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "OUT_1",
+              "name": "Cout",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 1,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": "chip_full_adder",
+          "chipColorHex": "#00B0FF",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p1_out_sum",
+          "type": "OUTPUT_PIN",
+          "label": "SUM",
+          "x": 1060.0,
+          "y": 140.0,
+          "pins": [
+            {
+              "id": "IN",
+              "name": "IN",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#00E5FF",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p1_out_cout",
+          "type": "OUTPUT_PIN",
+          "label": "Cout",
+          "x": 1060.0,
+          "y": 380.0,
+          "pins": [
+            {
+              "id": "IN",
+              "name": "IN",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#00E5FF",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p1_led_sum",
+          "type": "LED",
+          "label": "LED S",
+          "x": 760.0,
+          "y": 140.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "+",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "-",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#00E676",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p1_r1",
+          "type": "RESISTOR",
+          "label": "220\u03a9",
+          "x": 760.0,
+          "y": 260.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "resistanceOhms": 220.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#8D6E63",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "p1_gnd",
+          "type": "GROUND",
+          "label": "GND",
+          "x": 1060.0,
+          "y": 260.0,
+          "pins": [
+            {
+              "id": "GND",
+              "name": "0V",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#546E7A",
+          "ledBrightness": 0.0
+        }
+      ],
+      "wires": [
+        {
+          "id": "pw1_1",
+          "fromComponentId": "p1_a",
+          "fromPinId": "OUT",
+          "toComponentId": "p1_fa",
+          "toPinId": "IN_0",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#42A5F5",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "pw1_2",
+          "fromComponentId": "p1_b",
+          "fromPinId": "OUT",
+          "toComponentId": "p1_fa",
+          "toPinId": "IN_1",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#42A5F5",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "pw1_3",
+          "fromComponentId": "p1_cin",
+          "fromPinId": "OUT",
+          "toComponentId": "p1_fa",
+          "toPinId": "IN_2",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#26C6DA",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "pw1_4",
+          "fromComponentId": "p1_fa",
+          "fromPinId": "OUT_0",
+          "toComponentId": "p1_out_sum",
+          "toPinId": "IN",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#66BB6A",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "pw1_5",
+          "fromComponentId": "p1_fa",
+          "fromPinId": "OUT_1",
+          "toComponentId": "p1_out_cout",
+          "toPinId": "IN",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#FFA726",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "pw1_6",
+          "fromComponentId": "p1_fa",
+          "fromPinId": "OUT_0",
+          "toComponentId": "p1_led_sum",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#66BB6A",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "pw1_7",
+          "fromComponentId": "p1_led_sum",
+          "fromPinId": "CATHODE",
+          "toComponentId": "p1_r1",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#FFA726",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "pw1_8",
+          "fromComponentId": "p1_r1",
+          "fromPinId": "B",
+          "toComponentId": "p1_gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#90A4AE",
+          "busMode": "AUTO",
+          "busZoneId": null
+        }
+      ],
+      "busZones": []
+    },
+    {
+      "id": "preset_rc_led",
+      "title": "RC Capacitor Charge & LED Flow",
+      "description": "EveryCircuit-style live current dot animation with wireless \u23da grounds: toggle POWER switch to watch the capacitor charge/discharge through the LED.",
+      "components": [
+        {
+          "id": "rc_dc",
+          "type": "DC_VOLTAGE",
+          "label": "9V DC",
+          "x": 60.0,
+          "y": 200.0,
+          "pins": [
+            {
+              "id": "NEG",
+              "name": "-",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "POS",
+              "name": "+",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "voltage": 9.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#43A047",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "rc_gnd_dc",
+          "type": "GROUND",
+          "label": "GND",
+          "x": 60.0,
+          "y": 320.0,
+          "pins": [
+            {
+              "id": "GND",
+              "name": "0V",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#546E7A",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "rc_sw",
+          "type": "SPST_SWITCH",
+          "label": "POWER",
+          "x": 340.0,
+          "y": 140.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "#EC407A",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "rc_res",
+          "type": "RESISTOR",
+          "label": "330\u03a9",
+          "x": 620.0,
+          "y": 140.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "resistanceOhms": 330.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#8D6E63",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "rc_cap",
+          "type": "CAPACITOR",
+          "label": "47\u00b5F",
+          "x": 900.0,
+          "y": 260.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "+",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "-",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "capacitanceUf": 47.0,
+            "prevV": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#26A69A",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "rc_gnd_cap",
+          "type": "GROUND",
+          "label": "GND",
+          "x": 900.0,
+          "y": 360.0,
+          "pins": [
+            {
+              "id": "GND",
+              "name": "0V",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#546E7A",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "rc_led",
+          "type": "LED",
+          "label": "LED",
+          "x": 1160.0,
+          "y": 160.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "+",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "-",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#00E676",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "rc_gnd",
+          "type": "GROUND",
+          "label": "GND",
+          "x": 1420.0,
+          "y": 160.0,
+          "pins": [
+            {
+              "id": "GND",
+              "name": "0V",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#546E7A",
+          "ledBrightness": 0.0
+        }
+      ],
+      "wires": [
+        {
+          "id": "rc_w1",
+          "fromComponentId": "rc_dc",
+          "fromPinId": "POS",
+          "toComponentId": "rc_sw",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#EF5350",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "rc_w2",
+          "fromComponentId": "rc_sw",
+          "fromPinId": "B",
+          "toComponentId": "rc_res",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#FFA726",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "rc_w3",
+          "fromComponentId": "rc_res",
+          "fromPinId": "B",
+          "toComponentId": "rc_cap",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#66BB6A",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "rc_w4",
+          "fromComponentId": "rc_res",
+          "fromPinId": "B",
+          "toComponentId": "rc_led",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#66BB6A",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "rc_w5",
+          "fromComponentId": "rc_cap",
+          "fromPinId": "B",
+          "toComponentId": "rc_gnd_cap",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#90A4AE",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "rc_w6",
+          "fromComponentId": "rc_led",
+          "fromPinId": "CATHODE",
+          "toComponentId": "rc_gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#90A4AE",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "rc_w7",
+          "fromComponentId": "rc_dc",
+          "fromPinId": "NEG",
+          "toComponentId": "rc_gnd_dc",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#90A4AE",
+          "busMode": "AUTO",
+          "busZoneId": null
+        }
+      ],
+      "busZones": []
+    },
+    {
+      "id": "preset_nmos_inverter",
+      "title": "NMOS Transistor Logic Inverter",
+      "description": "See how digital logic works physically with an N-Channel MOSFET, 1k\u03a9 pull-up resistor, and wireless \u23da ground symbols.",
+      "components": [
+        {
+          "id": "nm_in",
+          "type": "INPUT_PIN",
+          "label": "GATE IN",
+          "x": 60.0,
+          "y": 320.0,
+          "pins": [
+            {
+              "id": "OUT",
+              "name": "OUT",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#00E676",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "nm_dc",
+          "type": "DC_VOLTAGE",
+          "label": "5V VDD",
+          "x": 60.0,
+          "y": 100.0,
+          "pins": [
+            {
+              "id": "NEG",
+              "name": "-",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "POS",
+              "name": "+",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "voltage": 5.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#43A047",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "nm_gnd_dc",
+          "type": "GROUND",
+          "label": "GND",
+          "x": 60.0,
+          "y": 200.0,
+          "pins": [
+            {
+              "id": "GND",
+              "name": "0V",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#546E7A",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "nm_r",
+          "type": "RESISTOR",
+          "label": "1k\u03a9 Pull-Up",
+          "x": 380.0,
+          "y": 100.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "resistanceOhms": 1000.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#8D6E63",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "nm_fet",
+          "type": "NMOS_TRANSISTOR",
+          "label": "NMOS",
+          "x": 680.0,
+          "y": 280.0,
+          "pins": [
+            {
+              "id": "G",
+              "name": "G",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "D",
+              "name": "D",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "S",
+              "name": "S",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 1,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#26C6DA",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "nm_out",
+          "type": "OUTPUT_PIN",
+          "label": "INV OUT",
+          "x": 980.0,
+          "y": 180.0,
+          "pins": [
+            {
+              "id": "IN",
+              "name": "IN",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#00E5FF",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "nm_gnd",
+          "type": "GROUND",
+          "label": "GND",
+          "x": 980.0,
+          "y": 360.0,
+          "pins": [
+            {
+              "id": "GND",
+              "name": "0V",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#546E7A",
+          "ledBrightness": 0.0
+        }
+      ],
+      "wires": [
+        {
+          "id": "nm_w1",
+          "fromComponentId": "nm_in",
+          "fromPinId": "OUT",
+          "toComponentId": "nm_fet",
+          "toPinId": "G",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#42A5F5",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "nm_w2",
+          "fromComponentId": "nm_dc",
+          "fromPinId": "POS",
+          "toComponentId": "nm_r",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#EF5350",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "nm_w3",
+          "fromComponentId": "nm_dc",
+          "fromPinId": "NEG",
+          "toComponentId": "nm_gnd_dc",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#90A4AE",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "nm_w4",
+          "fromComponentId": "nm_r",
+          "fromPinId": "B",
+          "toComponentId": "nm_fet",
+          "toPinId": "D",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#FFA726",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "nm_w5",
+          "fromComponentId": "nm_fet",
+          "fromPinId": "D",
+          "toComponentId": "nm_out",
+          "toPinId": "IN",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#66BB6A",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "nm_w6",
+          "fromComponentId": "nm_fet",
+          "fromPinId": "S",
+          "toComponentId": "nm_gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#90A4AE",
+          "busMode": "AUTO",
+          "busZoneId": null
+        }
+      ],
+      "busZones": []
+    },
+    {
+      "id": "preset_hex_counter",
+      "title": "4-Bit Counter & 7-Seg Hex Display",
+      "description": "Live binary counter pulsing current particles into a 4-bit hexadecimal 7-segment display.",
+      "components": [
+        {
+          "id": "c_clk",
+          "type": "CLOCK_GEN",
+          "label": "CLK 1.5Hz",
+          "x": 60.0,
+          "y": 180.0,
+          "pins": [
+            {
+              "id": "CLK",
+              "name": "CLK",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "frequencyHz": 1.5
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#FB8C00",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "c_rst",
+          "type": "INPUT_PIN",
+          "label": "RESET",
+          "x": 60.0,
+          "y": 340.0,
+          "pins": [
+            {
+              "id": "OUT",
+              "name": "OUT",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#00E676",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "c_cnt",
+          "type": "COUNTER_4BIT",
+          "label": "CNT4",
+          "x": 420.0,
+          "y": 220.0,
+          "pins": [
+            {
+              "id": "CLK",
+              "name": ">",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "RST",
+              "name": "R",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 1,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "Q3",
+              "name": "Q3",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "Q2",
+              "name": "Q2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 1,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "Q1",
+              "name": "Q1",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 2,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "Q0",
+              "name": "Q0",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 3,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#00ACC1",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "c_hex",
+          "type": "HEX_DISPLAY",
+          "label": "HEX",
+          "x": 800.0,
+          "y": 200.0,
+          "pins": [
+            {
+              "id": "B3",
+              "name": "8",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B2",
+              "name": "4",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 1,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B1",
+              "name": "2",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 2,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B0",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 3,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#FF2A54",
+          "ledBrightness": 0.0
+        }
+      ],
+      "wires": [
+        {
+          "id": "cw1",
+          "fromComponentId": "c_clk",
+          "fromPinId": "CLK",
+          "toComponentId": "c_cnt",
+          "toPinId": "CLK",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#26C6DA",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "cw2",
+          "fromComponentId": "c_rst",
+          "fromPinId": "OUT",
+          "toComponentId": "c_cnt",
+          "toPinId": "RST",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#FFA726",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "cw3",
+          "fromComponentId": "c_cnt",
+          "fromPinId": "Q3",
+          "toComponentId": "c_hex",
+          "toPinId": "B3",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#66BB6A",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "cw4",
+          "fromComponentId": "c_cnt",
+          "fromPinId": "Q2",
+          "toComponentId": "c_hex",
+          "toPinId": "B2",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#42A5F5",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "cw5",
+          "fromComponentId": "c_cnt",
+          "fromPinId": "Q1",
+          "toComponentId": "c_hex",
+          "toPinId": "B1",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#AB47BC",
+          "busMode": "AUTO",
+          "busZoneId": null
+        },
+        {
+          "id": "cw6",
+          "fromComponentId": "c_cnt",
+          "fromPinId": "Q0",
+          "toComponentId": "c_hex",
+          "toPinId": "B0",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.0,
+          "colorHex": "#26C6DA",
+          "busMode": "AUTO",
+          "busZoneId": null
+        }
+      ],
+      "busZones": []
+    },
+    {
+      "id": "preset_sandbox",
+      "title": "Blank Sub-Circuit Sandbox",
+      "description": "Wire gates or analog components between IN and OUT pins, then tap CREATE CHIP to save as a custom IC.",
+      "components": [
+        {
+          "id": "sb_a",
+          "type": "INPUT_PIN",
+          "label": "A",
+          "x": 60.0,
+          "y": 180.0,
+          "pins": [
+            {
+              "id": "OUT",
+              "name": "OUT",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#00E676",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "sb_b",
+          "type": "INPUT_PIN",
+          "label": "B",
+          "x": 60.0,
+          "y": 340.0,
+          "pins": [
+            {
+              "id": "OUT",
+              "name": "OUT",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#00E676",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "sb_out",
+          "type": "OUTPUT_PIN",
+          "label": "OUT",
+          "x": 1040.0,
+          "y": 260.0,
+          "pins": [
+            {
+              "id": "IN",
+              "name": "IN",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#00E5FF",
+          "ledBrightness": 0.0
+        }
+      ],
+      "wires": [],
+      "busZones": []
+    }
+  ],
+  "subCircuits": [
+    {
+      "id": "chip_auto_relay_4pin",
+      "name": "AUTO RELAY 4-PIN",
+      "description": "Bosch/ISO 4-Pin SPST Relay (30 Bat, 86 Coil+, 85 Coil- -> 87 NO, Coil State).",
+      "colorHex": "#00897B",
+      "isBuiltIn": true,
+      "inputPinNames": [
+        "30_BAT",
+        "86_COIL+",
+        "85_COIL-"
+      ],
+      "outputPinNames": [
+        "87_NO",
+        "COIL_ON"
+      ],
+      "internalGraph": {
+        "id": "graph_auto_relay_4pin",
+        "title": "AUTO RELAY 4-PIN",
+        "description": "Bosch/ISO 4-Pin SPST Automotive Make Relay",
+        "components": [
+          {
+            "id": "ar4_in_30",
+            "type": "INPUT_PIN",
+            "label": "30_BAT",
+            "x": 60.0,
+            "y": 100.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ar4_in_86",
+            "type": "INPUT_PIN",
+            "label": "86_COIL+",
+            "x": 60.0,
+            "y": 220.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ar4_in_85",
+            "type": "INPUT_PIN",
+            "label": "85_COIL-",
+            "x": 60.0,
+            "y": 360.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ar4_inv_85",
+            "type": "GATE_NOT",
+            "label": "85 LOW",
+            "x": 340.0,
+            "y": 360.0,
+            "pins": [
+              {
+                "id": "A",
+                "name": "A",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "Y",
+                "name": "Y",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#E53935",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ar4_coil_en",
+            "type": "GATE_AND",
+            "label": "COIL EN",
+            "x": 620.0,
+            "y": 220.0,
+            "pins": [
+              {
+                "id": "A",
+                "name": "A",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "B",
+                "name": "B",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "Y",
+                "name": "Y",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#1E88E5",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ar4_snub",
+            "type": "RESISTOR",
+            "label": "680\u03a9 SNUB",
+            "x": 620.0,
+            "y": 360.0,
+            "pins": [
+              {
+                "id": "A",
+                "name": "1",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "B",
+                "name": "2",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {
+              "resistanceOhms": 680.0
+            },
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#8D6E63",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ar4_rly",
+            "type": "RELAY_SPST",
+            "label": "ISO SPST",
+            "x": 920.0,
+            "y": 100.0,
+            "pins": [
+              {
+                "id": "COIL_P",
+                "name": "COIL+ (86)",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "COIL_N",
+                "name": "COIL- (85)",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "COM",
+                "name": "COM (30)",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 2,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "NO",
+                "name": "NO (87)",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {
+              "pullInVolts": 2.5,
+              "coilOhms": 100.0
+            },
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#D81B60",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ar4_gnd",
+            "type": "GROUND",
+            "label": "GND",
+            "x": 920.0,
+            "y": 360.0,
+            "pins": [
+              {
+                "id": "GND",
+                "name": "0V",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#546E7A",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ar4_out_87",
+            "type": "OUTPUT_PIN",
+            "label": "87_NO",
+            "x": 1240.0,
+            "y": 100.0,
+            "pins": [
+              {
+                "id": "IN",
+                "name": "IN",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E5FF",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ar4_out_coil",
+            "type": "OUTPUT_PIN",
+            "label": "COIL_ON",
+            "x": 1240.0,
+            "y": 240.0,
+            "pins": [
+              {
+                "id": "IN",
+                "name": "IN",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E5FF",
+            "ledBrightness": 0.0
+          }
+        ],
+        "wires": [
+          {
+            "id": "w_ar4_1",
+            "fromComponentId": "ar4_in_85",
+            "fromPinId": "OUT",
+            "toComponentId": "ar4_inv_85",
+            "toPinId": "A",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ar4_2",
+            "fromComponentId": "ar4_in_86",
+            "fromPinId": "OUT",
+            "toComponentId": "ar4_coil_en",
+            "toPinId": "A",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ar4_3",
+            "fromComponentId": "ar4_inv_85",
+            "fromPinId": "Y",
+            "toComponentId": "ar4_coil_en",
+            "toPinId": "B",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ar4_4",
+            "fromComponentId": "ar4_coil_en",
+            "fromPinId": "Y",
+            "toComponentId": "ar4_rly",
+            "toPinId": "COIL_P",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ar4_5",
+            "fromComponentId": "ar4_rly",
+            "fromPinId": "COIL_N",
+            "toComponentId": "ar4_gnd",
+            "toPinId": "GND",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ar4_6",
+            "fromComponentId": "ar4_coil_en",
+            "fromPinId": "Y",
+            "toComponentId": "ar4_snub",
+            "toPinId": "A",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ar4_7",
+            "fromComponentId": "ar4_snub",
+            "fromPinId": "B",
+            "toComponentId": "ar4_gnd",
+            "toPinId": "GND",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ar4_8",
+            "fromComponentId": "ar4_in_30",
+            "fromPinId": "OUT",
+            "toComponentId": "ar4_rly",
+            "toPinId": "COM",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ar4_9",
+            "fromComponentId": "ar4_rly",
+            "fromPinId": "NO",
+            "toComponentId": "ar4_out_87",
+            "toPinId": "IN",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ar4_10",
+            "fromComponentId": "ar4_coil_en",
+            "fromPinId": "Y",
+            "toComponentId": "ar4_out_coil",
+            "toPinId": "IN",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          }
+        ],
+        "busZones": []
+      }
+    },
+    {
+      "id": "chip_auto_relay_5pin",
+      "name": "AUTO RELAY 5-PIN",
+      "description": "Bosch/ISO 5-Pin SPDT Changeover Relay (30 COM, 86+, 85- -> 87 NO & 87a NC).",
+      "colorHex": "#FB8C00",
+      "isBuiltIn": true,
+      "inputPinNames": [
+        "30_COM",
+        "86_TRIG",
+        "85_GND"
+      ],
+      "outputPinNames": [
+        "87_NO",
+        "87a_NC"
+      ],
+      "internalGraph": {
+        "id": "graph_auto_relay_5pin",
+        "title": "AUTO RELAY 5-PIN",
+        "description": "Bosch/ISO 5-Pin SPDT Changeover Automotive Relay",
+        "components": [
+          {
+            "id": "ar5_in_30",
+            "type": "INPUT_PIN",
+            "label": "30_COM",
+            "x": 60.0,
+            "y": 100.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ar5_in_86",
+            "type": "INPUT_PIN",
+            "label": "86_TRIG",
+            "x": 60.0,
+            "y": 220.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ar5_in_85",
+            "type": "INPUT_PIN",
+            "label": "85_GND",
+            "x": 60.0,
+            "y": 360.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ar5_inv_85",
+            "type": "GATE_NOT",
+            "label": "85 GND",
+            "x": 340.0,
+            "y": 360.0,
+            "pins": [
+              {
+                "id": "A",
+                "name": "A",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "Y",
+                "name": "Y",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#E53935",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ar5_coil_en",
+            "type": "GATE_AND",
+            "label": "COIL EN",
+            "x": 620.0,
+            "y": 220.0,
+            "pins": [
+              {
+                "id": "A",
+                "name": "A",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "B",
+                "name": "B",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "Y",
+                "name": "Y",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#1E88E5",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ar5_nc_inv",
+            "type": "GATE_NOT",
+            "label": "NC GATE",
+            "x": 620.0,
+            "y": 360.0,
+            "pins": [
+              {
+                "id": "A",
+                "name": "A",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "Y",
+                "name": "Y",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#E53935",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ar5_no_rly",
+            "type": "RELAY_SPST",
+            "label": "87 NO",
+            "x": 920.0,
+            "y": 100.0,
+            "pins": [
+              {
+                "id": "COIL_P",
+                "name": "COIL+ (86)",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "COIL_N",
+                "name": "COIL- (85)",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "COM",
+                "name": "COM (30)",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 2,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "NO",
+                "name": "NO (87)",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {
+              "pullInVolts": 2.5,
+              "coilOhms": 100.0
+            },
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#D81B60",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ar5_nc_and",
+            "type": "GATE_AND",
+            "label": "87a NC",
+            "x": 920.0,
+            "y": 260.0,
+            "pins": [
+              {
+                "id": "A",
+                "name": "A",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "B",
+                "name": "B",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "Y",
+                "name": "Y",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#1E88E5",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ar5_gnd",
+            "type": "GROUND",
+            "label": "GND",
+            "x": 920.0,
+            "y": 400.0,
+            "pins": [
+              {
+                "id": "GND",
+                "name": "0V",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#546E7A",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ar5_out_87",
+            "type": "OUTPUT_PIN",
+            "label": "87_NO",
+            "x": 1240.0,
+            "y": 100.0,
+            "pins": [
+              {
+                "id": "IN",
+                "name": "IN",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E5FF",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ar5_out_87a",
+            "type": "OUTPUT_PIN",
+            "label": "87a_NC",
+            "x": 1240.0,
+            "y": 260.0,
+            "pins": [
+              {
+                "id": "IN",
+                "name": "IN",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E5FF",
+            "ledBrightness": 0.0
+          }
+        ],
+        "wires": [
+          {
+            "id": "w_ar5_1",
+            "fromComponentId": "ar5_in_85",
+            "fromPinId": "OUT",
+            "toComponentId": "ar5_inv_85",
+            "toPinId": "A",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ar5_2",
+            "fromComponentId": "ar5_in_86",
+            "fromPinId": "OUT",
+            "toComponentId": "ar5_coil_en",
+            "toPinId": "A",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ar5_3",
+            "fromComponentId": "ar5_inv_85",
+            "fromPinId": "Y",
+            "toComponentId": "ar5_coil_en",
+            "toPinId": "B",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ar5_4",
+            "fromComponentId": "ar5_coil_en",
+            "fromPinId": "Y",
+            "toComponentId": "ar5_no_rly",
+            "toPinId": "COIL_P",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ar5_5",
+            "fromComponentId": "ar5_no_rly",
+            "fromPinId": "COIL_N",
+            "toComponentId": "ar5_gnd",
+            "toPinId": "GND",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ar5_6",
+            "fromComponentId": "ar5_in_30",
+            "fromPinId": "OUT",
+            "toComponentId": "ar5_no_rly",
+            "toPinId": "COM",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ar5_7",
+            "fromComponentId": "ar5_no_rly",
+            "fromPinId": "NO",
+            "toComponentId": "ar5_out_87",
+            "toPinId": "IN",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ar5_8",
+            "fromComponentId": "ar5_coil_en",
+            "fromPinId": "Y",
+            "toComponentId": "ar5_nc_inv",
+            "toPinId": "A",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ar5_9",
+            "fromComponentId": "ar5_in_30",
+            "fromPinId": "OUT",
+            "toComponentId": "ar5_nc_and",
+            "toPinId": "A",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ar5_10",
+            "fromComponentId": "ar5_nc_inv",
+            "fromPinId": "Y",
+            "toComponentId": "ar5_nc_and",
+            "toPinId": "B",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ar5_11",
+            "fromComponentId": "ar5_nc_and",
+            "fromPinId": "Y",
+            "toComponentId": "ar5_out_87a",
+            "toPinId": "IN",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          }
+        ],
+        "busZones": []
+      }
+    },
+    {
+      "id": "chip_auto_latching_relay",
+      "name": "AUTO LATCH RELAY",
+      "description": "Bistable Automotive Latching Relay with nested 4-Pin Relay & SR coil memory.",
+      "colorHex": "#8E24AA",
+      "isBuiltIn": true,
+      "inputPinNames": [
+        "30_BAT",
+        "SET_86",
+        "RST_85"
+      ],
+      "outputPinNames": [
+        "87_OUT",
+        "LATCH_ST"
+      ],
+      "internalGraph": {
+        "id": "graph_auto_latching_relay",
+        "title": "AUTO LATCH RELAY",
+        "description": "Nested Automotive Latching Relay Sub-Circuit",
+        "components": [
+          {
+            "id": "alr_in_30",
+            "type": "INPUT_PIN",
+            "label": "30_BAT",
+            "x": 60.0,
+            "y": 100.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "alr_in_set",
+            "type": "INPUT_PIN",
+            "label": "SET_86",
+            "x": 60.0,
+            "y": 220.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "alr_in_rst",
+            "type": "INPUT_PIN",
+            "label": "RST_85",
+            "x": 60.0,
+            "y": 360.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "alr_sr",
+            "type": "SR_LATCH",
+            "label": "COIL LATCH",
+            "x": 360.0,
+            "y": 220.0,
+            "pins": [
+              {
+                "id": "S",
+                "name": "S",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "R",
+                "name": "R",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "Q",
+                "name": "Q",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "NQ",
+                "name": "!Q",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#5E35B1",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "alr_rly4",
+            "type": "SUB_CIRCUIT",
+            "label": "AUTO RELAY 4-PIN",
+            "x": 680.0,
+            "y": 120.0,
+            "pins": [
+              {
+                "id": "IN_0",
+                "name": "30_BAT",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "IN_1",
+                "name": "86_COIL+",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "IN_2",
+                "name": "85_COIL-",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 2,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "OUT_0",
+                "name": "87_NO",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "OUT_1",
+                "name": "COIL_ON",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": "chip_auto_relay_4pin",
+            "chipColorHex": "#00897B",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "alr_gnd",
+            "type": "GROUND",
+            "label": "GND",
+            "x": 680.0,
+            "y": 340.0,
+            "pins": [
+              {
+                "id": "GND",
+                "name": "0V",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#546E7A",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "alr_out_87",
+            "type": "OUTPUT_PIN",
+            "label": "87_OUT",
+            "x": 1080.0,
+            "y": 120.0,
+            "pins": [
+              {
+                "id": "IN",
+                "name": "IN",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E5FF",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "alr_out_st",
+            "type": "OUTPUT_PIN",
+            "label": "LATCH_ST",
+            "x": 1080.0,
+            "y": 280.0,
+            "pins": [
+              {
+                "id": "IN",
+                "name": "IN",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E5FF",
+            "ledBrightness": 0.0
+          }
+        ],
+        "wires": [
+          {
+            "id": "w_alr_1",
+            "fromComponentId": "alr_in_set",
+            "fromPinId": "OUT",
+            "toComponentId": "alr_sr",
+            "toPinId": "S",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_alr_2",
+            "fromComponentId": "alr_in_rst",
+            "fromPinId": "OUT",
+            "toComponentId": "alr_sr",
+            "toPinId": "R",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_alr_3",
+            "fromComponentId": "alr_in_30",
+            "fromPinId": "OUT",
+            "toComponentId": "alr_rly4",
+            "toPinId": "IN_0",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_alr_4",
+            "fromComponentId": "alr_sr",
+            "fromPinId": "Q",
+            "toComponentId": "alr_rly4",
+            "toPinId": "IN_1",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_alr_5",
+            "fromComponentId": "alr_gnd",
+            "fromPinId": "GND",
+            "toComponentId": "alr_rly4",
+            "toPinId": "IN_2",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_alr_6",
+            "fromComponentId": "alr_rly4",
+            "fromPinId": "OUT_0",
+            "toComponentId": "alr_out_87",
+            "toPinId": "IN",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_alr_7",
+            "fromComponentId": "alr_sr",
+            "fromPinId": "Q",
+            "toComponentId": "alr_out_st",
+            "toPinId": "IN",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          }
+        ],
+        "busZones": []
+      }
+    },
+    {
+      "id": "chip_half_adder",
+      "name": "HALF ADDER",
+      "description": "Adds two 1-bit inputs (A, B) into SUM and CARRY.",
+      "colorHex": "#7C4DFF",
+      "isBuiltIn": true,
+      "inputPinNames": [
+        "A",
+        "B"
+      ],
+      "outputPinNames": [
+        "SUM",
+        "CARRY"
+      ],
+      "internalGraph": {
+        "id": "graph_half_adder",
+        "title": "HALF ADDER",
+        "description": "XOR for SUM + AND for CARRY",
+        "components": [
+          {
+            "id": "ha_in_a",
+            "type": "INPUT_PIN",
+            "label": "A",
+            "x": 60.0,
+            "y": 160.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ha_in_b",
+            "type": "INPUT_PIN",
+            "label": "B",
+            "x": 60.0,
+            "y": 340.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ha_xor",
+            "type": "GATE_XOR",
+            "label": "XOR",
+            "x": 380.0,
+            "y": 160.0,
+            "pins": [
+              {
+                "id": "A",
+                "name": "A",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "B",
+                "name": "B",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "Y",
+                "name": "Y",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00897B",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ha_and",
+            "type": "GATE_AND",
+            "label": "AND",
+            "x": 380.0,
+            "y": 340.0,
+            "pins": [
+              {
+                "id": "A",
+                "name": "A",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "B",
+                "name": "B",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "Y",
+                "name": "Y",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#1E88E5",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ha_out_sum",
+            "type": "OUTPUT_PIN",
+            "label": "SUM",
+            "x": 720.0,
+            "y": 160.0,
+            "pins": [
+              {
+                "id": "IN",
+                "name": "IN",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E5FF",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ha_out_carry",
+            "type": "OUTPUT_PIN",
+            "label": "CARRY",
+            "x": 720.0,
+            "y": 340.0,
+            "pins": [
+              {
+                "id": "IN",
+                "name": "IN",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E5FF",
+            "ledBrightness": 0.0
+          }
+        ],
+        "wires": [
+          {
+            "id": "w_ha_1",
+            "fromComponentId": "ha_in_a",
+            "fromPinId": "OUT",
+            "toComponentId": "ha_xor",
+            "toPinId": "A",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ha_2",
+            "fromComponentId": "ha_in_b",
+            "fromPinId": "OUT",
+            "toComponentId": "ha_xor",
+            "toPinId": "B",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ha_3",
+            "fromComponentId": "ha_in_a",
+            "fromPinId": "OUT",
+            "toComponentId": "ha_and",
+            "toPinId": "A",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ha_4",
+            "fromComponentId": "ha_in_b",
+            "fromPinId": "OUT",
+            "toComponentId": "ha_and",
+            "toPinId": "B",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ha_5",
+            "fromComponentId": "ha_xor",
+            "fromPinId": "Y",
+            "toComponentId": "ha_out_sum",
+            "toPinId": "IN",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ha_6",
+            "fromComponentId": "ha_and",
+            "fromPinId": "Y",
+            "toComponentId": "ha_out_carry",
+            "toPinId": "IN",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          }
+        ],
+        "busZones": []
+      }
+    },
+    {
+      "id": "chip_full_adder",
+      "name": "FULL ADDER",
+      "description": "Nested sub-circuit built from 2x HALF ADDER chips + OR gate.",
+      "colorHex": "#00B0FF",
+      "isBuiltIn": true,
+      "inputPinNames": [
+        "A",
+        "B",
+        "Cin"
+      ],
+      "outputPinNames": [
+        "SUM",
+        "Cout"
+      ],
+      "internalGraph": {
+        "id": "graph_full_adder",
+        "title": "FULL ADDER",
+        "description": "Two nested HALF ADDERs + OR Carry combiner",
+        "components": [
+          {
+            "id": "fa_in_a",
+            "type": "INPUT_PIN",
+            "label": "A",
+            "x": 60.0,
+            "y": 100.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "fa_in_b",
+            "type": "INPUT_PIN",
+            "label": "B",
+            "x": 60.0,
+            "y": 220.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "fa_in_cin",
+            "type": "INPUT_PIN",
+            "label": "Cin",
+            "x": 60.0,
+            "y": 360.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "fa_ha1",
+            "type": "SUB_CIRCUIT",
+            "label": "HALF ADDER",
+            "x": 340.0,
+            "y": 120.0,
+            "pins": [
+              {
+                "id": "IN_0",
+                "name": "A",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "IN_1",
+                "name": "B",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "OUT_0",
+                "name": "SUM",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "OUT_1",
+                "name": "CARRY",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": "chip_half_adder",
+            "chipColorHex": "#7C4DFF",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "fa_ha2",
+            "type": "SUB_CIRCUIT",
+            "label": "HALF ADDER",
+            "x": 680.0,
+            "y": 220.0,
+            "pins": [
+              {
+                "id": "IN_0",
+                "name": "A",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "IN_1",
+                "name": "B",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "OUT_0",
+                "name": "SUM",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "OUT_1",
+                "name": "CARRY",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": "chip_half_adder",
+            "chipColorHex": "#7C4DFF",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "fa_or",
+            "type": "GATE_OR",
+            "label": "OR",
+            "x": 1000.0,
+            "y": 340.0,
+            "pins": [
+              {
+                "id": "A",
+                "name": "A",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "B",
+                "name": "B",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "Y",
+                "name": "Y",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#8E24AA",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "fa_out_sum",
+            "type": "OUTPUT_PIN",
+            "label": "SUM",
+            "x": 1280.0,
+            "y": 180.0,
+            "pins": [
+              {
+                "id": "IN",
+                "name": "IN",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E5FF",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "fa_out_cout",
+            "type": "OUTPUT_PIN",
+            "label": "Cout",
+            "x": 1280.0,
+            "y": 340.0,
+            "pins": [
+              {
+                "id": "IN",
+                "name": "IN",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E5FF",
+            "ledBrightness": 0.0
+          }
+        ],
+        "wires": [
+          {
+            "id": "w_fa_1",
+            "fromComponentId": "fa_in_a",
+            "fromPinId": "OUT",
+            "toComponentId": "fa_ha1",
+            "toPinId": "IN_0",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_fa_2",
+            "fromComponentId": "fa_in_b",
+            "fromPinId": "OUT",
+            "toComponentId": "fa_ha1",
+            "toPinId": "IN_1",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_fa_3",
+            "fromComponentId": "fa_ha1",
+            "fromPinId": "OUT_0",
+            "toComponentId": "fa_ha2",
+            "toPinId": "IN_0",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_fa_4",
+            "fromComponentId": "fa_in_cin",
+            "fromPinId": "OUT",
+            "toComponentId": "fa_ha2",
+            "toPinId": "IN_1",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_fa_5",
+            "fromComponentId": "fa_ha2",
+            "fromPinId": "OUT_0",
+            "toComponentId": "fa_out_sum",
+            "toPinId": "IN",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_fa_6",
+            "fromComponentId": "fa_ha2",
+            "fromPinId": "OUT_1",
+            "toComponentId": "fa_or",
+            "toPinId": "A",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_fa_7",
+            "fromComponentId": "fa_ha1",
+            "fromPinId": "OUT_1",
+            "toComponentId": "fa_or",
+            "toPinId": "B",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_fa_8",
+            "fromComponentId": "fa_or",
+            "fromPinId": "Y",
+            "toComponentId": "fa_out_cout",
+            "toPinId": "IN",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          }
+        ],
+        "busZones": []
+      }
+    },
+    {
+      "id": "chip_sr_latch",
+      "name": "SR LATCH",
+      "description": "1-bit Set/Reset flip-flop memory cell.",
+      "colorHex": "#5E35B1",
+      "isBuiltIn": true,
+      "inputPinNames": [
+        "S",
+        "R"
+      ],
+      "outputPinNames": [
+        "Q",
+        "!Q"
+      ],
+      "internalGraph": {
+        "id": "graph_sr_latch",
+        "title": "SR LATCH",
+        "description": "",
+        "components": [
+          {
+            "id": "sr_in_s",
+            "type": "INPUT_PIN",
+            "label": "S",
+            "x": 60.0,
+            "y": 160.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "sr_in_r",
+            "type": "INPUT_PIN",
+            "label": "R",
+            "x": 60.0,
+            "y": 340.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "sr_core",
+            "type": "SR_LATCH",
+            "label": "SR",
+            "x": 380.0,
+            "y": 240.0,
+            "pins": [
+              {
+                "id": "S",
+                "name": "S",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "R",
+                "name": "R",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "Q",
+                "name": "Q",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "NQ",
+                "name": "!Q",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#5E35B1",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "sr_out_q",
+            "type": "OUTPUT_PIN",
+            "label": "Q",
+            "x": 720.0,
+            "y": 160.0,
+            "pins": [
+              {
+                "id": "IN",
+                "name": "IN",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E5FF",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "sr_out_nq",
+            "type": "OUTPUT_PIN",
+            "label": "!Q",
+            "x": 720.0,
+            "y": 340.0,
+            "pins": [
+              {
+                "id": "IN",
+                "name": "IN",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E5FF",
+            "ledBrightness": 0.0
+          }
+        ],
+        "wires": [
+          {
+            "id": "w_sr_1",
+            "fromComponentId": "sr_in_s",
+            "fromPinId": "OUT",
+            "toComponentId": "sr_core",
+            "toPinId": "S",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_sr_2",
+            "fromComponentId": "sr_in_r",
+            "fromPinId": "OUT",
+            "toComponentId": "sr_core",
+            "toPinId": "R",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_sr_3",
+            "fromComponentId": "sr_core",
+            "fromPinId": "Q",
+            "toComponentId": "sr_out_q",
+            "toPinId": "IN",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_sr_4",
+            "fromComponentId": "sr_core",
+            "fromPinId": "NQ",
+            "toComponentId": "sr_out_nq",
+            "toPinId": "IN",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          }
+        ],
+        "busZones": []
+      }
+    },
+    {
+      "id": "chip_mux_2_1",
+      "name": "MUX 2:1",
+      "description": "2-to-1 Multiplexer controlled by SEL input.",
+      "colorHex": "#00897B",
+      "isBuiltIn": true,
+      "inputPinNames": [
+        "D0",
+        "D1",
+        "SEL"
+      ],
+      "outputPinNames": [
+        "OUT"
+      ],
+      "internalGraph": {
+        "id": "graph_mux_2_1",
+        "title": "MUX 2:1",
+        "description": "",
+        "components": [
+          {
+            "id": "mux_d0",
+            "type": "INPUT_PIN",
+            "label": "D0",
+            "x": 60.0,
+            "y": 120.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "mux_d1",
+            "type": "INPUT_PIN",
+            "label": "D1",
+            "x": 60.0,
+            "y": 260.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "mux_sel",
+            "type": "INPUT_PIN",
+            "label": "SEL",
+            "x": 60.0,
+            "y": 400.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "mux_not",
+            "type": "GATE_NOT",
+            "label": "NOT",
+            "x": 340.0,
+            "y": 360.0,
+            "pins": [
+              {
+                "id": "A",
+                "name": "A",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "Y",
+                "name": "Y",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#E53935",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "mux_and0",
+            "type": "GATE_AND",
+            "label": "AND",
+            "x": 600.0,
+            "y": 140.0,
+            "pins": [
+              {
+                "id": "A",
+                "name": "A",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "B",
+                "name": "B",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "Y",
+                "name": "Y",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#1E88E5",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "mux_and1",
+            "type": "GATE_AND",
+            "label": "AND",
+            "x": 600.0,
+            "y": 300.0,
+            "pins": [
+              {
+                "id": "A",
+                "name": "A",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "B",
+                "name": "B",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "Y",
+                "name": "Y",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#1E88E5",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "mux_or",
+            "type": "GATE_OR",
+            "label": "OR",
+            "x": 860.0,
+            "y": 220.0,
+            "pins": [
+              {
+                "id": "A",
+                "name": "A",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "B",
+                "name": "B",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "Y",
+                "name": "Y",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#8E24AA",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "mux_out",
+            "type": "OUTPUT_PIN",
+            "label": "OUT",
+            "x": 1140.0,
+            "y": 220.0,
+            "pins": [
+              {
+                "id": "IN",
+                "name": "IN",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E5FF",
+            "ledBrightness": 0.0
+          }
+        ],
+        "wires": [
+          {
+            "id": "w_m_1",
+            "fromComponentId": "mux_sel",
+            "fromPinId": "OUT",
+            "toComponentId": "mux_not",
+            "toPinId": "A",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_m_2",
+            "fromComponentId": "mux_d0",
+            "fromPinId": "OUT",
+            "toComponentId": "mux_and0",
+            "toPinId": "A",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_m_3",
+            "fromComponentId": "mux_not",
+            "fromPinId": "Y",
+            "toComponentId": "mux_and0",
+            "toPinId": "B",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_m_4",
+            "fromComponentId": "mux_d1",
+            "fromPinId": "OUT",
+            "toComponentId": "mux_and1",
+            "toPinId": "A",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_m_5",
+            "fromComponentId": "mux_sel",
+            "fromPinId": "OUT",
+            "toComponentId": "mux_and1",
+            "toPinId": "B",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_m_6",
+            "fromComponentId": "mux_and0",
+            "fromPinId": "Y",
+            "toComponentId": "mux_or",
+            "toPinId": "A",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_m_7",
+            "fromComponentId": "mux_and1",
+            "fromPinId": "Y",
+            "toComponentId": "mux_or",
+            "toPinId": "B",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_m_8",
+            "fromComponentId": "mux_or",
+            "fromPinId": "Y",
+            "toComponentId": "mux_out",
+            "toPinId": "IN",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          }
+        ],
+        "busZones": []
+      }
+    },
+    {
+      "id": "chip_300a_sensor_comp",
+      "name": "300A COMPARATOR",
+      "description": "Conditions Current Sensor TRIG into OVER_300A & SAFE_OPEN control signals.",
+      "colorHex": "#FF6D00",
+      "isBuiltIn": true,
+      "inputPinNames": [
+        "SNS_IN"
+      ],
+      "outputPinNames": [
+        "OVER_300A",
+        "SAFE_OPEN"
+      ],
+      "internalGraph": {
+        "id": "graph_300a_sensor_comp",
+        "title": "300A COMPARATOR",
+        "description": "",
+        "components": [
+          {
+            "id": "sc_in",
+            "type": "INPUT_PIN",
+            "label": "SNS_IN",
+            "x": 60.0,
+            "y": 220.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "sc_not_safe",
+            "type": "GATE_NOT",
+            "label": "NOT",
+            "x": 360.0,
+            "y": 260.0,
+            "pins": [
+              {
+                "id": "A",
+                "name": "A",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "Y",
+                "name": "Y",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#E53935",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "sc_buf_over",
+            "type": "GATE_NOT",
+            "label": "NOT",
+            "x": 640.0,
+            "y": 140.0,
+            "pins": [
+              {
+                "id": "A",
+                "name": "A",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "Y",
+                "name": "Y",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#E53935",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "sc_out_over",
+            "type": "OUTPUT_PIN",
+            "label": "OVER_300A",
+            "x": 940.0,
+            "y": 140.0,
+            "pins": [
+              {
+                "id": "IN",
+                "name": "IN",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E5FF",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "sc_out_safe",
+            "type": "OUTPUT_PIN",
+            "label": "SAFE_OPEN",
+            "x": 940.0,
+            "y": 300.0,
+            "pins": [
+              {
+                "id": "IN",
+                "name": "IN",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E5FF",
+            "ledBrightness": 0.0
+          }
+        ],
+        "wires": [
+          {
+            "id": "w_sc_1",
+            "fromComponentId": "sc_in",
+            "fromPinId": "OUT",
+            "toComponentId": "sc_not_safe",
+            "toPinId": "A",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_sc_2",
+            "fromComponentId": "sc_not_safe",
+            "fromPinId": "Y",
+            "toComponentId": "sc_out_safe",
+            "toPinId": "IN",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_sc_3",
+            "fromComponentId": "sc_not_safe",
+            "fromPinId": "Y",
+            "toComponentId": "sc_buf_over",
+            "toPinId": "A",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_sc_4",
+            "fromComponentId": "sc_buf_over",
+            "fromPinId": "Y",
+            "toComponentId": "sc_out_over",
+            "toPinId": "IN",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          }
+        ],
+        "busZones": []
+      }
+    },
+    {
+      "id": "chip_relay_coil_driver",
+      "name": "RELAY COIL DRIVER",
+      "description": "Drives the bypass Power Relay coil when >300A hold or manual override is asserted.",
+      "colorHex": "#D81B60",
+      "isBuiltIn": true,
+      "inputPinNames": [
+        "HOLD_REQ",
+        "MAN_OVR"
+      ],
+      "outputPinNames": [
+        "COIL_DRV"
+      ],
+      "internalGraph": {
+        "id": "graph_relay_coil_driver",
+        "title": "RELAY COIL DRIVER",
+        "description": "",
+        "components": [
+          {
+            "id": "rd_hold",
+            "type": "INPUT_PIN",
+            "label": "HOLD_REQ",
+            "x": 60.0,
+            "y": 160.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "rd_ovr",
+            "type": "INPUT_PIN",
+            "label": "MAN_OVR",
+            "x": 60.0,
+            "y": 320.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "rd_or",
+            "type": "GATE_OR",
+            "label": "OR",
+            "x": 380.0,
+            "y": 240.0,
+            "pins": [
+              {
+                "id": "A",
+                "name": "A",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "B",
+                "name": "B",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "Y",
+                "name": "Y",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#8E24AA",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "rd_out",
+            "type": "OUTPUT_PIN",
+            "label": "COIL_DRV",
+            "x": 720.0,
+            "y": 240.0,
+            "pins": [
+              {
+                "id": "IN",
+                "name": "IN",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E5FF",
+            "ledBrightness": 0.0
+          }
+        ],
+        "wires": [
+          {
+            "id": "w_rd_1",
+            "fromComponentId": "rd_hold",
+            "fromPinId": "OUT",
+            "toComponentId": "rd_or",
+            "toPinId": "A",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_rd_2",
+            "fromComponentId": "rd_ovr",
+            "fromPinId": "OUT",
+            "toComponentId": "rd_or",
+            "toPinId": "B",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_rd_3",
+            "fromComponentId": "rd_or",
+            "fromPinId": "Y",
+            "toComponentId": "rd_out",
+            "toPinId": "IN",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          }
+        ],
+        "busZones": []
+      }
+    },
+    {
+      "id": "chip_300a_switch_interlock",
+      "name": "300A HOLD INTERLOCK",
+      "description": "Nested IC containing RELAY COIL DRIVER: energizes bypass relay to prevent switch-off above 300A.",
+      "colorHex": "#E53935",
+      "isBuiltIn": true,
+      "inputPinNames": [
+        "OVER_IN",
+        "SW_SENSE"
+      ],
+      "outputPinNames": [
+        "RELAY_OUT",
+        "LOCK_WARN"
+      ],
+      "internalGraph": {
+        "id": "graph_300a_switch_interlock",
+        "title": "300A HOLD INTERLOCK",
+        "description": "",
+        "components": [
+          {
+            "id": "ilk_over",
+            "type": "INPUT_PIN",
+            "label": "OVER_IN",
+            "x": 60.0,
+            "y": 120.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ilk_sw",
+            "type": "INPUT_PIN",
+            "label": "SW_SENSE",
+            "x": 60.0,
+            "y": 320.0,
+            "pins": [
+              {
+                "id": "OUT",
+                "name": "OUT",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E676",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ilk_drv",
+            "type": "SUB_CIRCUIT",
+            "label": "RELAY COIL DRIVER",
+            "x": 360.0,
+            "y": 100.0,
+            "pins": [
+              {
+                "id": "IN_0",
+                "name": "HOLD_REQ",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "IN_1",
+                "name": "MAN_OVR",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "OUT_0",
+                "name": "COIL_DRV",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": "chip_relay_coil_driver",
+            "chipColorHex": "#D81B60",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ilk_sw_not",
+            "type": "GATE_NOT",
+            "label": "NOT",
+            "x": 360.0,
+            "y": 320.0,
+            "pins": [
+              {
+                "id": "A",
+                "name": "A",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "Y",
+                "name": "Y",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#E53935",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ilk_warn_and",
+            "type": "GATE_AND",
+            "label": "AND",
+            "x": 740.0,
+            "y": 320.0,
+            "pins": [
+              {
+                "id": "A",
+                "name": "A",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "B",
+                "name": "B",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 1,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              },
+              {
+                "id": "Y",
+                "name": "Y",
+                "isInput": false,
+                "side": "RIGHT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#1E88E5",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ilk_out_rly",
+            "type": "OUTPUT_PIN",
+            "label": "RELAY_OUT",
+            "x": 1060.0,
+            "y": 120.0,
+            "pins": [
+              {
+                "id": "IN",
+                "name": "IN",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E5FF",
+            "ledBrightness": 0.0
+          },
+          {
+            "id": "ilk_out_warn",
+            "type": "OUTPUT_PIN",
+            "label": "LOCK_WARN",
+            "x": 1060.0,
+            "y": 320.0,
+            "pins": [
+              {
+                "id": "IN",
+                "name": "IN",
+                "isInput": true,
+                "side": "LEFT",
+                "relativeIndex": 0,
+                "voltage": 0.0,
+                "currentMa": 0.0
+              }
+            ],
+            "params": {},
+            "boolState": false,
+            "subCircuitId": null,
+            "chipColorHex": "#00E5FF",
+            "ledBrightness": 0.0
+          }
+        ],
+        "wires": [
+          {
+            "id": "w_ilk_1",
+            "fromComponentId": "ilk_over",
+            "fromPinId": "OUT",
+            "toComponentId": "ilk_drv",
+            "toPinId": "IN_0",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ilk_2",
+            "fromComponentId": "ilk_drv",
+            "fromPinId": "OUT_0",
+            "toComponentId": "ilk_out_rly",
+            "toPinId": "IN",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ilk_3",
+            "fromComponentId": "ilk_sw",
+            "fromPinId": "OUT",
+            "toComponentId": "ilk_sw_not",
+            "toPinId": "A",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ilk_4",
+            "fromComponentId": "ilk_over",
+            "fromPinId": "OUT",
+            "toComponentId": "ilk_warn_and",
+            "toPinId": "A",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ilk_5",
+            "fromComponentId": "ilk_sw_not",
+            "fromPinId": "Y",
+            "toComponentId": "ilk_warn_and",
+            "toPinId": "B",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          },
+          {
+            "id": "w_ilk_6",
+            "fromComponentId": "ilk_warn_and",
+            "fromPinId": "Y",
+            "toComponentId": "ilk_out_warn",
+            "toPinId": "IN",
+            "voltage": 0.0,
+            "currentMa": 0.0,
+            "particlePhase": 0.0,
+            "userSelectedGaugeId": null,
+            "lengthMeters": 1.0,
+            "colorHex": null,
+            "busMode": "AUTO",
+            "busZoneId": null
+          }
+        ],
+        "busZones": []
+      }
+    }
+  ]
+}
