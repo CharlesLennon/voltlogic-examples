@@ -7,8 +7,8 @@
       "id": "gnd",
       "type": "GROUND",
       "label": "CHASSIS GND",
-      "x": 1800.0,
-      "y": 1660.0,
+      "x": 2100.0,
+      "y": 2020.0,
       "pins": [
         {
           "id": "GND",
@@ -30,8 +30,8 @@
       "id": "m1",
       "type": "DC_VOLTAGE",
       "label": "18-20V PACK #1",
-      "x": 940.0,
-      "y": 40.0,
+      "x": 1180.0,
+      "y": 60.0,
       "pins": [
         {
           "id": "NEG",
@@ -64,8 +64,8 @@
       "id": "f1",
       "type": "FUSE",
       "label": "40A FUSE #1",
-      "x": 1160.0,
-      "y": 40.0,
+      "x": 1480.0,
+      "y": 60.0,
       "pins": [
         {
           "id": "A",
@@ -100,8 +100,8 @@
       "id": "d1",
       "type": "IDEAL_DIODE",
       "label": "IDEAL DIO #1",
-      "x": 1380.0,
-      "y": 40.0,
+      "x": 1760.0,
+      "y": 60.0,
       "pins": [
         {
           "id": "ANODE",
@@ -136,8 +136,8 @@
       "id": "chg_ptc1",
       "type": "PTC_BREAKER",
       "label": "10A PTC #1",
-      "x": 440.0,
-      "y": 40.0,
+      "x": 600.0,
+      "y": 60.0,
       "pins": [
         {
           "id": "A",
@@ -172,8 +172,8 @@
       "id": "chg_d1",
       "type": "DIODE",
       "label": "CHG DIODE #1",
-      "x": 660.0,
-      "y": 40.0,
+      "x": 880.0,
+      "y": 60.0,
       "pins": [
         {
           "id": "ANODE",
@@ -206,8 +206,8 @@
       "id": "m2",
       "type": "DC_VOLTAGE",
       "label": "18-20V PACK #2",
-      "x": 940.0,
-      "y": 190.0,
+      "x": 1180.0,
+      "y": 250.0,
       "pins": [
         {
           "id": "NEG",
@@ -240,8 +240,8 @@
       "id": "f2",
       "type": "FUSE",
       "label": "40A FUSE #2",
-      "x": 1160.0,
-      "y": 190.0,
+      "x": 1480.0,
+      "y": 250.0,
       "pins": [
         {
           "id": "A",
@@ -276,8 +276,8 @@
       "id": "d2",
       "type": "IDEAL_DIODE",
       "label": "IDEAL DIO #2",
-      "x": 1380.0,
-      "y": 190.0,
+      "x": 1760.0,
+      "y": 250.0,
       "pins": [
         {
           "id": "ANODE",
@@ -312,8 +312,8 @@
       "id": "chg_ptc2",
       "type": "PTC_BREAKER",
       "label": "10A PTC #2",
-      "x": 440.0,
-      "y": 190.0,
+      "x": 600.0,
+      "y": 250.0,
       "pins": [
         {
           "id": "A",
@@ -348,8 +348,8 @@
       "id": "chg_d2",
       "type": "DIODE",
       "label": "CHG DIODE #2",
-      "x": 660.0,
-      "y": 190.0,
+      "x": 880.0,
+      "y": 250.0,
       "pins": [
         {
           "id": "ANODE",
@@ -382,8 +382,8 @@
       "id": "m3",
       "type": "DC_VOLTAGE",
       "label": "18-20V PACK #3",
-      "x": 940.0,
-      "y": 340.0,
+      "x": 1180.0,
+      "y": 440.0,
       "pins": [
         {
           "id": "NEG",
@@ -416,8 +416,8 @@
       "id": "f3",
       "type": "FUSE",
       "label": "40A FUSE #3",
-      "x": 1160.0,
-      "y": 340.0,
+      "x": 1480.0,
+      "y": 440.0,
       "pins": [
         {
           "id": "A",
@@ -452,8 +452,8 @@
       "id": "d3",
       "type": "IDEAL_DIODE",
       "label": "IDEAL DIO #3",
-      "x": 1380.0,
-      "y": 340.0,
+      "x": 1760.0,
+      "y": 440.0,
       "pins": [
         {
           "id": "ANODE",
@@ -488,8 +488,8 @@
       "id": "chg_ptc3",
       "type": "PTC_BREAKER",
       "label": "10A PTC #3",
-      "x": 440.0,
-      "y": 340.0,
+      "x": 600.0,
+      "y": 440.0,
       "pins": [
         {
           "id": "A",
@@ -524,8 +524,8 @@
       "id": "chg_d3",
       "type": "DIODE",
       "label": "CHG DIODE #3",
-      "x": 660.0,
-      "y": 340.0,
+      "x": 880.0,
+      "y": 440.0,
       "pins": [
         {
           "id": "ANODE",
@@ -558,8 +558,8 @@
       "id": "m4",
       "type": "DC_VOLTAGE",
       "label": "18-20V PACK #4",
-      "x": 940.0,
-      "y": 490.0,
+      "x": 1180.0,
+      "y": 630.0,
       "pins": [
         {
           "id": "NEG",
@@ -592,8 +592,8 @@
       "id": "f4",
       "type": "FUSE",
       "label": "40A FUSE #4",
-      "x": 1160.0,
-      "y": 490.0,
+      "x": 1480.0,
+      "y": 630.0,
       "pins": [
         {
           "id": "A",
@@ -628,8 +628,8 @@
       "id": "d4",
       "type": "IDEAL_DIODE",
       "label": "IDEAL DIO #4",
-      "x": 1380.0,
-      "y": 490.0,
+      "x": 1760.0,
+      "y": 630.0,
       "pins": [
         {
           "id": "ANODE",
@@ -664,8 +664,8 @@
       "id": "chg_ptc4",
       "type": "PTC_BREAKER",
       "label": "10A PTC #4",
-      "x": 440.0,
-      "y": 490.0,
+      "x": 600.0,
+      "y": 630.0,
       "pins": [
         {
           "id": "A",
@@ -700,8 +700,8 @@
       "id": "chg_d4",
       "type": "DIODE",
       "label": "CHG DIODE #4",
-      "x": 660.0,
-      "y": 490.0,
+      "x": 880.0,
+      "y": 630.0,
       "pins": [
         {
           "id": "ANODE",
@@ -734,8 +734,8 @@
       "id": "m5",
       "type": "DC_VOLTAGE",
       "label": "18-20V PACK #5",
-      "x": 940.0,
-      "y": 640.0,
+      "x": 1180.0,
+      "y": 820.0,
       "pins": [
         {
           "id": "NEG",
@@ -768,8 +768,8 @@
       "id": "f5",
       "type": "FUSE",
       "label": "40A FUSE #5",
-      "x": 1160.0,
-      "y": 640.0,
+      "x": 1480.0,
+      "y": 820.0,
       "pins": [
         {
           "id": "A",
@@ -804,8 +804,8 @@
       "id": "d5",
       "type": "IDEAL_DIODE",
       "label": "IDEAL DIO #5",
-      "x": 1380.0,
-      "y": 640.0,
+      "x": 1760.0,
+      "y": 820.0,
       "pins": [
         {
           "id": "ANODE",
@@ -840,8 +840,8 @@
       "id": "chg_ptc5",
       "type": "PTC_BREAKER",
       "label": "10A PTC #5",
-      "x": 440.0,
-      "y": 640.0,
+      "x": 600.0,
+      "y": 820.0,
       "pins": [
         {
           "id": "A",
@@ -876,8 +876,8 @@
       "id": "chg_d5",
       "type": "DIODE",
       "label": "CHG DIODE #5",
-      "x": 660.0,
-      "y": 640.0,
+      "x": 880.0,
+      "y": 820.0,
       "pins": [
         {
           "id": "ANODE",
@@ -910,8 +910,8 @@
       "id": "m6",
       "type": "DC_VOLTAGE",
       "label": "18-20V PACK #6",
-      "x": 940.0,
-      "y": 790.0,
+      "x": 1180.0,
+      "y": 1010.0,
       "pins": [
         {
           "id": "NEG",
@@ -944,8 +944,8 @@
       "id": "f6",
       "type": "FUSE",
       "label": "40A FUSE #6",
-      "x": 1160.0,
-      "y": 790.0,
+      "x": 1480.0,
+      "y": 1010.0,
       "pins": [
         {
           "id": "A",
@@ -980,8 +980,8 @@
       "id": "d6",
       "type": "IDEAL_DIODE",
       "label": "IDEAL DIO #6",
-      "x": 1380.0,
-      "y": 790.0,
+      "x": 1760.0,
+      "y": 1010.0,
       "pins": [
         {
           "id": "ANODE",
@@ -1016,8 +1016,8 @@
       "id": "chg_ptc6",
       "type": "PTC_BREAKER",
       "label": "10A PTC #6",
-      "x": 440.0,
-      "y": 790.0,
+      "x": 600.0,
+      "y": 1010.0,
       "pins": [
         {
           "id": "A",
@@ -1052,8 +1052,8 @@
       "id": "chg_d6",
       "type": "DIODE",
       "label": "CHG DIODE #6",
-      "x": 660.0,
-      "y": 790.0,
+      "x": 880.0,
+      "y": 1010.0,
       "pins": [
         {
           "id": "ANODE",
@@ -1086,8 +1086,8 @@
       "id": "m7",
       "type": "DC_VOLTAGE",
       "label": "18-20V PACK #7",
-      "x": 940.0,
-      "y": 940.0,
+      "x": 1180.0,
+      "y": 1200.0,
       "pins": [
         {
           "id": "NEG",
@@ -1120,8 +1120,8 @@
       "id": "f7",
       "type": "FUSE",
       "label": "40A FUSE #7",
-      "x": 1160.0,
-      "y": 940.0,
+      "x": 1480.0,
+      "y": 1200.0,
       "pins": [
         {
           "id": "A",
@@ -1156,8 +1156,8 @@
       "id": "d7",
       "type": "IDEAL_DIODE",
       "label": "IDEAL DIO #7",
-      "x": 1380.0,
-      "y": 940.0,
+      "x": 1760.0,
+      "y": 1200.0,
       "pins": [
         {
           "id": "ANODE",
@@ -1192,8 +1192,8 @@
       "id": "chg_ptc7",
       "type": "PTC_BREAKER",
       "label": "10A PTC #7",
-      "x": 440.0,
-      "y": 940.0,
+      "x": 600.0,
+      "y": 1200.0,
       "pins": [
         {
           "id": "A",
@@ -1228,8 +1228,8 @@
       "id": "chg_d7",
       "type": "DIODE",
       "label": "CHG DIODE #7",
-      "x": 660.0,
-      "y": 940.0,
+      "x": 880.0,
+      "y": 1200.0,
       "pins": [
         {
           "id": "ANODE",
@@ -1262,8 +1262,8 @@
       "id": "m8",
       "type": "DC_VOLTAGE",
       "label": "18-20V PACK #8",
-      "x": 940.0,
-      "y": 1090.0,
+      "x": 1180.0,
+      "y": 1390.0,
       "pins": [
         {
           "id": "NEG",
@@ -1296,8 +1296,8 @@
       "id": "f8",
       "type": "FUSE",
       "label": "40A FUSE #8",
-      "x": 1160.0,
-      "y": 1090.0,
+      "x": 1480.0,
+      "y": 1390.0,
       "pins": [
         {
           "id": "A",
@@ -1332,8 +1332,8 @@
       "id": "d8",
       "type": "IDEAL_DIODE",
       "label": "IDEAL DIO #8",
-      "x": 1380.0,
-      "y": 1090.0,
+      "x": 1760.0,
+      "y": 1390.0,
       "pins": [
         {
           "id": "ANODE",
@@ -1368,8 +1368,8 @@
       "id": "chg_ptc8",
       "type": "PTC_BREAKER",
       "label": "10A PTC #8",
-      "x": 440.0,
-      "y": 1090.0,
+      "x": 600.0,
+      "y": 1390.0,
       "pins": [
         {
           "id": "A",
@@ -1404,8 +1404,8 @@
       "id": "chg_d8",
       "type": "DIODE",
       "label": "CHG DIODE #8",
-      "x": 660.0,
-      "y": 1090.0,
+      "x": 880.0,
+      "y": 1390.0,
       "pins": [
         {
           "id": "ANODE",
@@ -1438,8 +1438,8 @@
       "id": "m9",
       "type": "DC_VOLTAGE",
       "label": "18-20V PACK #9",
-      "x": 940.0,
-      "y": 1240.0,
+      "x": 1180.0,
+      "y": 1580.0,
       "pins": [
         {
           "id": "NEG",
@@ -1472,8 +1472,8 @@
       "id": "f9",
       "type": "FUSE",
       "label": "40A FUSE #9",
-      "x": 1160.0,
-      "y": 1240.0,
+      "x": 1480.0,
+      "y": 1580.0,
       "pins": [
         {
           "id": "A",
@@ -1508,8 +1508,8 @@
       "id": "d9",
       "type": "IDEAL_DIODE",
       "label": "IDEAL DIO #9",
-      "x": 1380.0,
-      "y": 1240.0,
+      "x": 1760.0,
+      "y": 1580.0,
       "pins": [
         {
           "id": "ANODE",
@@ -1544,8 +1544,8 @@
       "id": "chg_ptc9",
       "type": "PTC_BREAKER",
       "label": "10A PTC #9",
-      "x": 440.0,
-      "y": 1240.0,
+      "x": 600.0,
+      "y": 1580.0,
       "pins": [
         {
           "id": "A",
@@ -1580,8 +1580,8 @@
       "id": "chg_d9",
       "type": "DIODE",
       "label": "CHG DIODE #9",
-      "x": 660.0,
-      "y": 1240.0,
+      "x": 880.0,
+      "y": 1580.0,
       "pins": [
         {
           "id": "ANODE",
@@ -1614,8 +1614,8 @@
       "id": "m10",
       "type": "DC_VOLTAGE",
       "label": "18-20V PACK #10",
-      "x": 940.0,
-      "y": 1390.0,
+      "x": 1180.0,
+      "y": 1770.0,
       "pins": [
         {
           "id": "NEG",
@@ -1648,8 +1648,8 @@
       "id": "f10",
       "type": "FUSE",
       "label": "40A FUSE #10",
-      "x": 1160.0,
-      "y": 1390.0,
+      "x": 1480.0,
+      "y": 1770.0,
       "pins": [
         {
           "id": "A",
@@ -1684,8 +1684,8 @@
       "id": "d10",
       "type": "IDEAL_DIODE",
       "label": "IDEAL DIO #10",
-      "x": 1380.0,
-      "y": 1390.0,
+      "x": 1760.0,
+      "y": 1770.0,
       "pins": [
         {
           "id": "ANODE",
@@ -1720,8 +1720,8 @@
       "id": "chg_ptc10",
       "type": "PTC_BREAKER",
       "label": "10A PTC #10",
-      "x": 440.0,
-      "y": 1390.0,
+      "x": 600.0,
+      "y": 1770.0,
       "pins": [
         {
           "id": "A",
@@ -1756,8 +1756,8 @@
       "id": "chg_d10",
       "type": "DIODE",
       "label": "CHG DIODE #10",
-      "x": 660.0,
-      "y": 1390.0,
+      "x": 880.0,
+      "y": 1770.0,
       "pins": [
         {
           "id": "ANODE",
@@ -1790,8 +1790,8 @@
       "id": "main_cb",
       "type": "PTC_BREAKER",
       "label": "150A MAIN BREAKER",
-      "x": 1760.0,
-      "y": 260.0,
+      "x": 2360.0,
+      "y": 360.0,
       "pins": [
         {
           "id": "A",
@@ -1826,8 +1826,8 @@
       "id": "dcdc",
       "type": "BUCK_CONVERTER",
       "label": "18-20V->13.8V 100A",
-      "x": 2000.0,
-      "y": 260.0,
+      "x": 2660.0,
+      "y": 360.0,
       "pins": [
         {
           "id": "VIN_P",
@@ -1882,8 +1882,8 @@
       "id": "led_r",
       "type": "RESISTOR",
       "label": "1k LED RES",
-      "x": 2000.0,
-      "y": 80.0,
+      "x": 2660.0,
+      "y": 100.0,
       "pins": [
         {
           "id": "A",
@@ -1916,8 +1916,8 @@
       "id": "led_ok",
       "type": "LED",
       "label": "DOCK POWER OK",
-      "x": 2220.0,
-      "y": 80.0,
+      "x": 2940.0,
+      "y": 100.0,
       "pins": [
         {
           "id": "ANODE",
@@ -1948,8 +1948,8 @@
       "id": "cap_bank",
       "type": "SUPERCAPACITOR",
       "label": "500F SUPERCAP",
-      "x": 2260.0,
-      "y": 260.0,
+      "x": 3000.0,
+      "y": 360.0,
       "pins": [
         {
           "id": "A",
@@ -1985,8 +1985,8 @@
       "id": "tvs_bus",
       "type": "ZENER_DIODE",
       "label": "16V SURGE TVS",
-      "x": 2260.0,
-      "y": 440.0,
+      "x": 3000.0,
+      "y": 580.0,
       "pins": [
         {
           "id": "ANODE",
@@ -2021,8 +2021,8 @@
       "id": "ign",
       "type": "SWITCH_IGNITION",
       "label": "IGNITION KEY",
-      "x": 2260.0,
-      "y": 640.0,
+      "x": 3000.0,
+      "y": 860.0,
       "pins": [
         {
           "id": "BAT",
@@ -2073,8 +2073,8 @@
       "id": "acc_load",
       "type": "LOAD_LAMP",
       "label": "LIGHTS & FAN",
-      "x": 2520.0,
-      "y": 560.0,
+      "x": 3340.0,
+      "y": 740.0,
       "pins": [
         {
           "id": "A",
@@ -2109,8 +2109,8 @@
       "id": "ecu_fuel",
       "type": "LOAD_LAMP",
       "label": "ECU & FUEL PUMP",
-      "x": 2520.0,
-      "y": 740.0,
+      "x": 3340.0,
+      "y": 960.0,
       "pins": [
         {
           "id": "A",
@@ -2145,8 +2145,8 @@
       "id": "st_rly",
       "type": "RELAY_SPST",
       "label": "STARTER SOLENOID",
-      "x": 2520.0,
-      "y": 940.0,
+      "x": 3340.0,
+      "y": 1220.0,
       "pins": [
         {
           "id": "COIL_P",
@@ -2198,8 +2198,8 @@
       "id": "alt",
       "type": "ALTERNATOR",
       "label": "ALT 14.4V",
-      "x": 2000.0,
-      "y": 500.0,
+      "x": 2660.0,
+      "y": 720.0,
       "pins": [
         {
           "id": "NEG",
@@ -2235,8 +2235,8 @@
       "id": "alt_dio",
       "type": "IDEAL_DIODE",
       "label": "ALT ISOLATOR",
-      "x": 2000.0,
-      "y": 680.0,
+      "x": 2660.0,
+      "y": 960.0,
       "pins": [
         {
           "id": "ANODE",
@@ -2272,7 +2272,7 @@
       "type": "BOOST_CONVERTER",
       "label": "14->21V BOOST CC/CV",
       "x": 40.0,
-      "y": 650.0,
+      "y": 920.0,
       "pins": [
         {
           "id": "VIN_P",
@@ -2327,8 +2327,8 @@
       "id": "starter",
       "type": "LOAD_MOTOR",
       "label": "STARTER MOTOR",
-      "x": 2780.0,
-      "y": 940.0,
+      "x": 3680.0,
+      "y": 1220.0,
       "pins": [
         {
           "id": "A",
@@ -3710,24 +3710,24 @@
     {
       "id": "makita_bus",
       "label": "18-20V PARALLEL & GND BUS DUCT",
-      "x": 1580.0,
-      "y": 40.0,
-      "width": 120.0,
-      "height": 1480.0,
+      "x": 2040.0,
+      "y": 60.0,
+      "width": 220.0,
+      "height": 1820.0,
       "orientation": "VERTICAL",
       "attractByDefault": true,
-      "laneSpacing": 18.0
+      "laneSpacing": 24.0
     },
     {
       "id": "charge_bus",
       "label": "21.0V CC/CV CHARGE BUS",
-      "x": 260.0,
-      "y": 40.0,
-      "width": 120.0,
-      "height": 1480.0,
+      "x": 300.0,
+      "y": 60.0,
+      "width": 220.0,
+      "height": 1820.0,
       "orientation": "VERTICAL",
       "attractByDefault": false,
-      "laneSpacing": 18.0
+      "laneSpacing": 24.0
     }
   ]
 }
