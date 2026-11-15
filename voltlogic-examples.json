@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 10,
+  "schemaVersion": 11,
   "presets": [
     {
       "id": "preset_300a_relay_interlock",
@@ -5344,8 +5344,8 @@
     },
     {
       "id": "preset_makita_18v_car_bank",
-      "title": "10x Makita 18V Parallel Hot-Swap Car Power Bank",
-      "description": "10x 18V Makita packs isolated via ideal diodes feeding a 13.8V DC-DC converter and 500F supercapacitor starter bank.",
+      "title": "10x Makita 18-20V Parallel Hot-Swap Car Power Bank",
+      "description": "10x 18-20V Makita packs isolated via ideal diodes feeding a 13.8V DC-DC converter, 500F supercapacitor starter bank, and 14.4V alternator.",
       "components": [
         {
           "id": "gnd",
@@ -5373,7 +5373,7 @@
         {
           "id": "m1",
           "type": "DC_VOLTAGE",
-          "label": "MAKITA 18V #1",
+          "label": "MAKITA 18-20V #1",
           "x": 40.0,
           "y": 40.0,
           "pins": [
@@ -5397,7 +5397,7 @@
             }
           ],
           "params": {
-            "voltage": 18.0
+            "voltage": 20.0
           },
           "boolState": false,
           "subCircuitId": null,
@@ -5479,7 +5479,7 @@
         {
           "id": "m2",
           "type": "DC_VOLTAGE",
-          "label": "MAKITA 18V #2",
+          "label": "MAKITA 18-20V #2",
           "x": 40.0,
           "y": 190.0,
           "pins": [
@@ -5503,7 +5503,7 @@
             }
           ],
           "params": {
-            "voltage": 18.0
+            "voltage": 20.0
           },
           "boolState": false,
           "subCircuitId": null,
@@ -5585,7 +5585,7 @@
         {
           "id": "m3",
           "type": "DC_VOLTAGE",
-          "label": "MAKITA 18V #3",
+          "label": "MAKITA 18-20V #3",
           "x": 40.0,
           "y": 340.0,
           "pins": [
@@ -5609,7 +5609,7 @@
             }
           ],
           "params": {
-            "voltage": 18.0
+            "voltage": 20.0
           },
           "boolState": false,
           "subCircuitId": null,
@@ -5691,7 +5691,7 @@
         {
           "id": "m4",
           "type": "DC_VOLTAGE",
-          "label": "MAKITA 18V #4",
+          "label": "MAKITA 18-20V #4",
           "x": 40.0,
           "y": 490.0,
           "pins": [
@@ -5715,7 +5715,7 @@
             }
           ],
           "params": {
-            "voltage": 18.0
+            "voltage": 20.0
           },
           "boolState": false,
           "subCircuitId": null,
@@ -5797,7 +5797,7 @@
         {
           "id": "m5",
           "type": "DC_VOLTAGE",
-          "label": "MAKITA 18V #5",
+          "label": "MAKITA 18-20V #5",
           "x": 40.0,
           "y": 640.0,
           "pins": [
@@ -5821,7 +5821,7 @@
             }
           ],
           "params": {
-            "voltage": 18.0
+            "voltage": 20.0
           },
           "boolState": false,
           "subCircuitId": null,
@@ -5903,7 +5903,7 @@
         {
           "id": "m6",
           "type": "DC_VOLTAGE",
-          "label": "MAKITA 18V #6",
+          "label": "MAKITA 18-20V #6",
           "x": 40.0,
           "y": 790.0,
           "pins": [
@@ -5927,7 +5927,7 @@
             }
           ],
           "params": {
-            "voltage": 18.0
+            "voltage": 20.0
           },
           "boolState": false,
           "subCircuitId": null,
@@ -6009,7 +6009,7 @@
         {
           "id": "m7",
           "type": "DC_VOLTAGE",
-          "label": "MAKITA 18V #7",
+          "label": "MAKITA 18-20V #7",
           "x": 40.0,
           "y": 940.0,
           "pins": [
@@ -6033,7 +6033,7 @@
             }
           ],
           "params": {
-            "voltage": 18.0
+            "voltage": 20.0
           },
           "boolState": false,
           "subCircuitId": null,
@@ -6115,7 +6115,7 @@
         {
           "id": "m8",
           "type": "DC_VOLTAGE",
-          "label": "MAKITA 18V #8",
+          "label": "MAKITA 18-20V #8",
           "x": 40.0,
           "y": 1090.0,
           "pins": [
@@ -6139,7 +6139,7 @@
             }
           ],
           "params": {
-            "voltage": 18.0
+            "voltage": 20.0
           },
           "boolState": false,
           "subCircuitId": null,
@@ -6221,7 +6221,7 @@
         {
           "id": "m9",
           "type": "DC_VOLTAGE",
-          "label": "MAKITA 18V #9",
+          "label": "MAKITA 18-20V #9",
           "x": 40.0,
           "y": 1240.0,
           "pins": [
@@ -6245,7 +6245,7 @@
             }
           ],
           "params": {
-            "voltage": 18.0
+            "voltage": 20.0
           },
           "boolState": false,
           "subCircuitId": null,
@@ -6327,7 +6327,7 @@
         {
           "id": "m10",
           "type": "DC_VOLTAGE",
-          "label": "MAKITA 18V #10",
+          "label": "MAKITA 18-20V #10",
           "x": 40.0,
           "y": 1390.0,
           "pins": [
@@ -6351,7 +6351,7 @@
             }
           ],
           "params": {
-            "voltage": 18.0
+            "voltage": 20.0
           },
           "boolState": false,
           "subCircuitId": null,
@@ -6469,7 +6469,7 @@
         {
           "id": "dcdc",
           "type": "BUCK_CONVERTER",
-          "label": "18V-13.8V 100A",
+          "label": "18-20V->13.8V 100A",
           "x": 1100.0,
           "y": 260.0,
           "pins": [
@@ -7835,7 +7835,7 @@
       "busZones": [
         {
           "id": "makita_bus",
-          "label": "18V PARALLEL & GND BUS DUCT",
+          "label": "18-20V PARALLEL & GND BUS DUCT",
           "x": 680.0,
           "y": 40.0,
           "width": 120.0,
