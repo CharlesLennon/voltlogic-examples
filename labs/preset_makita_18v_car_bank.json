@@ -2269,8 +2269,8 @@
     },
     {
       "id": "chg",
-      "type": "BUCK_CONVERTER",
-      "label": "21V CC/CV CHARGER",
+      "type": "BOOST_CONVERTER",
+      "label": "14->21V BOOST CC/CV",
       "x": 40.0,
       "y": 650.0,
       "pins": [
