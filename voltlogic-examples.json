@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 8,
+  "schemaVersion": 9,
   "presets": [
     {
       "id": "preset_300a_relay_interlock",
@@ -5339,6 +5339,2395 @@
           "orientation": "HORIZONTAL",
           "attractByDefault": true,
           "laneSpacing": 20.0
+        }
+      ]
+    },
+    {
+      "id": "preset_makita_18v_car_bank",
+      "title": "10x Makita 18V Parallel Hot-Swap Car Power Bank",
+      "description": "10x 18V Makita packs isolated via ideal diodes feeding a 13.8V DC-DC converter and 500F supercapacitor starter bank.",
+      "components": [
+        {
+          "id": "gnd",
+          "type": "GROUND",
+          "label": "CHASSIS GND",
+          "x": 900.0,
+          "y": 1660.0,
+          "pins": [
+            {
+              "id": "GND",
+              "name": "0V",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "m1",
+          "type": "DC_VOLTAGE",
+          "label": "MAKITA 18V #1",
+          "x": 40.0,
+          "y": 40.0,
+          "pins": [
+            {
+              "id": "NEG",
+              "name": "-",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "POS",
+              "name": "+",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "voltage": 18.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "f1",
+          "type": "FUSE",
+          "label": "40A FUSE #1",
+          "x": 260.0,
+          "y": 40.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "ratingAmps": 40.0,
+            "recommendedAmps": 10.0,
+            "autoSize": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "d1",
+          "type": "IDEAL_DIODE",
+          "label": "IDEAL DIO #1",
+          "x": 480.0,
+          "y": 40.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "A",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "K",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "vfVolts": 0.03,
+            "maxAmps": 60.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "m2",
+          "type": "DC_VOLTAGE",
+          "label": "MAKITA 18V #2",
+          "x": 40.0,
+          "y": 190.0,
+          "pins": [
+            {
+              "id": "NEG",
+              "name": "-",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "POS",
+              "name": "+",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "voltage": 18.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "f2",
+          "type": "FUSE",
+          "label": "40A FUSE #2",
+          "x": 260.0,
+          "y": 190.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "ratingAmps": 40.0,
+            "recommendedAmps": 10.0,
+            "autoSize": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "d2",
+          "type": "IDEAL_DIODE",
+          "label": "IDEAL DIO #2",
+          "x": 480.0,
+          "y": 190.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "A",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "K",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "vfVolts": 0.03,
+            "maxAmps": 60.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "m3",
+          "type": "DC_VOLTAGE",
+          "label": "MAKITA 18V #3",
+          "x": 40.0,
+          "y": 340.0,
+          "pins": [
+            {
+              "id": "NEG",
+              "name": "-",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "POS",
+              "name": "+",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "voltage": 18.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "f3",
+          "type": "FUSE",
+          "label": "40A FUSE #3",
+          "x": 260.0,
+          "y": 340.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "ratingAmps": 40.0,
+            "recommendedAmps": 10.0,
+            "autoSize": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "d3",
+          "type": "IDEAL_DIODE",
+          "label": "IDEAL DIO #3",
+          "x": 480.0,
+          "y": 340.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "A",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "K",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "vfVolts": 0.03,
+            "maxAmps": 60.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "m4",
+          "type": "DC_VOLTAGE",
+          "label": "MAKITA 18V #4",
+          "x": 40.0,
+          "y": 490.0,
+          "pins": [
+            {
+              "id": "NEG",
+              "name": "-",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "POS",
+              "name": "+",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "voltage": 18.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "f4",
+          "type": "FUSE",
+          "label": "40A FUSE #4",
+          "x": 260.0,
+          "y": 490.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "ratingAmps": 40.0,
+            "recommendedAmps": 10.0,
+            "autoSize": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "d4",
+          "type": "IDEAL_DIODE",
+          "label": "IDEAL DIO #4",
+          "x": 480.0,
+          "y": 490.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "A",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "K",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "vfVolts": 0.03,
+            "maxAmps": 60.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "m5",
+          "type": "DC_VOLTAGE",
+          "label": "MAKITA 18V #5",
+          "x": 40.0,
+          "y": 640.0,
+          "pins": [
+            {
+              "id": "NEG",
+              "name": "-",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "POS",
+              "name": "+",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "voltage": 18.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "f5",
+          "type": "FUSE",
+          "label": "40A FUSE #5",
+          "x": 260.0,
+          "y": 640.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "ratingAmps": 40.0,
+            "recommendedAmps": 10.0,
+            "autoSize": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "d5",
+          "type": "IDEAL_DIODE",
+          "label": "IDEAL DIO #5",
+          "x": 480.0,
+          "y": 640.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "A",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "K",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "vfVolts": 0.03,
+            "maxAmps": 60.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "m6",
+          "type": "DC_VOLTAGE",
+          "label": "MAKITA 18V #6",
+          "x": 40.0,
+          "y": 790.0,
+          "pins": [
+            {
+              "id": "NEG",
+              "name": "-",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "POS",
+              "name": "+",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "voltage": 18.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "f6",
+          "type": "FUSE",
+          "label": "40A FUSE #6",
+          "x": 260.0,
+          "y": 790.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "ratingAmps": 40.0,
+            "recommendedAmps": 10.0,
+            "autoSize": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "d6",
+          "type": "IDEAL_DIODE",
+          "label": "IDEAL DIO #6",
+          "x": 480.0,
+          "y": 790.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "A",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "K",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "vfVolts": 0.03,
+            "maxAmps": 60.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "m7",
+          "type": "DC_VOLTAGE",
+          "label": "MAKITA 18V #7",
+          "x": 40.0,
+          "y": 940.0,
+          "pins": [
+            {
+              "id": "NEG",
+              "name": "-",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "POS",
+              "name": "+",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "voltage": 18.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "f7",
+          "type": "FUSE",
+          "label": "40A FUSE #7",
+          "x": 260.0,
+          "y": 940.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "ratingAmps": 40.0,
+            "recommendedAmps": 10.0,
+            "autoSize": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "d7",
+          "type": "IDEAL_DIODE",
+          "label": "IDEAL DIO #7",
+          "x": 480.0,
+          "y": 940.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "A",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "K",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "vfVolts": 0.03,
+            "maxAmps": 60.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "m8",
+          "type": "DC_VOLTAGE",
+          "label": "MAKITA 18V #8",
+          "x": 40.0,
+          "y": 1090.0,
+          "pins": [
+            {
+              "id": "NEG",
+              "name": "-",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "POS",
+              "name": "+",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "voltage": 18.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "f8",
+          "type": "FUSE",
+          "label": "40A FUSE #8",
+          "x": 260.0,
+          "y": 1090.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "ratingAmps": 40.0,
+            "recommendedAmps": 10.0,
+            "autoSize": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "d8",
+          "type": "IDEAL_DIODE",
+          "label": "IDEAL DIO #8",
+          "x": 480.0,
+          "y": 1090.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "A",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "K",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "vfVolts": 0.03,
+            "maxAmps": 60.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "m9",
+          "type": "DC_VOLTAGE",
+          "label": "MAKITA 18V #9",
+          "x": 40.0,
+          "y": 1240.0,
+          "pins": [
+            {
+              "id": "NEG",
+              "name": "-",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "POS",
+              "name": "+",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "voltage": 18.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "f9",
+          "type": "FUSE",
+          "label": "40A FUSE #9",
+          "x": 260.0,
+          "y": 1240.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "ratingAmps": 40.0,
+            "recommendedAmps": 10.0,
+            "autoSize": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "d9",
+          "type": "IDEAL_DIODE",
+          "label": "IDEAL DIO #9",
+          "x": 480.0,
+          "y": 1240.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "A",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "K",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "vfVolts": 0.03,
+            "maxAmps": 60.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "m10",
+          "type": "DC_VOLTAGE",
+          "label": "MAKITA 18V #10",
+          "x": 40.0,
+          "y": 1390.0,
+          "pins": [
+            {
+              "id": "NEG",
+              "name": "-",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "POS",
+              "name": "+",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "voltage": 18.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "f10",
+          "type": "FUSE",
+          "label": "40A FUSE #10",
+          "x": 260.0,
+          "y": 1390.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "ratingAmps": 40.0,
+            "recommendedAmps": 10.0,
+            "autoSize": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "d10",
+          "type": "IDEAL_DIODE",
+          "label": "IDEAL DIO #10",
+          "x": 480.0,
+          "y": 1390.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "A",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "K",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "vfVolts": 0.03,
+            "maxAmps": 60.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "main_cb",
+          "type": "PTC_BREAKER",
+          "label": "150A MAIN BREAKER",
+          "x": 860.0,
+          "y": 260.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "IN",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "OUT",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "tripAmps": 150.0,
+            "autoReset": 0.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "dcdc",
+          "type": "BUCK_CONVERTER",
+          "label": "18V-13.8V 100A",
+          "x": 1100.0,
+          "y": 260.0,
+          "pins": [
+            {
+              "id": "VIN_P",
+              "name": "VIN+",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "GND",
+              "name": "GND",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 1,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "VOUT_P",
+              "name": "VOUT+",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "OUT_N",
+              "name": "OUT-",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 1,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "outVolts": 13.8,
+            "efficiencyPct": 94.0,
+            "maxAmps": 100.0,
+            "measuredAmps": 0.0,
+            "measuredWatts": 0.0
+          },
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "led_r",
+          "type": "RESISTOR",
+          "label": "1k LED RES",
+          "x": 1100.0,
+          "y": 80.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "resistanceOhms": 1000.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "led_ok",
+          "type": "LED",
+          "label": "DOCK POWER OK",
+          "x": 1320.0,
+          "y": 80.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "+",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "-",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {},
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "cap_bank",
+          "type": "SUPERCAPACITOR",
+          "label": "500F SUPERCAP",
+          "x": 1360.0,
+          "y": 260.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "+",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "-",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "capacitanceF": 500.0,
+            "maxVolts": 16.0,
+            "esrOhms": 0.01,
+            "prevV": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "tvs_bus",
+          "type": "ZENER_DIODE",
+          "label": "16V SURGE TVS",
+          "x": 1360.0,
+          "y": 440.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "A",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "K",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "zenerVolts": 16.0,
+            "measuredAmps": 0.0,
+            "measuredWatts": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "ign",
+          "type": "SWITCH_IGNITION",
+          "label": "IGNITION KEY",
+          "x": 1360.0,
+          "y": 640.0,
+          "pins": [
+            {
+              "id": "BAT",
+              "name": "BAT",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "ACC",
+              "name": "ACC",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "IGN",
+              "name": "IGN",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 1,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "ST",
+              "name": "ST",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 2,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "position": 2.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "acc_load",
+          "type": "LOAD_LAMP",
+          "label": "LIGHTS & FAN",
+          "x": 1620.0,
+          "y": 560.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "+",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "-",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "watts": 180.0,
+            "nominalVolts": 12.0,
+            "measuredWatts": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "ecu_fuel",
+          "type": "LOAD_LAMP",
+          "label": "ECU & FUEL PUMP",
+          "x": 1620.0,
+          "y": 740.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "+",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "-",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "watts": 240.0,
+            "nominalVolts": 12.0,
+            "measuredWatts": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "st_rly",
+          "type": "RELAY_SPST",
+          "label": "STARTER SOLENOID",
+          "x": 1620.0,
+          "y": 940.0,
+          "pins": [
+            {
+              "id": "COIL_P",
+              "name": "86",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "COIL_N",
+              "name": "85",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 1,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "COM",
+              "name": "30",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 2,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "NO",
+              "name": "87",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "pullInVolts": 8.0,
+            "coilOhms": 50.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "starter",
+          "type": "LOAD_MOTOR",
+          "label": "STARTER MOTOR",
+          "x": 1880.0,
+          "y": 940.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "+",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "-",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "watts": 1800.0,
+            "nominalVolts": 12.0,
+            "measuredWatts": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        }
+      ],
+      "wires": [
+        {
+          "id": "mw_g1",
+          "fromComponentId": "m1",
+          "fromPinId": "NEG",
+          "toComponentId": "gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#90A4AE",
+          "busZoneId": "makita_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "mw_pf1",
+          "fromComponentId": "m1",
+          "fromPinId": "POS",
+          "toComponentId": "f1",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_fd1",
+          "fromComponentId": "f1",
+          "fromPinId": "B",
+          "toComponentId": "d1",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_db1",
+          "fromComponentId": "d1",
+          "fromPinId": "CATHODE",
+          "toComponentId": "main_cb",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": "makita_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "mw_g2",
+          "fromComponentId": "m2",
+          "fromPinId": "NEG",
+          "toComponentId": "gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#90A4AE",
+          "busZoneId": "makita_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "mw_pf2",
+          "fromComponentId": "m2",
+          "fromPinId": "POS",
+          "toComponentId": "f2",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_fd2",
+          "fromComponentId": "f2",
+          "fromPinId": "B",
+          "toComponentId": "d2",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_db2",
+          "fromComponentId": "d2",
+          "fromPinId": "CATHODE",
+          "toComponentId": "main_cb",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": "makita_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "mw_g3",
+          "fromComponentId": "m3",
+          "fromPinId": "NEG",
+          "toComponentId": "gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#90A4AE",
+          "busZoneId": "makita_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "mw_pf3",
+          "fromComponentId": "m3",
+          "fromPinId": "POS",
+          "toComponentId": "f3",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_fd3",
+          "fromComponentId": "f3",
+          "fromPinId": "B",
+          "toComponentId": "d3",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_db3",
+          "fromComponentId": "d3",
+          "fromPinId": "CATHODE",
+          "toComponentId": "main_cb",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": "makita_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "mw_g4",
+          "fromComponentId": "m4",
+          "fromPinId": "NEG",
+          "toComponentId": "gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#90A4AE",
+          "busZoneId": "makita_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "mw_pf4",
+          "fromComponentId": "m4",
+          "fromPinId": "POS",
+          "toComponentId": "f4",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_fd4",
+          "fromComponentId": "f4",
+          "fromPinId": "B",
+          "toComponentId": "d4",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_db4",
+          "fromComponentId": "d4",
+          "fromPinId": "CATHODE",
+          "toComponentId": "main_cb",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": "makita_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "mw_g5",
+          "fromComponentId": "m5",
+          "fromPinId": "NEG",
+          "toComponentId": "gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#90A4AE",
+          "busZoneId": "makita_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "mw_pf5",
+          "fromComponentId": "m5",
+          "fromPinId": "POS",
+          "toComponentId": "f5",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_fd5",
+          "fromComponentId": "f5",
+          "fromPinId": "B",
+          "toComponentId": "d5",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_db5",
+          "fromComponentId": "d5",
+          "fromPinId": "CATHODE",
+          "toComponentId": "main_cb",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": "makita_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "mw_g6",
+          "fromComponentId": "m6",
+          "fromPinId": "NEG",
+          "toComponentId": "gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#90A4AE",
+          "busZoneId": "makita_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "mw_pf6",
+          "fromComponentId": "m6",
+          "fromPinId": "POS",
+          "toComponentId": "f6",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_fd6",
+          "fromComponentId": "f6",
+          "fromPinId": "B",
+          "toComponentId": "d6",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_db6",
+          "fromComponentId": "d6",
+          "fromPinId": "CATHODE",
+          "toComponentId": "main_cb",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": "makita_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "mw_g7",
+          "fromComponentId": "m7",
+          "fromPinId": "NEG",
+          "toComponentId": "gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#90A4AE",
+          "busZoneId": "makita_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "mw_pf7",
+          "fromComponentId": "m7",
+          "fromPinId": "POS",
+          "toComponentId": "f7",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_fd7",
+          "fromComponentId": "f7",
+          "fromPinId": "B",
+          "toComponentId": "d7",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_db7",
+          "fromComponentId": "d7",
+          "fromPinId": "CATHODE",
+          "toComponentId": "main_cb",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": "makita_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "mw_g8",
+          "fromComponentId": "m8",
+          "fromPinId": "NEG",
+          "toComponentId": "gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#90A4AE",
+          "busZoneId": "makita_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "mw_pf8",
+          "fromComponentId": "m8",
+          "fromPinId": "POS",
+          "toComponentId": "f8",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_fd8",
+          "fromComponentId": "f8",
+          "fromPinId": "B",
+          "toComponentId": "d8",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_db8",
+          "fromComponentId": "d8",
+          "fromPinId": "CATHODE",
+          "toComponentId": "main_cb",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": "makita_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "mw_g9",
+          "fromComponentId": "m9",
+          "fromPinId": "NEG",
+          "toComponentId": "gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#90A4AE",
+          "busZoneId": "makita_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "mw_pf9",
+          "fromComponentId": "m9",
+          "fromPinId": "POS",
+          "toComponentId": "f9",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_fd9",
+          "fromComponentId": "f9",
+          "fromPinId": "B",
+          "toComponentId": "d9",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_db9",
+          "fromComponentId": "d9",
+          "fromPinId": "CATHODE",
+          "toComponentId": "main_cb",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": "makita_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "mw_g10",
+          "fromComponentId": "m10",
+          "fromPinId": "NEG",
+          "toComponentId": "gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#90A4AE",
+          "busZoneId": "makita_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "mw_pf10",
+          "fromComponentId": "m10",
+          "fromPinId": "POS",
+          "toComponentId": "f10",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_fd10",
+          "fromComponentId": "f10",
+          "fromPinId": "B",
+          "toComponentId": "d10",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_db10",
+          "fromComponentId": "d10",
+          "fromPinId": "CATHODE",
+          "toComponentId": "main_cb",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": "makita_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "mw_cb_dc",
+          "fromComponentId": "main_cb",
+          "fromPinId": "B",
+          "toComponentId": "dcdc",
+          "toPinId": "VIN_P",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_dc_g1",
+          "fromComponentId": "dcdc",
+          "fromPinId": "GND",
+          "toComponentId": "gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#90A4AE",
+          "busZoneId": null,
+          "busMode": "AUTO"
+        },
+        {
+          "id": "mw_dc_g2",
+          "fromComponentId": "dcdc",
+          "fromPinId": "OUT_N",
+          "toComponentId": "gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#90A4AE",
+          "busZoneId": null,
+          "busMode": "AUTO"
+        },
+        {
+          "id": "mw_cb_lr",
+          "fromComponentId": "main_cb",
+          "fromPinId": "B",
+          "toComponentId": "led_r",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#FFA726",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_lr_ok",
+          "fromComponentId": "led_r",
+          "fromPinId": "B",
+          "toComponentId": "led_ok",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#66BB6A",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_ok_g",
+          "fromComponentId": "led_ok",
+          "fromPinId": "CATHODE",
+          "toComponentId": "gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#90A4AE",
+          "busZoneId": null,
+          "busMode": "AUTO"
+        },
+        {
+          "id": "mw_dc_cap",
+          "fromComponentId": "dcdc",
+          "fromPinId": "VOUT_P",
+          "toComponentId": "cap_bank",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_cap_g",
+          "fromComponentId": "cap_bank",
+          "fromPinId": "B",
+          "toComponentId": "gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#90A4AE",
+          "busZoneId": null,
+          "busMode": "AUTO"
+        },
+        {
+          "id": "mw_tvs_g",
+          "fromComponentId": "gnd",
+          "fromPinId": "GND",
+          "toComponentId": "tvs_bus",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#90A4AE",
+          "busZoneId": null,
+          "busMode": "AUTO"
+        },
+        {
+          "id": "mw_tvs_v",
+          "fromComponentId": "tvs_bus",
+          "fromPinId": "CATHODE",
+          "toComponentId": "dcdc",
+          "toPinId": "VOUT_P",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_dc_ign",
+          "fromComponentId": "dcdc",
+          "fromPinId": "VOUT_P",
+          "toComponentId": "ign",
+          "toPinId": "BAT",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_acc",
+          "fromComponentId": "ign",
+          "fromPinId": "ACC",
+          "toComponentId": "acc_load",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#66BB6A",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_acc_g",
+          "fromComponentId": "acc_load",
+          "fromPinId": "B",
+          "toComponentId": "gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#90A4AE",
+          "busZoneId": null,
+          "busMode": "AUTO"
+        },
+        {
+          "id": "mw_ecu",
+          "fromComponentId": "ign",
+          "fromPinId": "IGN",
+          "toComponentId": "ecu_fuel",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#66BB6A",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_ecu_g",
+          "fromComponentId": "ecu_fuel",
+          "fromPinId": "B",
+          "toComponentId": "gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#90A4AE",
+          "busZoneId": null,
+          "busMode": "AUTO"
+        },
+        {
+          "id": "mw_st_com",
+          "fromComponentId": "dcdc",
+          "fromPinId": "VOUT_P",
+          "toComponentId": "st_rly",
+          "toPinId": "COM",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#EF5350",
+          "busZoneId": null,
+          "busMode": "AUTO"
+        },
+        {
+          "id": "mw_st_coil",
+          "fromComponentId": "ign",
+          "fromPinId": "ST",
+          "toComponentId": "st_rly",
+          "toPinId": "COIL_P",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#FFA726",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_st_cg",
+          "fromComponentId": "st_rly",
+          "fromPinId": "COIL_N",
+          "toComponentId": "gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#90A4AE",
+          "busZoneId": null,
+          "busMode": "AUTO"
+        },
+        {
+          "id": "mw_st_no",
+          "fromComponentId": "st_rly",
+          "fromPinId": "NO",
+          "toComponentId": "starter",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#66BB6A",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "mw_st_mg",
+          "fromComponentId": "starter",
+          "fromPinId": "B",
+          "toComponentId": "gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#90A4AE",
+          "busZoneId": null,
+          "busMode": "AUTO"
+        }
+      ],
+      "busZones": [
+        {
+          "id": "makita_bus",
+          "label": "18V PARALLEL & GND BUS DUCT",
+          "x": 680.0,
+          "y": 40.0,
+          "width": 120.0,
+          "height": 1480.0,
+          "orientation": "VERTICAL",
+          "attractByDefault": true,
+          "laneSpacing": 18.0
         }
       ]
     }
