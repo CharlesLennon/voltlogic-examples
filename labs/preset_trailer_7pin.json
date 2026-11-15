@@ -34,7 +34,7 @@
       },
       "boolState": false,
       "subCircuitId": null,
-      "chipColorHex": "#43A047",
+      "chipColorHex": "",
       "ledBrightness": 0.0
     },
     {
@@ -69,7 +69,7 @@
       },
       "boolState": false,
       "subCircuitId": null,
-      "chipColorHex": "#FB8C00",
+      "chipColorHex": "",
       "ledBrightness": 0.0
     },
     {
@@ -101,7 +101,7 @@
       "params": {},
       "boolState": true,
       "subCircuitId": null,
-      "chipColorHex": "#1E88E5",
+      "chipColorHex": "",
       "ledBrightness": 0.0
     },
     {
@@ -133,7 +133,7 @@
       "params": {},
       "boolState": false,
       "subCircuitId": null,
-      "chipColorHex": "#1E88E5",
+      "chipColorHex": "",
       "ledBrightness": 0.0
     },
     {
@@ -165,7 +165,7 @@
       "params": {},
       "boolState": false,
       "subCircuitId": null,
-      "chipColorHex": "#1E88E5",
+      "chipColorHex": "",
       "ledBrightness": 0.0
     },
     {
@@ -209,7 +209,7 @@
       },
       "boolState": true,
       "subCircuitId": null,
-      "chipColorHex": "#8E24AA",
+      "chipColorHex": "",
       "ledBrightness": 0.0
     },
     {
@@ -244,7 +244,7 @@
       },
       "boolState": false,
       "subCircuitId": null,
-      "chipColorHex": "#FDD835",
+      "chipColorHex": "",
       "ledBrightness": 0.0
     },
     {
@@ -279,7 +279,7 @@
       },
       "boolState": false,
       "subCircuitId": null,
-      "chipColorHex": "#FF9800",
+      "chipColorHex": "",
       "ledBrightness": 0.0
     },
     {
@@ -314,7 +314,7 @@
       },
       "boolState": false,
       "subCircuitId": null,
-      "chipColorHex": "#FF9800",
+      "chipColorHex": "",
       "ledBrightness": 0.0
     },
     {
@@ -349,7 +349,7 @@
       },
       "boolState": false,
       "subCircuitId": null,
-      "chipColorHex": "#00897B",
+      "chipColorHex": "",
       "ledBrightness": 0.0
     },
     {
@@ -372,7 +372,7 @@
       "params": {},
       "boolState": false,
       "subCircuitId": null,
-      "chipColorHex": "#546E7A",
+      "chipColorHex": "",
       "ledBrightness": 0.0
     }
   ],

@@ -37,7 +37,7 @@
       },
       "boolState": true,
       "subCircuitId": null,
-      "chipColorHex": "#00ACC1",
+      "chipColorHex": "",
       "ledBrightness": 0.0
     },
     {
@@ -76,7 +76,7 @@
       },
       "boolState": false,
       "subCircuitId": null,
-      "chipColorHex": "#43A047",
+      "chipColorHex": "",
       "ledBrightness": 0.0
     },
     {
@@ -111,7 +111,7 @@
       },
       "boolState": false,
       "subCircuitId": null,
-      "chipColorHex": "#FB8C00",
+      "chipColorHex": "",
       "ledBrightness": 0.0
     },
     {
@@ -164,7 +164,7 @@
       },
       "boolState": false,
       "subCircuitId": null,
-      "chipColorHex": "#D81B60",
+      "chipColorHex": "",
       "ledBrightness": 0.0
     },
     {
@@ -208,7 +208,7 @@
       },
       "boolState": false,
       "subCircuitId": null,
-      "chipColorHex": "#26A69A",
+      "chipColorHex": "",
       "ledBrightness": 0.0
     },
     {
@@ -242,7 +242,7 @@
       },
       "boolState": false,
       "subCircuitId": null,
-      "chipColorHex": "#546E7A",
+      "chipColorHex": "",
       "ledBrightness": 0.0
     },
     {
@@ -281,7 +281,7 @@
       },
       "boolState": false,
       "subCircuitId": null,
-      "chipColorHex": "#2E7D32",
+      "chipColorHex": "",
       "ledBrightness": 0.0
     },
     {
@@ -313,7 +313,7 @@
       "params": {},
       "boolState": true,
       "subCircuitId": null,
-      "chipColorHex": "#1E88E5",
+      "chipColorHex": "",
       "ledBrightness": 0.0
     },
     {
@@ -348,7 +348,7 @@
       },
       "boolState": false,
       "subCircuitId": null,
-      "chipColorHex": "#FDD835",
+      "chipColorHex": "",
       "ledBrightness": 0.0
     },
     {
@@ -383,7 +383,7 @@
       },
       "boolState": false,
       "subCircuitId": null,
-      "chipColorHex": "#00897B",
+      "chipColorHex": "",
       "ledBrightness": 0.0
     },
     {
@@ -406,7 +406,7 @@
       "params": {},
       "boolState": false,
       "subCircuitId": null,
-      "chipColorHex": "#546E7A",
+      "chipColorHex": "",
       "ledBrightness": 0.0
     }
   ],
