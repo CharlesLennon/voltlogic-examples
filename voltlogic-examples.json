@@ -5351,7 +5351,7 @@
           "id": "gnd",
           "type": "GROUND",
           "label": "CHASSIS GND",
-          "x": 900.0,
+          "x": 1800.0,
           "y": 1660.0,
           "pins": [
             {
@@ -5374,7 +5374,7 @@
           "id": "m1",
           "type": "DC_VOLTAGE",
           "label": "MAKITA 18-20V #1",
-          "x": 40.0,
+          "x": 940.0,
           "y": 40.0,
           "pins": [
             {
@@ -5408,7 +5408,7 @@
           "id": "f1",
           "type": "FUSE",
           "label": "40A FUSE #1",
-          "x": 260.0,
+          "x": 1160.0,
           "y": 40.0,
           "pins": [
             {
@@ -5444,7 +5444,7 @@
           "id": "d1",
           "type": "IDEAL_DIODE",
           "label": "IDEAL DIO #1",
-          "x": 480.0,
+          "x": 1380.0,
           "y": 40.0,
           "pins": [
             {
@@ -5480,7 +5480,7 @@
           "id": "chg_ptc1",
           "type": "PTC_BREAKER",
           "label": "10A PTC #1",
-          "x": -460.0,
+          "x": 440.0,
           "y": 40.0,
           "pins": [
             {
@@ -5516,7 +5516,7 @@
           "id": "chg_d1",
           "type": "DIODE",
           "label": "CHG DIODE #1",
-          "x": -220.0,
+          "x": 660.0,
           "y": 40.0,
           "pins": [
             {
@@ -5550,7 +5550,7 @@
           "id": "m2",
           "type": "DC_VOLTAGE",
           "label": "MAKITA 18-20V #2",
-          "x": 40.0,
+          "x": 940.0,
           "y": 190.0,
           "pins": [
             {
@@ -5584,7 +5584,7 @@
           "id": "f2",
           "type": "FUSE",
           "label": "40A FUSE #2",
-          "x": 260.0,
+          "x": 1160.0,
           "y": 190.0,
           "pins": [
             {
@@ -5620,7 +5620,7 @@
           "id": "d2",
           "type": "IDEAL_DIODE",
           "label": "IDEAL DIO #2",
-          "x": 480.0,
+          "x": 1380.0,
           "y": 190.0,
           "pins": [
             {
@@ -5656,7 +5656,7 @@
           "id": "chg_ptc2",
           "type": "PTC_BREAKER",
           "label": "10A PTC #2",
-          "x": -460.0,
+          "x": 440.0,
           "y": 190.0,
           "pins": [
             {
@@ -5692,7 +5692,7 @@
           "id": "chg_d2",
           "type": "DIODE",
           "label": "CHG DIODE #2",
-          "x": -220.0,
+          "x": 660.0,
           "y": 190.0,
           "pins": [
             {
@@ -5726,7 +5726,7 @@
           "id": "m3",
           "type": "DC_VOLTAGE",
           "label": "MAKITA 18-20V #3",
-          "x": 40.0,
+          "x": 940.0,
           "y": 340.0,
           "pins": [
             {
@@ -5760,7 +5760,7 @@
           "id": "f3",
           "type": "FUSE",
           "label": "40A FUSE #3",
-          "x": 260.0,
+          "x": 1160.0,
           "y": 340.0,
           "pins": [
             {
@@ -5796,7 +5796,7 @@
           "id": "d3",
           "type": "IDEAL_DIODE",
           "label": "IDEAL DIO #3",
-          "x": 480.0,
+          "x": 1380.0,
           "y": 340.0,
           "pins": [
             {
@@ -5832,7 +5832,7 @@
           "id": "chg_ptc3",
           "type": "PTC_BREAKER",
           "label": "10A PTC #3",
-          "x": -460.0,
+          "x": 440.0,
           "y": 340.0,
           "pins": [
             {
@@ -5868,7 +5868,7 @@
           "id": "chg_d3",
           "type": "DIODE",
           "label": "CHG DIODE #3",
-          "x": -220.0,
+          "x": 660.0,
           "y": 340.0,
           "pins": [
             {
@@ -5902,7 +5902,7 @@
           "id": "m4",
           "type": "DC_VOLTAGE",
           "label": "MAKITA 18-20V #4",
-          "x": 40.0,
+          "x": 940.0,
           "y": 490.0,
           "pins": [
             {
@@ -5936,7 +5936,7 @@
           "id": "f4",
           "type": "FUSE",
           "label": "40A FUSE #4",
-          "x": 260.0,
+          "x": 1160.0,
           "y": 490.0,
           "pins": [
             {
@@ -5972,7 +5972,7 @@
           "id": "d4",
           "type": "IDEAL_DIODE",
           "label": "IDEAL DIO #4",
-          "x": 480.0,
+          "x": 1380.0,
           "y": 490.0,
           "pins": [
             {
@@ -6008,7 +6008,7 @@
           "id": "chg_ptc4",
           "type": "PTC_BREAKER",
           "label": "10A PTC #4",
-          "x": -460.0,
+          "x": 440.0,
           "y": 490.0,
           "pins": [
             {
@@ -6044,7 +6044,7 @@
           "id": "chg_d4",
           "type": "DIODE",
           "label": "CHG DIODE #4",
-          "x": -220.0,
+          "x": 660.0,
           "y": 490.0,
           "pins": [
             {
@@ -6078,7 +6078,7 @@
           "id": "m5",
           "type": "DC_VOLTAGE",
           "label": "MAKITA 18-20V #5",
-          "x": 40.0,
+          "x": 940.0,
           "y": 640.0,
           "pins": [
             {
@@ -6112,7 +6112,7 @@
           "id": "f5",
           "type": "FUSE",
           "label": "40A FUSE #5",
-          "x": 260.0,
+          "x": 1160.0,
           "y": 640.0,
           "pins": [
             {
@@ -6148,7 +6148,7 @@
           "id": "d5",
           "type": "IDEAL_DIODE",
           "label": "IDEAL DIO #5",
-          "x": 480.0,
+          "x": 1380.0,
           "y": 640.0,
           "pins": [
             {
@@ -6184,7 +6184,7 @@
           "id": "chg_ptc5",
           "type": "PTC_BREAKER",
           "label": "10A PTC #5",
-          "x": -460.0,
+          "x": 440.0,
           "y": 640.0,
           "pins": [
             {
@@ -6220,7 +6220,7 @@
           "id": "chg_d5",
           "type": "DIODE",
           "label": "CHG DIODE #5",
-          "x": -220.0,
+          "x": 660.0,
           "y": 640.0,
           "pins": [
             {
@@ -6254,7 +6254,7 @@
           "id": "m6",
           "type": "DC_VOLTAGE",
           "label": "MAKITA 18-20V #6",
-          "x": 40.0,
+          "x": 940.0,
           "y": 790.0,
           "pins": [
             {
@@ -6288,7 +6288,7 @@
           "id": "f6",
           "type": "FUSE",
           "label": "40A FUSE #6",
-          "x": 260.0,
+          "x": 1160.0,
           "y": 790.0,
           "pins": [
             {
@@ -6324,7 +6324,7 @@
           "id": "d6",
           "type": "IDEAL_DIODE",
           "label": "IDEAL DIO #6",
-          "x": 480.0,
+          "x": 1380.0,
           "y": 790.0,
           "pins": [
             {
@@ -6360,7 +6360,7 @@
           "id": "chg_ptc6",
           "type": "PTC_BREAKER",
           "label": "10A PTC #6",
-          "x": -460.0,
+          "x": 440.0,
           "y": 790.0,
           "pins": [
             {
@@ -6396,7 +6396,7 @@
           "id": "chg_d6",
           "type": "DIODE",
           "label": "CHG DIODE #6",
-          "x": -220.0,
+          "x": 660.0,
           "y": 790.0,
           "pins": [
             {
@@ -6430,7 +6430,7 @@
           "id": "m7",
           "type": "DC_VOLTAGE",
           "label": "MAKITA 18-20V #7",
-          "x": 40.0,
+          "x": 940.0,
           "y": 940.0,
           "pins": [
             {
@@ -6464,7 +6464,7 @@
           "id": "f7",
           "type": "FUSE",
           "label": "40A FUSE #7",
-          "x": 260.0,
+          "x": 1160.0,
           "y": 940.0,
           "pins": [
             {
@@ -6500,7 +6500,7 @@
           "id": "d7",
           "type": "IDEAL_DIODE",
           "label": "IDEAL DIO #7",
-          "x": 480.0,
+          "x": 1380.0,
           "y": 940.0,
           "pins": [
             {
@@ -6536,7 +6536,7 @@
           "id": "chg_ptc7",
           "type": "PTC_BREAKER",
           "label": "10A PTC #7",
-          "x": -460.0,
+          "x": 440.0,
           "y": 940.0,
           "pins": [
             {
@@ -6572,7 +6572,7 @@
           "id": "chg_d7",
           "type": "DIODE",
           "label": "CHG DIODE #7",
-          "x": -220.0,
+          "x": 660.0,
           "y": 940.0,
           "pins": [
             {
@@ -6606,7 +6606,7 @@
           "id": "m8",
           "type": "DC_VOLTAGE",
           "label": "MAKITA 18-20V #8",
-          "x": 40.0,
+          "x": 940.0,
           "y": 1090.0,
           "pins": [
             {
@@ -6640,7 +6640,7 @@
           "id": "f8",
           "type": "FUSE",
           "label": "40A FUSE #8",
-          "x": 260.0,
+          "x": 1160.0,
           "y": 1090.0,
           "pins": [
             {
@@ -6676,7 +6676,7 @@
           "id": "d8",
           "type": "IDEAL_DIODE",
           "label": "IDEAL DIO #8",
-          "x": 480.0,
+          "x": 1380.0,
           "y": 1090.0,
           "pins": [
             {
@@ -6712,7 +6712,7 @@
           "id": "chg_ptc8",
           "type": "PTC_BREAKER",
           "label": "10A PTC #8",
-          "x": -460.0,
+          "x": 440.0,
           "y": 1090.0,
           "pins": [
             {
@@ -6748,7 +6748,7 @@
           "id": "chg_d8",
           "type": "DIODE",
           "label": "CHG DIODE #8",
-          "x": -220.0,
+          "x": 660.0,
           "y": 1090.0,
           "pins": [
             {
@@ -6782,7 +6782,7 @@
           "id": "m9",
           "type": "DC_VOLTAGE",
           "label": "MAKITA 18-20V #9",
-          "x": 40.0,
+          "x": 940.0,
           "y": 1240.0,
           "pins": [
             {
@@ -6816,7 +6816,7 @@
           "id": "f9",
           "type": "FUSE",
           "label": "40A FUSE #9",
-          "x": 260.0,
+          "x": 1160.0,
           "y": 1240.0,
           "pins": [
             {
@@ -6852,7 +6852,7 @@
           "id": "d9",
           "type": "IDEAL_DIODE",
           "label": "IDEAL DIO #9",
-          "x": 480.0,
+          "x": 1380.0,
           "y": 1240.0,
           "pins": [
             {
@@ -6888,7 +6888,7 @@
           "id": "chg_ptc9",
           "type": "PTC_BREAKER",
           "label": "10A PTC #9",
-          "x": -460.0,
+          "x": 440.0,
           "y": 1240.0,
           "pins": [
             {
@@ -6924,7 +6924,7 @@
           "id": "chg_d9",
           "type": "DIODE",
           "label": "CHG DIODE #9",
-          "x": -220.0,
+          "x": 660.0,
           "y": 1240.0,
           "pins": [
             {
@@ -6958,7 +6958,7 @@
           "id": "m10",
           "type": "DC_VOLTAGE",
           "label": "MAKITA 18-20V #10",
-          "x": 40.0,
+          "x": 940.0,
           "y": 1390.0,
           "pins": [
             {
@@ -6992,7 +6992,7 @@
           "id": "f10",
           "type": "FUSE",
           "label": "40A FUSE #10",
-          "x": 260.0,
+          "x": 1160.0,
           "y": 1390.0,
           "pins": [
             {
@@ -7028,7 +7028,7 @@
           "id": "d10",
           "type": "IDEAL_DIODE",
           "label": "IDEAL DIO #10",
-          "x": 480.0,
+          "x": 1380.0,
           "y": 1390.0,
           "pins": [
             {
@@ -7064,7 +7064,7 @@
           "id": "chg_ptc10",
           "type": "PTC_BREAKER",
           "label": "10A PTC #10",
-          "x": -460.0,
+          "x": 440.0,
           "y": 1390.0,
           "pins": [
             {
@@ -7100,7 +7100,7 @@
           "id": "chg_d10",
           "type": "DIODE",
           "label": "CHG DIODE #10",
-          "x": -220.0,
+          "x": 660.0,
           "y": 1390.0,
           "pins": [
             {
@@ -7134,7 +7134,7 @@
           "id": "main_cb",
           "type": "PTC_BREAKER",
           "label": "150A MAIN BREAKER",
-          "x": 860.0,
+          "x": 1760.0,
           "y": 260.0,
           "pins": [
             {
@@ -7170,7 +7170,7 @@
           "id": "dcdc",
           "type": "BUCK_CONVERTER",
           "label": "18-20V->13.8V 100A",
-          "x": 1100.0,
+          "x": 2000.0,
           "y": 260.0,
           "pins": [
             {
@@ -7226,7 +7226,7 @@
           "id": "led_r",
           "type": "RESISTOR",
           "label": "1k LED RES",
-          "x": 1100.0,
+          "x": 2000.0,
           "y": 80.0,
           "pins": [
             {
@@ -7260,7 +7260,7 @@
           "id": "led_ok",
           "type": "LED",
           "label": "DOCK POWER OK",
-          "x": 1320.0,
+          "x": 2220.0,
           "y": 80.0,
           "pins": [
             {
@@ -7292,7 +7292,7 @@
           "id": "cap_bank",
           "type": "SUPERCAPACITOR",
           "label": "500F SUPERCAP",
-          "x": 1360.0,
+          "x": 2260.0,
           "y": 260.0,
           "pins": [
             {
@@ -7329,7 +7329,7 @@
           "id": "tvs_bus",
           "type": "ZENER_DIODE",
           "label": "16V SURGE TVS",
-          "x": 1360.0,
+          "x": 2260.0,
           "y": 440.0,
           "pins": [
             {
@@ -7365,7 +7365,7 @@
           "id": "ign",
           "type": "SWITCH_IGNITION",
           "label": "IGNITION KEY",
-          "x": 1360.0,
+          "x": 2260.0,
           "y": 640.0,
           "pins": [
             {
@@ -7417,7 +7417,7 @@
           "id": "acc_load",
           "type": "LOAD_LAMP",
           "label": "LIGHTS & FAN",
-          "x": 1620.0,
+          "x": 2520.0,
           "y": 560.0,
           "pins": [
             {
@@ -7453,7 +7453,7 @@
           "id": "ecu_fuel",
           "type": "LOAD_LAMP",
           "label": "ECU & FUEL PUMP",
-          "x": 1620.0,
+          "x": 2520.0,
           "y": 740.0,
           "pins": [
             {
@@ -7489,7 +7489,7 @@
           "id": "st_rly",
           "type": "RELAY_SPST",
           "label": "STARTER SOLENOID",
-          "x": 1620.0,
+          "x": 2520.0,
           "y": 940.0,
           "pins": [
             {
@@ -7542,7 +7542,7 @@
           "id": "alt",
           "type": "ALTERNATOR",
           "label": "ALT 14.4V",
-          "x": 1100.0,
+          "x": 2000.0,
           "y": 500.0,
           "pins": [
             {
@@ -7579,7 +7579,7 @@
           "id": "alt_dio",
           "type": "IDEAL_DIODE",
           "label": "ALT ISOLATOR",
-          "x": 1100.0,
+          "x": 2000.0,
           "y": 680.0,
           "pins": [
             {
@@ -7615,7 +7615,7 @@
           "id": "chg",
           "type": "BUCK_CONVERTER",
           "label": "21V CC/CV CHARGER",
-          "x": -860.0,
+          "x": 40.0,
           "y": 650.0,
           "pins": [
             {
@@ -7671,7 +7671,7 @@
           "id": "starter",
           "type": "LOAD_MOTOR",
           "label": "STARTER MOTOR",
-          "x": 1880.0,
+          "x": 2780.0,
           "y": 940.0,
           "pins": [
             {
@@ -9054,7 +9054,7 @@
         {
           "id": "makita_bus",
           "label": "18-20V PARALLEL & GND BUS DUCT",
-          "x": 680.0,
+          "x": 1580.0,
           "y": 40.0,
           "width": 120.0,
           "height": 1480.0,
@@ -9065,7 +9065,7 @@
         {
           "id": "charge_bus",
           "label": "21.0V CC/CV CHARGE BUS",
-          "x": -640.0,
+          "x": 260.0,
           "y": 40.0,
           "width": 120.0,
           "height": 1480.0,
