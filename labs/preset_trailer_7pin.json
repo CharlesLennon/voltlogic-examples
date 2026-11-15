@@ -177,8 +177,8 @@
       "y": 520.0,
       "pins": [
         {
-          "id": "VIN",
-          "name": "VIN",
+          "id": "VIN_P",
+          "name": "VIN+",
           "isInput": true,
           "side": "LEFT",
           "relativeIndex": 0,
@@ -195,18 +195,27 @@
           "currentMa": 0.0
         },
         {
-          "id": "VOUT",
-          "name": "OUT",
+          "id": "PWM_OUT",
+          "name": "PWM+",
           "isInput": false,
           "side": "RIGHT",
           "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "OUT_N",
+          "name": "PWM-",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 1,
           "voltage": 0.0,
           "currentMa": 0.0
         }
       ],
       "params": {
         "dutyPct": 65.0,
-        "maxVolts": 12.6
+        "frequencyHz": 1000.0
       },
       "boolState": true,
       "subCircuitId": null,
@@ -443,7 +452,7 @@
       "fromComponentId": "tr_fuse",
       "fromPinId": "B",
       "toComponentId": "tr_pwm_brk",
-      "toPinId": "VIN",
+      "toPinId": "VIN_P",
       "voltage": 0.0,
       "currentMa": 0.0,
       "particlePhase": 0.0,
@@ -497,7 +506,7 @@
     {
       "id": "tw9",
       "fromComponentId": "tr_pwm_brk",
-      "fromPinId": "VOUT",
+      "fromPinId": "PWM_OUT",
       "toComponentId": "tr_brk_coil",
       "toPinId": "A",
       "voltage": 0.0,
