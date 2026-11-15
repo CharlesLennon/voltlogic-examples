@@ -199,8 +199,8 @@
       "id": "plc_mot",
       "type": "LOAD_MOTOR",
       "label": "CONVEYOR MTR",
-      "x": 1020.0,
-      "y": 80.0,
+      "x": 1060.0,
+      "y": 60.0,
       "pins": [
         {
           "id": "A",
@@ -231,11 +231,45 @@
       "ledBrightness": 0.0
     },
     {
+      "id": "plc_res_run",
+      "type": "RESISTOR",
+      "label": "1.1k\u03a9 LED",
+      "x": 1020.0,
+      "y": 220.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "1",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "2",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "ohms": 1100.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#8D6E63",
+      "ledBrightness": 0.0
+    },
+    {
       "id": "plc_led_run",
       "type": "LED",
       "label": "RUN LAMP",
-      "x": 1020.0,
-      "y": 200.0,
+      "x": 1220.0,
+      "y": 220.0,
       "pins": [
         {
           "id": "ANODE",
@@ -266,45 +300,11 @@
       "ledBrightness": 0.0
     },
     {
-      "id": "plc_res_run",
-      "type": "RESISTOR",
-      "label": "1.1k\u03a9 LED",
-      "x": 880.0,
-      "y": 200.0,
-      "pins": [
-        {
-          "id": "A",
-          "name": "1",
-          "isInput": true,
-          "side": "LEFT",
-          "relativeIndex": 0,
-          "voltage": 0.0,
-          "currentMa": 0.0
-        },
-        {
-          "id": "B",
-          "name": "2",
-          "isInput": false,
-          "side": "RIGHT",
-          "relativeIndex": 0,
-          "voltage": 0.0,
-          "currentMa": 0.0
-        }
-      ],
-      "params": {
-        "ohms": 1100.0
-      },
-      "boolState": false,
-      "subCircuitId": null,
-      "chipColorHex": "#8D6E63",
-      "ledBrightness": 0.0
-    },
-    {
       "id": "plc_gnd",
       "type": "GROUND",
       "label": "0V COMMON",
       "x": 580.0,
-      "y": 440.0,
+      "y": 480.0,
       "pins": [
         {
           "id": "GND",

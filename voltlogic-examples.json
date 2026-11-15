@@ -3029,7 +3029,7 @@
           "id": "vsr_bat1",
           "type": "BATTERY_CAR_12V",
           "label": "STARTER 12V",
-          "x": 240.0,
+          "x": 260.0,
           "y": 60.0,
           "pins": [
             {
@@ -3068,7 +3068,7 @@
           "id": "vsr_fuse1",
           "type": "FUSE",
           "label": "100A MIDI",
-          "x": 440.0,
+          "x": 480.0,
           "y": 60.0,
           "pins": [
             {
@@ -3103,8 +3103,8 @@
           "id": "vsr_rly",
           "type": "RELAY_SPST",
           "label": "VSR 120A",
-          "x": 640.0,
-          "y": 120.0,
+          "x": 700.0,
+          "y": 100.0,
           "pins": [
             {
               "id": "COIL_P",
@@ -3156,7 +3156,7 @@
           "id": "vsr_cmp",
           "type": "COMPARATOR",
           "label": "VSR >13.3V",
-          "x": 440.0,
+          "x": 480.0,
           "y": 220.0,
           "pins": [
             {
@@ -3200,7 +3200,7 @@
           "id": "vsr_ref",
           "type": "DC_VOLTAGE",
           "label": "REF 13.3V",
-          "x": 240.0,
+          "x": 260.0,
           "y": 240.0,
           "pins": [
             {
@@ -3234,7 +3234,7 @@
           "id": "vsr_bat2",
           "type": "BATTERY_CAR_12V",
           "label": "HOUSE 12V",
-          "x": 860.0,
+          "x": 940.0,
           "y": 60.0,
           "pins": [
             {
@@ -3273,7 +3273,7 @@
           "id": "vsr_sw",
           "type": "SPST_SWITCH",
           "label": "CABIN MASTER",
-          "x": 860.0,
+          "x": 940.0,
           "y": 220.0,
           "pins": [
             {
@@ -3305,8 +3305,8 @@
           "id": "vsr_lamp",
           "type": "LOAD_LAMP",
           "label": "CABIN LEDS",
-          "x": 1080.0,
-          "y": 140.0,
+          "x": 1180.0,
+          "y": 120.0,
           "pins": [
             {
               "id": "A",
@@ -3340,8 +3340,8 @@
           "id": "vsr_fan",
           "type": "LOAD_MOTOR",
           "label": "FRIDGE / FAN",
-          "x": 1080.0,
-          "y": 260.0,
+          "x": 1180.0,
+          "y": 280.0,
           "pins": [
             {
               "id": "A",
@@ -3375,8 +3375,8 @@
           "id": "vsr_gnd",
           "type": "GROUND",
           "label": "CHASSIS GND",
-          "x": 640.0,
-          "y": 440.0,
+          "x": 700.0,
+          "y": 480.0,
           "pins": [
             {
               "id": "GND",
@@ -3659,7 +3659,7 @@
           "type": "DC_VOLTAGE",
           "label": "TOW 12V",
           "x": 40.0,
-          "y": 140.0,
+          "y": 200.0,
           "pins": [
             {
               "id": "NEG",
@@ -3693,7 +3693,7 @@
           "type": "FUSE",
           "label": "30A TRAILER",
           "x": 220.0,
-          "y": 140.0,
+          "y": 200.0,
           "pins": [
             {
               "id": "A",
@@ -3760,7 +3760,7 @@
           "type": "SPST_SWITCH",
           "label": "LEFT TURN",
           "x": 420.0,
-          "y": 140.0,
+          "y": 200.0,
           "pins": [
             {
               "id": "A",
@@ -3792,7 +3792,7 @@
           "type": "SPST_SWITCH",
           "label": "RIGHT TURN",
           "x": 420.0,
-          "y": 240.0,
+          "y": 360.0,
           "pins": [
             {
               "id": "A",
@@ -3824,7 +3824,7 @@
           "type": "PWM_CONTROLLER",
           "label": "BRAKE GAIN",
           "x": 420.0,
-          "y": 340.0,
+          "y": 520.0,
           "pins": [
             {
               "id": "VIN",
@@ -3867,7 +3867,7 @@
           "id": "tr_lamp_tail",
           "type": "LOAD_LAMP",
           "label": "MARKER LAMPS",
-          "x": 940.0,
+          "x": 960.0,
           "y": 40.0,
           "pins": [
             {
@@ -3902,8 +3902,8 @@
           "id": "tr_lamp_left",
           "type": "LOAD_LAMP",
           "label": "LEFT STOP/TURN",
-          "x": 940.0,
-          "y": 140.0,
+          "x": 960.0,
+          "y": 200.0,
           "pins": [
             {
               "id": "A",
@@ -3937,8 +3937,8 @@
           "id": "tr_lamp_right",
           "type": "LOAD_LAMP",
           "label": "RIGHT STOP/TURN",
-          "x": 940.0,
-          "y": 240.0,
+          "x": 960.0,
+          "y": 360.0,
           "pins": [
             {
               "id": "A",
@@ -3972,8 +3972,8 @@
           "id": "tr_brk_coil",
           "type": "LOAD_MOTOR",
           "label": "ELEC BRAKE COILS",
-          "x": 940.0,
-          "y": 340.0,
+          "x": 960.0,
+          "y": 520.0,
           "pins": [
             {
               "id": "A",
@@ -4008,7 +4008,7 @@
           "type": "GROUND",
           "label": "PIN 1 WHT GND",
           "x": 700.0,
-          "y": 520.0,
+          "y": 680.0,
           "pins": [
             {
               "id": "GND",
@@ -5003,8 +5003,8 @@
           "id": "plc_mot",
           "type": "LOAD_MOTOR",
           "label": "CONVEYOR MTR",
-          "x": 1020.0,
-          "y": 80.0,
+          "x": 1060.0,
+          "y": 60.0,
           "pins": [
             {
               "id": "A",
@@ -5035,11 +5035,45 @@
           "ledBrightness": 0.0
         },
         {
+          "id": "plc_res_run",
+          "type": "RESISTOR",
+          "label": "1.1k\u03a9 LED",
+          "x": 1020.0,
+          "y": 220.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "1",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "2",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "ohms": 1100.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "#8D6E63",
+          "ledBrightness": 0.0
+        },
+        {
           "id": "plc_led_run",
           "type": "LED",
           "label": "RUN LAMP",
-          "x": 1020.0,
-          "y": 200.0,
+          "x": 1220.0,
+          "y": 220.0,
           "pins": [
             {
               "id": "ANODE",
@@ -5070,45 +5104,11 @@
           "ledBrightness": 0.0
         },
         {
-          "id": "plc_res_run",
-          "type": "RESISTOR",
-          "label": "1.1k\u03a9 LED",
-          "x": 880.0,
-          "y": 200.0,
-          "pins": [
-            {
-              "id": "A",
-              "name": "1",
-              "isInput": true,
-              "side": "LEFT",
-              "relativeIndex": 0,
-              "voltage": 0.0,
-              "currentMa": 0.0
-            },
-            {
-              "id": "B",
-              "name": "2",
-              "isInput": false,
-              "side": "RIGHT",
-              "relativeIndex": 0,
-              "voltage": 0.0,
-              "currentMa": 0.0
-            }
-          ],
-          "params": {
-            "ohms": 1100.0
-          },
-          "boolState": false,
-          "subCircuitId": null,
-          "chipColorHex": "#8D6E63",
-          "ledBrightness": 0.0
-        },
-        {
           "id": "plc_gnd",
           "type": "GROUND",
           "label": "0V COMMON",
           "x": 580.0,
-          "y": 440.0,
+          "y": 480.0,
           "pins": [
             {
               "id": "GND",

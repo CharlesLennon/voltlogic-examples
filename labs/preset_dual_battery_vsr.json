@@ -44,7 +44,7 @@
       "id": "vsr_bat1",
       "type": "BATTERY_CAR_12V",
       "label": "STARTER 12V",
-      "x": 240.0,
+      "x": 260.0,
       "y": 60.0,
       "pins": [
         {
@@ -83,7 +83,7 @@
       "id": "vsr_fuse1",
       "type": "FUSE",
       "label": "100A MIDI",
-      "x": 440.0,
+      "x": 480.0,
       "y": 60.0,
       "pins": [
         {
@@ -118,8 +118,8 @@
       "id": "vsr_rly",
       "type": "RELAY_SPST",
       "label": "VSR 120A",
-      "x": 640.0,
-      "y": 120.0,
+      "x": 700.0,
+      "y": 100.0,
       "pins": [
         {
           "id": "COIL_P",
@@ -171,7 +171,7 @@
       "id": "vsr_cmp",
       "type": "COMPARATOR",
       "label": "VSR >13.3V",
-      "x": 440.0,
+      "x": 480.0,
       "y": 220.0,
       "pins": [
         {
@@ -215,7 +215,7 @@
       "id": "vsr_ref",
       "type": "DC_VOLTAGE",
       "label": "REF 13.3V",
-      "x": 240.0,
+      "x": 260.0,
       "y": 240.0,
       "pins": [
         {
@@ -249,7 +249,7 @@
       "id": "vsr_bat2",
       "type": "BATTERY_CAR_12V",
       "label": "HOUSE 12V",
-      "x": 860.0,
+      "x": 940.0,
       "y": 60.0,
       "pins": [
         {
@@ -288,7 +288,7 @@
       "id": "vsr_sw",
       "type": "SPST_SWITCH",
       "label": "CABIN MASTER",
-      "x": 860.0,
+      "x": 940.0,
       "y": 220.0,
       "pins": [
         {
@@ -320,8 +320,8 @@
       "id": "vsr_lamp",
       "type": "LOAD_LAMP",
       "label": "CABIN LEDS",
-      "x": 1080.0,
-      "y": 140.0,
+      "x": 1180.0,
+      "y": 120.0,
       "pins": [
         {
           "id": "A",
@@ -355,8 +355,8 @@
       "id": "vsr_fan",
       "type": "LOAD_MOTOR",
       "label": "FRIDGE / FAN",
-      "x": 1080.0,
-      "y": 260.0,
+      "x": 1180.0,
+      "y": 280.0,
       "pins": [
         {
           "id": "A",
@@ -390,8 +390,8 @@
       "id": "vsr_gnd",
       "type": "GROUND",
       "label": "CHASSIS GND",
-      "x": 640.0,
-      "y": 440.0,
+      "x": 700.0,
+      "y": 480.0,
       "pins": [
         {
           "id": "GND",
