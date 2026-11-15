@@ -270,7 +270,7 @@
         }
       ],
       "params": {
-        "ohms": 1.2
+        "resistanceOhms": 1.2
       },
       "boolState": false,
       "subCircuitId": null,

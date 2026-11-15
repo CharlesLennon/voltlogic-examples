@@ -258,7 +258,7 @@
         }
       ],
       "params": {
-        "ohms": 1100.0
+        "resistanceOhms": 1100.0
       },
       "boolState": false,
       "subCircuitId": null,
