@@ -1,0 +1,666 @@
+{
+  "id": "preset_dual_battery_vsr",
+  "title": "Dual-Battery Camper Split-Charge (VSR)",
+  "description": "Alternator charges Starter Battery; when >13.3V, Comparator pulls in the VSR Contactor to charge the House Battery and run Cabin Loads.",
+  "components": [
+    {
+      "id": "vsr_alt",
+      "type": "ALTERNATOR",
+      "label": "ALT 14.4V",
+      "x": 40.0,
+      "y": 60.0,
+      "pins": [
+        {
+          "id": "NEG",
+          "name": "B-",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "POS",
+          "name": "B+",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "voltage": 14.4,
+        "internalOhms": 0.015,
+        "maxAmps": 120.0,
+        "measuredAmps": 0.0
+      },
+      "boolState": true,
+      "subCircuitId": null,
+      "chipColorHex": "#00ACC1",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "vsr_bat1",
+      "type": "BATTERY_CAR_12V",
+      "label": "STARTER 12V",
+      "x": 240.0,
+      "y": 60.0,
+      "pins": [
+        {
+          "id": "NEG",
+          "name": "-",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "POS",
+          "name": "+",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "voltage": 12.6,
+        "internalOhms": 0.012,
+        "capacityAh": 70.0,
+        "maxAmps": 400.0,
+        "chargePct": 100.0,
+        "measuredAmps": 0.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#43A047",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "vsr_fuse1",
+      "type": "FUSE",
+      "label": "100A MIDI",
+      "x": 440.0,
+      "y": 60.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "1",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "2",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "ratingAmps": 100.0,
+        "blown": 0.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#FB8C00",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "vsr_rly",
+      "type": "RELAY_SPST",
+      "label": "VSR 120A",
+      "x": 640.0,
+      "y": 120.0,
+      "pins": [
+        {
+          "id": "COIL_P",
+          "name": "86",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "COIL_N",
+          "name": "85",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 1,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "COM",
+          "name": "30",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 2,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "NO",
+          "name": "87",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "pullInVolts": 2.5,
+        "coilOhms": 100.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#D81B60",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "vsr_cmp",
+      "type": "COMPARATOR",
+      "label": "VSR >13.3V",
+      "x": 440.0,
+      "y": 220.0,
+      "pins": [
+        {
+          "id": "IN_P",
+          "name": "+",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "IN_N",
+          "name": "-",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 1,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "OUT",
+          "name": "OUT",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "hysteresisVolts": 0.2,
+        "outHighVolts": 12.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#26A69A",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "vsr_ref",
+      "type": "DC_VOLTAGE",
+      "label": "REF 13.3V",
+      "x": 240.0,
+      "y": 240.0,
+      "pins": [
+        {
+          "id": "NEG",
+          "name": "-",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "POS",
+          "name": "+",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "voltage": 13.3
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#546E7A",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "vsr_bat2",
+      "type": "BATTERY_CAR_12V",
+      "label": "HOUSE 12V",
+      "x": 860.0,
+      "y": 60.0,
+      "pins": [
+        {
+          "id": "NEG",
+          "name": "-",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "POS",
+          "name": "+",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "voltage": 12.2,
+        "internalOhms": 0.015,
+        "capacityAh": 100.0,
+        "maxAmps": 300.0,
+        "chargePct": 85.0,
+        "measuredAmps": 0.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#2E7D32",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "vsr_sw",
+      "type": "SPST_SWITCH",
+      "label": "CABIN MASTER",
+      "x": 860.0,
+      "y": 220.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "IN",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "OUT",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": true,
+      "subCircuitId": null,
+      "chipColorHex": "#1E88E5",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "vsr_lamp",
+      "type": "LOAD_LAMP",
+      "label": "CABIN LEDS",
+      "x": 1080.0,
+      "y": 140.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "+",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "-",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "ohms": 6.0,
+        "ratedWatts": 24.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#FDD835",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "vsr_fan",
+      "type": "LOAD_MOTOR",
+      "label": "FRIDGE / FAN",
+      "x": 1080.0,
+      "y": 260.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "+",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "-",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "ohms": 2.4,
+        "ratedWatts": 60.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#00897B",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "vsr_gnd",
+      "type": "GROUND",
+      "label": "CHASSIS GND",
+      "x": 640.0,
+      "y": 440.0,
+      "pins": [
+        {
+          "id": "GND",
+          "name": "0V",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#546E7A",
+      "ledBrightness": 0.0
+    }
+  ],
+  "wires": [
+    {
+      "id": "vw1",
+      "fromComponentId": "vsr_alt",
+      "fromPinId": "POS",
+      "toComponentId": "vsr_bat1",
+      "toPinId": "POS",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#EF5350",
+      "busZoneId": null,
+      "busMode": "DIRECT"
+    },
+    {
+      "id": "vw2",
+      "fromComponentId": "vsr_bat1",
+      "fromPinId": "POS",
+      "toComponentId": "vsr_fuse1",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#EF5350",
+      "busZoneId": null,
+      "busMode": "DIRECT"
+    },
+    {
+      "id": "vw3",
+      "fromComponentId": "vsr_fuse1",
+      "fromPinId": "B",
+      "toComponentId": "vsr_rly",
+      "toPinId": "COM",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#EF5350",
+      "busZoneId": null,
+      "busMode": "DIRECT"
+    },
+    {
+      "id": "vw4",
+      "fromComponentId": "vsr_bat1",
+      "fromPinId": "POS",
+      "toComponentId": "vsr_cmp",
+      "toPinId": "IN_P",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#42A5F5",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "vw5",
+      "fromComponentId": "vsr_ref",
+      "fromPinId": "POS",
+      "toComponentId": "vsr_cmp",
+      "toPinId": "IN_N",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#26C6DA",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "vw6",
+      "fromComponentId": "vsr_cmp",
+      "fromPinId": "OUT",
+      "toComponentId": "vsr_rly",
+      "toPinId": "COIL_P",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#FFA726",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "vw7",
+      "fromComponentId": "vsr_rly",
+      "fromPinId": "NO",
+      "toComponentId": "vsr_bat2",
+      "toPinId": "POS",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#EF5350",
+      "busZoneId": null,
+      "busMode": "DIRECT"
+    },
+    {
+      "id": "vw8",
+      "fromComponentId": "vsr_bat2",
+      "fromPinId": "POS",
+      "toComponentId": "vsr_sw",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#EF5350",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "vw9",
+      "fromComponentId": "vsr_sw",
+      "fromPinId": "B",
+      "toComponentId": "vsr_lamp",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#66BB6A",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "vw10",
+      "fromComponentId": "vsr_sw",
+      "fromPinId": "B",
+      "toComponentId": "vsr_fan",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#66BB6A",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "vw11",
+      "fromComponentId": "vsr_alt",
+      "fromPinId": "NEG",
+      "toComponentId": "vsr_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#90A4AE",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "vw12",
+      "fromComponentId": "vsr_bat1",
+      "fromPinId": "NEG",
+      "toComponentId": "vsr_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#90A4AE",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "vw13",
+      "fromComponentId": "vsr_ref",
+      "fromPinId": "NEG",
+      "toComponentId": "vsr_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#90A4AE",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "vw14",
+      "fromComponentId": "vsr_rly",
+      "fromPinId": "COIL_N",
+      "toComponentId": "vsr_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#90A4AE",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "vw15",
+      "fromComponentId": "vsr_bat2",
+      "fromPinId": "NEG",
+      "toComponentId": "vsr_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#90A4AE",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "vw16",
+      "fromComponentId": "vsr_lamp",
+      "fromPinId": "B",
+      "toComponentId": "vsr_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#90A4AE",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "vw17",
+      "fromComponentId": "vsr_fan",
+      "fromPinId": "B",
+      "toComponentId": "vsr_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#90A4AE",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    }
+  ],
+  "busZones": [
+    {
+      "id": "vsr_bus",
+      "label": "CAMPER HARNESS DUCT",
+      "x": 200.0,
+      "y": 340.0,
+      "width": 840.0,
+      "height": 90.0,
+      "orientation": "HORIZONTAL",
+      "attractByDefault": true,
+      "laneSpacing": 20.0
+    }
+  ]
+}

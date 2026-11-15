@@ -1,0 +1,604 @@
+{
+  "id": "preset_trailer_7pin",
+  "title": "Trailer 7-Pin Lighting & Brake Harness",
+  "description": "Tow-rig 7-pin plug distribution: Tail/Marker, Left & Right Stop/Turn, and PWM Electric Brake Controller routed cleanly through a 7-Pin Harness Duct.",
+  "components": [
+    {
+      "id": "tr_bat",
+      "type": "DC_VOLTAGE",
+      "label": "TOW 12V",
+      "x": 40.0,
+      "y": 140.0,
+      "pins": [
+        {
+          "id": "NEG",
+          "name": "-",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "POS",
+          "name": "+",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "voltage": 12.6
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#43A047",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "tr_fuse",
+      "type": "FUSE",
+      "label": "30A TRAILER",
+      "x": 220.0,
+      "y": 140.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "1",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "2",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "ratingAmps": 30.0,
+        "blown": 0.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#FB8C00",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "tr_sw_tail",
+      "type": "SPST_SWITCH",
+      "label": "TAIL / MARKER",
+      "x": 420.0,
+      "y": 40.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "IN",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "OUT",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": true,
+      "subCircuitId": null,
+      "chipColorHex": "#1E88E5",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "tr_sw_left",
+      "type": "SPST_SWITCH",
+      "label": "LEFT TURN",
+      "x": 420.0,
+      "y": 140.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "IN",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "OUT",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#1E88E5",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "tr_sw_right",
+      "type": "SPST_SWITCH",
+      "label": "RIGHT TURN",
+      "x": 420.0,
+      "y": 240.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "IN",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "OUT",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#1E88E5",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "tr_pwm_brk",
+      "type": "PWM_CONTROLLER",
+      "label": "BRAKE GAIN",
+      "x": 420.0,
+      "y": 340.0,
+      "pins": [
+        {
+          "id": "VIN",
+          "name": "VIN",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "GND",
+          "name": "GND",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 1,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "VOUT",
+          "name": "OUT",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "dutyPct": 65.0,
+        "maxVolts": 12.6
+      },
+      "boolState": true,
+      "subCircuitId": null,
+      "chipColorHex": "#8E24AA",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "tr_lamp_tail",
+      "type": "LOAD_LAMP",
+      "label": "MARKER LAMPS",
+      "x": 940.0,
+      "y": 40.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "+",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "-",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "ohms": 4.8,
+        "ratedWatts": 30.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#FDD835",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "tr_lamp_left",
+      "type": "LOAD_LAMP",
+      "label": "LEFT STOP/TURN",
+      "x": 940.0,
+      "y": 140.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "+",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "-",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "ohms": 5.3,
+        "ratedWatts": 27.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#FF9800",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "tr_lamp_right",
+      "type": "LOAD_LAMP",
+      "label": "RIGHT STOP/TURN",
+      "x": 940.0,
+      "y": 240.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "+",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "-",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "ohms": 5.3,
+        "ratedWatts": 27.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#FF9800",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "tr_brk_coil",
+      "type": "LOAD_MOTOR",
+      "label": "ELEC BRAKE COILS",
+      "x": 940.0,
+      "y": 340.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "+",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "-",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "ohms": 1.6,
+        "ratedWatts": 90.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#00897B",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "tr_gnd",
+      "type": "GROUND",
+      "label": "PIN 1 WHT GND",
+      "x": 700.0,
+      "y": 520.0,
+      "pins": [
+        {
+          "id": "GND",
+          "name": "0V",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#546E7A",
+      "ledBrightness": 0.0
+    }
+  ],
+  "wires": [
+    {
+      "id": "tw1",
+      "fromComponentId": "tr_bat",
+      "fromPinId": "POS",
+      "toComponentId": "tr_fuse",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#EF5350",
+      "busZoneId": null,
+      "busMode": "DIRECT"
+    },
+    {
+      "id": "tw2",
+      "fromComponentId": "tr_fuse",
+      "fromPinId": "B",
+      "toComponentId": "tr_sw_tail",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#EF5350",
+      "busZoneId": null,
+      "busMode": "DIRECT"
+    },
+    {
+      "id": "tw3",
+      "fromComponentId": "tr_fuse",
+      "fromPinId": "B",
+      "toComponentId": "tr_sw_left",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#EF5350",
+      "busZoneId": null,
+      "busMode": "DIRECT"
+    },
+    {
+      "id": "tw4",
+      "fromComponentId": "tr_fuse",
+      "fromPinId": "B",
+      "toComponentId": "tr_sw_right",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#EF5350",
+      "busZoneId": null,
+      "busMode": "DIRECT"
+    },
+    {
+      "id": "tw5",
+      "fromComponentId": "tr_fuse",
+      "fromPinId": "B",
+      "toComponentId": "tr_pwm_brk",
+      "toPinId": "VIN",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#EF5350",
+      "busZoneId": null,
+      "busMode": "DIRECT"
+    },
+    {
+      "id": "tw6",
+      "fromComponentId": "tr_sw_tail",
+      "fromPinId": "B",
+      "toComponentId": "tr_lamp_tail",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#FFA726",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "tw7",
+      "fromComponentId": "tr_sw_left",
+      "fromPinId": "B",
+      "toComponentId": "tr_lamp_left",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#66BB6A",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "tw8",
+      "fromComponentId": "tr_sw_right",
+      "fromPinId": "B",
+      "toComponentId": "tr_lamp_right",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#66BB6A",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "tw9",
+      "fromComponentId": "tr_pwm_brk",
+      "fromPinId": "VOUT",
+      "toComponentId": "tr_brk_coil",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#42A5F5",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "tw10",
+      "fromComponentId": "tr_bat",
+      "fromPinId": "NEG",
+      "toComponentId": "tr_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#90A4AE",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "tw11",
+      "fromComponentId": "tr_pwm_brk",
+      "fromPinId": "GND",
+      "toComponentId": "tr_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#90A4AE",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "tw12",
+      "fromComponentId": "tr_lamp_tail",
+      "fromPinId": "B",
+      "toComponentId": "tr_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#90A4AE",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "tw13",
+      "fromComponentId": "tr_lamp_left",
+      "fromPinId": "B",
+      "toComponentId": "tr_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#90A4AE",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "tw14",
+      "fromComponentId": "tr_lamp_right",
+      "fromPinId": "B",
+      "toComponentId": "tr_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#90A4AE",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "tw15",
+      "fromComponentId": "tr_brk_coil",
+      "fromPinId": "B",
+      "toComponentId": "tr_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#90A4AE",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    }
+  ],
+  "busZones": [
+    {
+      "id": "tr_bus",
+      "label": "7-PIN TRAILER HARNESS",
+      "x": 600.0,
+      "y": 40.0,
+      "width": 140.0,
+      "height": 380.0,
+      "orientation": "VERTICAL",
+      "attractByDefault": true,
+      "laneSpacing": 22.0
+    }
+  ]
+}

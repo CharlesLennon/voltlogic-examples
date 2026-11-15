@@ -1,0 +1,523 @@
+{
+  "id": "preset_plc_motor_latch",
+  "title": "PLC Start/Stop Motor Latch + E-Stop",
+  "description": "Industrial 24V PLC cabinet ladder logic: E-Stop (NC) + Overload (NC) feed momentary START PB and K1 Seal-In Latch driving Motor Contactor + RUN/STOP Lamps.",
+  "components": [
+    {
+      "id": "plc_psu",
+      "type": "DC_VOLTAGE",
+      "label": "24V PLC PSU",
+      "x": 40.0,
+      "y": 140.0,
+      "pins": [
+        {
+          "id": "NEG",
+          "name": "-",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "POS",
+          "name": "+",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "voltage": 24.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#43A047",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "plc_estop",
+      "type": "SPST_SWITCH",
+      "label": "E-STOP (NC)",
+      "x": 220.0,
+      "y": 80.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "1",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "2",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": true,
+      "subCircuitId": null,
+      "chipColorHex": "#E53935",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "plc_ovl",
+      "type": "SPST_SWITCH",
+      "label": "OVERLOAD (NC)",
+      "x": 400.0,
+      "y": 80.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "95",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "96",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": true,
+      "subCircuitId": null,
+      "chipColorHex": "#FB8C00",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "plc_start",
+      "type": "PUSH_BUTTON",
+      "label": "START PB",
+      "x": 580.0,
+      "y": 80.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "NO",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "OUT",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#43A047",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "plc_k1",
+      "type": "RELAY_SPDT",
+      "label": "K1 SEAL-IN",
+      "x": 780.0,
+      "y": 140.0,
+      "pins": [
+        {
+          "id": "COIL_P",
+          "name": "A1",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "COIL_N",
+          "name": "A2",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 1,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "COM",
+          "name": "11",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 2,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "NO",
+          "name": "14",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "NC",
+          "name": "12",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 1,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "pullInVolts": 5.0,
+        "coilOhms": 240.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#AD1457",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "plc_mot",
+      "type": "LOAD_MOTOR",
+      "label": "CONVEYOR MTR",
+      "x": 1020.0,
+      "y": 80.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "+",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "-",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "ohms": 4.8,
+        "ratedWatts": 120.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#00897B",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "plc_led_run",
+      "type": "LED",
+      "label": "RUN LAMP",
+      "x": 1020.0,
+      "y": 200.0,
+      "pins": [
+        {
+          "id": "ANODE",
+          "name": "+",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "CATHODE",
+          "name": "-",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "vfVolts": 2.0,
+        "maxMa": 20.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#66BB6A",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "plc_res_run",
+      "type": "RESISTOR",
+      "label": "1.1k\u03a9 LED",
+      "x": 880.0,
+      "y": 200.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "1",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "2",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "ohms": 1100.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#8D6E63",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "plc_gnd",
+      "type": "GROUND",
+      "label": "0V COMMON",
+      "x": 580.0,
+      "y": 440.0,
+      "pins": [
+        {
+          "id": "GND",
+          "name": "0V",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#546E7A",
+      "ledBrightness": 0.0
+    }
+  ],
+  "wires": [
+    {
+      "id": "pw1",
+      "fromComponentId": "plc_psu",
+      "fromPinId": "POS",
+      "toComponentId": "plc_estop",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#EF5350",
+      "busZoneId": null,
+      "busMode": "DIRECT"
+    },
+    {
+      "id": "pw2",
+      "fromComponentId": "plc_estop",
+      "fromPinId": "B",
+      "toComponentId": "plc_ovl",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#EF5350",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "pw3",
+      "fromComponentId": "plc_ovl",
+      "fromPinId": "B",
+      "toComponentId": "plc_start",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#EF5350",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "pw4",
+      "fromComponentId": "plc_ovl",
+      "fromPinId": "B",
+      "toComponentId": "plc_k1",
+      "toPinId": "COM",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#EF5350",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "pw5",
+      "fromComponentId": "plc_start",
+      "fromPinId": "B",
+      "toComponentId": "plc_k1",
+      "toPinId": "COIL_P",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#FFA726",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "pw6",
+      "fromComponentId": "plc_k1",
+      "fromPinId": "NO",
+      "toComponentId": "plc_k1",
+      "toPinId": "COIL_P",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#26C6DA",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "pw7",
+      "fromComponentId": "plc_k1",
+      "fromPinId": "NO",
+      "toComponentId": "plc_mot",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#66BB6A",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "pw8",
+      "fromComponentId": "plc_k1",
+      "fromPinId": "NO",
+      "toComponentId": "plc_res_run",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#66BB6A",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "pw9",
+      "fromComponentId": "plc_res_run",
+      "fromPinId": "B",
+      "toComponentId": "plc_led_run",
+      "toPinId": "ANODE",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#66BB6A",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "pw10",
+      "fromComponentId": "plc_psu",
+      "fromPinId": "NEG",
+      "toComponentId": "plc_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#90A4AE",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "pw11",
+      "fromComponentId": "plc_k1",
+      "fromPinId": "COIL_N",
+      "toComponentId": "plc_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#90A4AE",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "pw12",
+      "fromComponentId": "plc_mot",
+      "fromPinId": "B",
+      "toComponentId": "plc_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#90A4AE",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "pw13",
+      "fromComponentId": "plc_led_run",
+      "fromPinId": "CATHODE",
+      "toComponentId": "plc_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#90A4AE",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    }
+  ],
+  "busZones": [
+    {
+      "id": "plc_bus",
+      "label": "PLC CABINET WIRE DUCT",
+      "x": 220.0,
+      "y": 320.0,
+      "width": 760.0,
+      "height": 95.0,
+      "orientation": "HORIZONTAL",
+      "attractByDefault": true,
+      "laneSpacing": 20.0
+    }
+  ]
+}

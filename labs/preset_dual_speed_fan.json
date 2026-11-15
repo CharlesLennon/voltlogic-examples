@@ -1,0 +1,549 @@
+{
+  "id": "preset_dual_speed_fan",
+  "title": "2-Speed Radiator Fan Control (Low/High)",
+  "description": "Low-speed stage feeds Radiator Fan through a 1.2\u03a9 ballast resistor; High-speed override relay bypasses the resistor for full 12V cooling.",
+  "components": [
+    {
+      "id": "fn_bat",
+      "type": "DC_VOLTAGE",
+      "label": "12V IGN",
+      "x": 40.0,
+      "y": 160.0,
+      "pins": [
+        {
+          "id": "NEG",
+          "name": "-",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "POS",
+          "name": "+",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "voltage": 12.6
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#43A047",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "fn_fuse",
+      "type": "FUSE",
+      "label": "40A FAN",
+      "x": 220.0,
+      "y": 160.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "1",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "2",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "ratingAmps": 40.0,
+        "blown": 0.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#FB8C00",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "fn_sw_low",
+      "type": "SPST_SWITCH",
+      "label": "90C LOW T-STAT",
+      "x": 420.0,
+      "y": 60.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "IN",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "OUT",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": true,
+      "subCircuitId": null,
+      "chipColorHex": "#1E88E5",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "fn_sw_hi",
+      "type": "SPST_SWITCH",
+      "label": "102C / AC HIGH",
+      "x": 420.0,
+      "y": 260.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "IN",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "OUT",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#E53935",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "fn_rly_low",
+      "type": "RELAY_SPST",
+      "label": "LOW FAN RELAY",
+      "x": 640.0,
+      "y": 60.0,
+      "pins": [
+        {
+          "id": "COIL_P",
+          "name": "86",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "COIL_N",
+          "name": "85",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 1,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "COM",
+          "name": "30",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 2,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "NO",
+          "name": "87",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "pullInVolts": 2.5,
+        "coilOhms": 100.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#D81B60",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "fn_rly_hi",
+      "type": "RELAY_SPST",
+      "label": "HIGH FAN RELAY",
+      "x": 640.0,
+      "y": 260.0,
+      "pins": [
+        {
+          "id": "COIL_P",
+          "name": "86",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "COIL_N",
+          "name": "85",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 1,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "COM",
+          "name": "30",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 2,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "NO",
+          "name": "87",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "pullInVolts": 2.5,
+        "coilOhms": 100.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#AD1457",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "fn_res",
+      "type": "RESISTOR",
+      "label": "BALLAST 1.2\u03a9",
+      "x": 860.0,
+      "y": 60.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "1",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "2",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "ohms": 1.2
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#8D6E63",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "fn_mot",
+      "type": "LOAD_MOTOR",
+      "label": "RADIATOR FAN",
+      "x": 1060.0,
+      "y": 160.0,
+      "pins": [
+        {
+          "id": "A",
+          "name": "+",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "B",
+          "name": "-",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "ohms": 1.2,
+        "ratedWatts": 120.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#00897B",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "fn_gnd",
+      "type": "GROUND",
+      "label": "CHASSIS GND",
+      "x": 640.0,
+      "y": 460.0,
+      "pins": [
+        {
+          "id": "GND",
+          "name": "0V",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {},
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "#546E7A",
+      "ledBrightness": 0.0
+    }
+  ],
+  "wires": [
+    {
+      "id": "fw1",
+      "fromComponentId": "fn_bat",
+      "fromPinId": "POS",
+      "toComponentId": "fn_fuse",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#EF5350",
+      "busZoneId": null,
+      "busMode": "DIRECT"
+    },
+    {
+      "id": "fw2",
+      "fromComponentId": "fn_fuse",
+      "fromPinId": "B",
+      "toComponentId": "fn_sw_low",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#EF5350",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "fw3",
+      "fromComponentId": "fn_fuse",
+      "fromPinId": "B",
+      "toComponentId": "fn_sw_hi",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#EF5350",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "fw4",
+      "fromComponentId": "fn_fuse",
+      "fromPinId": "B",
+      "toComponentId": "fn_rly_low",
+      "toPinId": "COM",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#EF5350",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "fw5",
+      "fromComponentId": "fn_fuse",
+      "fromPinId": "B",
+      "toComponentId": "fn_rly_hi",
+      "toPinId": "COM",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#EF5350",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "fw6",
+      "fromComponentId": "fn_sw_low",
+      "fromPinId": "B",
+      "toComponentId": "fn_rly_low",
+      "toPinId": "COIL_P",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#FFA726",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "fw7",
+      "fromComponentId": "fn_sw_hi",
+      "fromPinId": "B",
+      "toComponentId": "fn_rly_hi",
+      "toPinId": "COIL_P",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#FFA726",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "fw8",
+      "fromComponentId": "fn_rly_low",
+      "fromPinId": "NO",
+      "toComponentId": "fn_res",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#66BB6A",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "fw9",
+      "fromComponentId": "fn_res",
+      "fromPinId": "B",
+      "toComponentId": "fn_mot",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#66BB6A",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "fw10",
+      "fromComponentId": "fn_rly_hi",
+      "fromPinId": "NO",
+      "toComponentId": "fn_mot",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#66BB6A",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "fw11",
+      "fromComponentId": "fn_bat",
+      "fromPinId": "NEG",
+      "toComponentId": "fn_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#90A4AE",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "fw12",
+      "fromComponentId": "fn_rly_low",
+      "fromPinId": "COIL_N",
+      "toComponentId": "fn_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#90A4AE",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "fw13",
+      "fromComponentId": "fn_rly_hi",
+      "fromPinId": "COIL_N",
+      "toComponentId": "fn_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#90A4AE",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "fw14",
+      "fromComponentId": "fn_mot",
+      "fromPinId": "B",
+      "toComponentId": "fn_gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#90A4AE",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    }
+  ],
+  "busZones": [
+    {
+      "id": "fn_bus",
+      "label": "ENGINE BAY HARNESS",
+      "x": 360.0,
+      "y": 360.0,
+      "width": 560.0,
+      "height": 90.0,
+      "orientation": "HORIZONTAL",
+      "attractByDefault": true,
+      "laneSpacing": 20.0
+    }
+  ]
+}
