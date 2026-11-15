@@ -5114,10 +5114,7 @@
               "currentMa": 0.0
             }
           ],
-          "params": {
-            "vfVolts": 2.0,
-            "maxMa": 20.0
-          },
+          "params": {},
           "boolState": false,
           "subCircuitId": null,
           "chipColorHex": "",
