@@ -3553,8 +3553,8 @@
     },
     {
       "id": "mw_st_com",
-      "fromComponentId": "dcdc",
-      "fromPinId": "VOUT_P",
+      "fromComponentId": "cap_bank",
+      "fromPinId": "A",
       "toComponentId": "st_rly",
       "toPinId": "COM",
       "voltage": 0.0,
@@ -3563,7 +3563,7 @@
       "gaugeAwg": null,
       "colorHex": "#EF5350",
       "busZoneId": null,
-      "busMode": "AUTO"
+      "busMode": "DIRECT"
     },
     {
       "id": "mw_st_coil",

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 14,
+  "schemaVersion": 15,
   "presets": [
     {
       "id": "preset_300a_relay_interlock",
@@ -8897,8 +8897,8 @@
         },
         {
           "id": "mw_st_com",
-          "fromComponentId": "dcdc",
-          "fromPinId": "VOUT_P",
+          "fromComponentId": "cap_bank",
+          "fromPinId": "A",
           "toComponentId": "st_rly",
           "toPinId": "COM",
           "voltage": 0.0,
@@ -8907,7 +8907,7 @@
           "gaugeAwg": null,
           "colorHex": "#EF5350",
           "busZoneId": null,
-          "busMode": "AUTO"
+          "busMode": "DIRECT"
         },
         {
           "id": "mw_st_coil",
