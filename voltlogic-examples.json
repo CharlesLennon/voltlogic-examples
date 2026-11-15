@@ -3092,7 +3092,7 @@
           ],
           "params": {
             "ratingAmps": 100.0,
-            "blown": 0.0
+            "autoSize": 0.0
           },
           "boolState": false,
           "subCircuitId": null,
@@ -3328,8 +3328,8 @@
             }
           ],
           "params": {
-            "ohms": 6.0,
-            "ratedWatts": 24.0
+            "watts": 24.0,
+            "nominalVolts": 12.0
           },
           "boolState": false,
           "subCircuitId": null,
@@ -3363,8 +3363,8 @@
             }
           ],
           "params": {
-            "ohms": 2.4,
-            "ratedWatts": 60.0
+            "watts": 60.0,
+            "nominalVolts": 12.0
           },
           "boolState": false,
           "subCircuitId": null,
@@ -3716,7 +3716,7 @@
           ],
           "params": {
             "ratingAmps": 30.0,
-            "blown": 0.0
+            "autoSize": 0.0
           },
           "boolState": false,
           "subCircuitId": null,
@@ -3890,8 +3890,8 @@
             }
           ],
           "params": {
-            "ohms": 4.8,
-            "ratedWatts": 30.0
+            "watts": 30.0,
+            "nominalVolts": 12.0
           },
           "boolState": false,
           "subCircuitId": null,
@@ -3925,8 +3925,8 @@
             }
           ],
           "params": {
-            "ohms": 5.3,
-            "ratedWatts": 27.0
+            "watts": 27.0,
+            "nominalVolts": 12.0
           },
           "boolState": false,
           "subCircuitId": null,
@@ -3960,8 +3960,8 @@
             }
           ],
           "params": {
-            "ohms": 5.3,
-            "ratedWatts": 27.0
+            "watts": 27.0,
+            "nominalVolts": 12.0
           },
           "boolState": false,
           "subCircuitId": null,
@@ -3995,8 +3995,8 @@
             }
           ],
           "params": {
-            "ohms": 1.6,
-            "ratedWatts": 90.0
+            "watts": 90.0,
+            "nominalVolts": 12.0
           },
           "boolState": false,
           "subCircuitId": null,
@@ -4320,7 +4320,7 @@
           ],
           "params": {
             "ratingAmps": 40.0,
-            "blown": 0.0
+            "autoSize": 0.0
           },
           "boolState": false,
           "subCircuitId": null,
@@ -4558,8 +4558,8 @@
             }
           ],
           "params": {
-            "ohms": 1.2,
-            "ratedWatts": 120.0
+            "watts": 120.0,
+            "nominalVolts": 12.0
           },
           "boolState": false,
           "subCircuitId": null,
@@ -5026,8 +5026,8 @@
             }
           ],
           "params": {
-            "ohms": 4.8,
-            "ratedWatts": 120.0
+            "watts": 120.0,
+            "nominalVolts": 24.0
           },
           "boolState": false,
           "subCircuitId": null,

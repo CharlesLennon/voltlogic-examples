@@ -222,8 +222,8 @@
         }
       ],
       "params": {
-        "ohms": 4.8,
-        "ratedWatts": 120.0
+        "watts": 120.0,
+        "nominalVolts": 24.0
       },
       "boolState": false,
       "subCircuitId": null,

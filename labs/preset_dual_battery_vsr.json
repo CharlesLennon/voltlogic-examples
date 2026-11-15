@@ -107,7 +107,7 @@
       ],
       "params": {
         "ratingAmps": 100.0,
-        "blown": 0.0
+        "autoSize": 0.0
       },
       "boolState": false,
       "subCircuitId": null,
@@ -343,8 +343,8 @@
         }
       ],
       "params": {
-        "ohms": 6.0,
-        "ratedWatts": 24.0
+        "watts": 24.0,
+        "nominalVolts": 12.0
       },
       "boolState": false,
       "subCircuitId": null,
@@ -378,8 +378,8 @@
         }
       ],
       "params": {
-        "ohms": 2.4,
-        "ratedWatts": 60.0
+        "watts": 60.0,
+        "nominalVolts": 12.0
       },
       "boolState": false,
       "subCircuitId": null,
