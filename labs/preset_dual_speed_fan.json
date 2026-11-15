@@ -305,7 +305,8 @@
       ],
       "params": {
         "watts": 120.0,
-        "nominalVolts": 12.0
+        "nominalVolts": 12.0,
+        "measuredWatts": 0.0
       },
       "boolState": false,
       "subCircuitId": null,

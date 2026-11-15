@@ -241,7 +241,8 @@
       ],
       "params": {
         "watts": 30.0,
-        "nominalVolts": 12.0
+        "nominalVolts": 12.0,
+        "measuredWatts": 0.0
       },
       "boolState": false,
       "subCircuitId": null,
@@ -276,7 +277,8 @@
       ],
       "params": {
         "watts": 27.0,
-        "nominalVolts": 12.0
+        "nominalVolts": 12.0,
+        "measuredWatts": 0.0
       },
       "boolState": false,
       "subCircuitId": null,
@@ -311,7 +313,8 @@
       ],
       "params": {
         "watts": 27.0,
-        "nominalVolts": 12.0
+        "nominalVolts": 12.0,
+        "measuredWatts": 0.0
       },
       "boolState": false,
       "subCircuitId": null,
@@ -346,7 +349,8 @@
       ],
       "params": {
         "watts": 90.0,
-        "nominalVolts": 12.0
+        "nominalVolts": 12.0,
+        "measuredWatts": 0.0
       },
       "boolState": false,
       "subCircuitId": null,
