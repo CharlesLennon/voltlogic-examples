@@ -3092,6 +3092,7 @@
           ],
           "params": {
             "ratingAmps": 100.0,
+            "recommendedAmps": 100.0,
             "autoSize": 0.0
           },
           "boolState": false,
@@ -3716,6 +3717,7 @@
           ],
           "params": {
             "ratingAmps": 30.0,
+            "recommendedAmps": 30.0,
             "autoSize": 0.0
           },
           "boolState": false,
@@ -4320,6 +4322,7 @@
           ],
           "params": {
             "ratingAmps": 40.0,
+            "recommendedAmps": 40.0,
             "autoSize": 0.0
           },
           "boolState": false,

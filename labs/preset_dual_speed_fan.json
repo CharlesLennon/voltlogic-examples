@@ -65,6 +65,7 @@
       ],
       "params": {
         "ratingAmps": 40.0,
+        "recommendedAmps": 40.0,
         "autoSize": 0.0
       },
       "boolState": false,
