@@ -1495,6 +1495,79 @@
       "ledBrightness": 0.0
     },
     {
+      "id": "alt",
+      "type": "ALTERNATOR",
+      "label": "ALT 14.4V",
+      "x": 1100.0,
+      "y": 500.0,
+      "pins": [
+        {
+          "id": "NEG",
+          "name": "B-",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "POS",
+          "name": "B+",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "voltage": 14.4,
+        "internalOhms": 0.015,
+        "maxAmps": 120.0,
+        "measuredAmps": 0.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "",
+      "ledBrightness": 0.0
+    },
+    {
+      "id": "alt_dio",
+      "type": "IDEAL_DIODE",
+      "label": "ALT ISOLATOR",
+      "x": 1100.0,
+      "y": 680.0,
+      "pins": [
+        {
+          "id": "ANODE",
+          "name": "A",
+          "isInput": true,
+          "side": "LEFT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        },
+        {
+          "id": "CATHODE",
+          "name": "K",
+          "isInput": false,
+          "side": "RIGHT",
+          "relativeIndex": 0,
+          "voltage": 0.0,
+          "currentMa": 0.0
+        }
+      ],
+      "params": {
+        "vfVolts": 0.03,
+        "maxAmps": 120.0,
+        "measuredAmps": 0.0
+      },
+      "boolState": false,
+      "subCircuitId": null,
+      "chipColorHex": "",
+      "ledBrightness": 0.0
+    },
+    {
       "id": "starter",
       "type": "LOAD_MOTOR",
       "label": "STARTER MOTOR",
@@ -2371,6 +2444,48 @@
       "colorHex": "#90A4AE",
       "busZoneId": null,
       "busMode": "AUTO"
+    },
+    {
+      "id": "mw_alt_g",
+      "fromComponentId": "alt",
+      "fromPinId": "NEG",
+      "toComponentId": "gnd",
+      "toPinId": "GND",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#90A4AE",
+      "busZoneId": null,
+      "busMode": "AUTO"
+    },
+    {
+      "id": "mw_alt_d",
+      "fromComponentId": "alt",
+      "fromPinId": "POS",
+      "toComponentId": "alt_dio",
+      "toPinId": "ANODE",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#EF5350",
+      "busZoneId": null,
+      "busMode": "DIRECT"
+    },
+    {
+      "id": "mw_alt_bus",
+      "fromComponentId": "alt_dio",
+      "fromPinId": "CATHODE",
+      "toComponentId": "cap_bank",
+      "toPinId": "A",
+      "voltage": 0.0,
+      "currentMa": 0.0,
+      "particlePhase": 0.0,
+      "gaugeAwg": null,
+      "colorHex": "#EF5350",
+      "busZoneId": null,
+      "busMode": "DIRECT"
     }
   ],
   "busZones": [
