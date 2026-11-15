@@ -6708,7 +6708,7 @@
           "params": {
             "position": 2.0
           },
-          "boolState": false,
+          "boolState": true,
           "subCircuitId": null,
           "chipColorHex": "",
           "ledBrightness": 0.0
