@@ -5435,7 +5435,7 @@
             "recommendedAmps": 10.0,
             "autoSize": 0.0
           },
-          "boolState": false,
+          "boolState": true,
           "subCircuitId": null,
           "chipColorHex": "",
           "ledBrightness": 0.0
@@ -5541,7 +5541,7 @@
             "recommendedAmps": 10.0,
             "autoSize": 0.0
           },
-          "boolState": false,
+          "boolState": true,
           "subCircuitId": null,
           "chipColorHex": "",
           "ledBrightness": 0.0
@@ -5647,7 +5647,7 @@
             "recommendedAmps": 10.0,
             "autoSize": 0.0
           },
-          "boolState": false,
+          "boolState": true,
           "subCircuitId": null,
           "chipColorHex": "",
           "ledBrightness": 0.0
@@ -5753,7 +5753,7 @@
             "recommendedAmps": 10.0,
             "autoSize": 0.0
           },
-          "boolState": false,
+          "boolState": true,
           "subCircuitId": null,
           "chipColorHex": "",
           "ledBrightness": 0.0
@@ -5859,7 +5859,7 @@
             "recommendedAmps": 10.0,
             "autoSize": 0.0
           },
-          "boolState": false,
+          "boolState": true,
           "subCircuitId": null,
           "chipColorHex": "",
           "ledBrightness": 0.0
@@ -5965,7 +5965,7 @@
             "recommendedAmps": 10.0,
             "autoSize": 0.0
           },
-          "boolState": false,
+          "boolState": true,
           "subCircuitId": null,
           "chipColorHex": "",
           "ledBrightness": 0.0
@@ -6071,7 +6071,7 @@
             "recommendedAmps": 10.0,
             "autoSize": 0.0
           },
-          "boolState": false,
+          "boolState": true,
           "subCircuitId": null,
           "chipColorHex": "",
           "ledBrightness": 0.0
@@ -6177,7 +6177,7 @@
             "recommendedAmps": 10.0,
             "autoSize": 0.0
           },
-          "boolState": false,
+          "boolState": true,
           "subCircuitId": null,
           "chipColorHex": "",
           "ledBrightness": 0.0
@@ -6283,7 +6283,7 @@
             "recommendedAmps": 10.0,
             "autoSize": 0.0
           },
-          "boolState": false,
+          "boolState": true,
           "subCircuitId": null,
           "chipColorHex": "",
           "ledBrightness": 0.0
@@ -6389,7 +6389,7 @@
             "recommendedAmps": 10.0,
             "autoSize": 0.0
           },
-          "boolState": false,
+          "boolState": true,
           "subCircuitId": null,
           "chipColorHex": "",
           "ledBrightness": 0.0
