@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 13,
+  "schemaVersion": 14,
   "presets": [
     {
       "id": "preset_300a_relay_interlock",
@@ -5344,8 +5344,8 @@
     },
     {
       "id": "preset_makita_18v_car_bank",
-      "title": "10x Makita 18-20V Parallel Hot-Swap Car Power Bank",
-      "description": "10x 18-20V Makita packs isolated via ideal diodes feeding a 13.8V DC-DC converter, 500F supercapacitor starter bank, 14.4V alternator, and separate 21.0V CC/CV charge busbar with 10A PTCs & diodes.",
+      "title": "10x 18-20V Tool Pack Parallel Hot-Swap Car Power Bank",
+      "description": "10x 18-20V 5S tool battery packs isolated via ideal diodes feeding a 13.8V DC-DC converter, 500F supercapacitor starter bank, 14.4V alternator, and separate 21.0V CC/CV boost charge busbar with 10A PTCs & diodes.",
       "components": [
         {
           "id": "gnd",
@@ -5373,7 +5373,7 @@
         {
           "id": "m1",
           "type": "DC_VOLTAGE",
-          "label": "MAKITA 18-20V #1",
+          "label": "18-20V PACK #1",
           "x": 940.0,
           "y": 40.0,
           "pins": [
@@ -5549,7 +5549,7 @@
         {
           "id": "m2",
           "type": "DC_VOLTAGE",
-          "label": "MAKITA 18-20V #2",
+          "label": "18-20V PACK #2",
           "x": 940.0,
           "y": 190.0,
           "pins": [
@@ -5725,7 +5725,7 @@
         {
           "id": "m3",
           "type": "DC_VOLTAGE",
-          "label": "MAKITA 18-20V #3",
+          "label": "18-20V PACK #3",
           "x": 940.0,
           "y": 340.0,
           "pins": [
@@ -5901,7 +5901,7 @@
         {
           "id": "m4",
           "type": "DC_VOLTAGE",
-          "label": "MAKITA 18-20V #4",
+          "label": "18-20V PACK #4",
           "x": 940.0,
           "y": 490.0,
           "pins": [
@@ -6077,7 +6077,7 @@
         {
           "id": "m5",
           "type": "DC_VOLTAGE",
-          "label": "MAKITA 18-20V #5",
+          "label": "18-20V PACK #5",
           "x": 940.0,
           "y": 640.0,
           "pins": [
@@ -6253,7 +6253,7 @@
         {
           "id": "m6",
           "type": "DC_VOLTAGE",
-          "label": "MAKITA 18-20V #6",
+          "label": "18-20V PACK #6",
           "x": 940.0,
           "y": 790.0,
           "pins": [
@@ -6429,7 +6429,7 @@
         {
           "id": "m7",
           "type": "DC_VOLTAGE",
-          "label": "MAKITA 18-20V #7",
+          "label": "18-20V PACK #7",
           "x": 940.0,
           "y": 940.0,
           "pins": [
@@ -6605,7 +6605,7 @@
         {
           "id": "m8",
           "type": "DC_VOLTAGE",
-          "label": "MAKITA 18-20V #8",
+          "label": "18-20V PACK #8",
           "x": 940.0,
           "y": 1090.0,
           "pins": [
@@ -6781,7 +6781,7 @@
         {
           "id": "m9",
           "type": "DC_VOLTAGE",
-          "label": "MAKITA 18-20V #9",
+          "label": "18-20V PACK #9",
           "x": 940.0,
           "y": 1240.0,
           "pins": [
@@ -6957,7 +6957,7 @@
         {
           "id": "m10",
           "type": "DC_VOLTAGE",
-          "label": "MAKITA 18-20V #10",
+          "label": "18-20V PACK #10",
           "x": 940.0,
           "y": 1390.0,
           "pins": [
