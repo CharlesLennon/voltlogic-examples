@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 11,
+  "schemaVersion": 12,
   "presets": [
     {
       "id": "preset_300a_relay_interlock",
@@ -5345,7 +5345,7 @@
     {
       "id": "preset_makita_18v_car_bank",
       "title": "10x Makita 18-20V Parallel Hot-Swap Car Power Bank",
-      "description": "10x 18-20V Makita packs isolated via ideal diodes feeding a 13.8V DC-DC converter, 500F supercapacitor starter bank, and 14.4V alternator.",
+      "description": "10x 18-20V Makita packs isolated via ideal diodes feeding a 13.8V DC-DC converter, 500F supercapacitor starter bank, 14.4V alternator, and separate 21.0V CC/CV charge busbar with 10A PTCs & diodes.",
       "components": [
         {
           "id": "gnd",
@@ -5477,6 +5477,76 @@
           "ledBrightness": 0.0
         },
         {
+          "id": "chg_ptc1",
+          "type": "PTC_BREAKER",
+          "label": "10A PTC #1",
+          "x": -460.0,
+          "y": 40.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "IN",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "OUT",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "tripAmps": 10.0,
+            "autoReset": 1.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "chg_d1",
+          "type": "DIODE",
+          "label": "CHG DIODE #1",
+          "x": -220.0,
+          "y": 40.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "A",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "K",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "measuredAmps": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
           "id": "m2",
           "type": "DC_VOLTAGE",
           "label": "MAKITA 18-20V #2",
@@ -5575,6 +5645,76 @@
           "params": {
             "vfVolts": 0.03,
             "maxAmps": 60.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "chg_ptc2",
+          "type": "PTC_BREAKER",
+          "label": "10A PTC #2",
+          "x": -460.0,
+          "y": 190.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "IN",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "OUT",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "tripAmps": 10.0,
+            "autoReset": 1.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "chg_d2",
+          "type": "DIODE",
+          "label": "CHG DIODE #2",
+          "x": -220.0,
+          "y": 190.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "A",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "K",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
             "measuredAmps": 0.0
           },
           "boolState": false,
@@ -5689,6 +5829,76 @@
           "ledBrightness": 0.0
         },
         {
+          "id": "chg_ptc3",
+          "type": "PTC_BREAKER",
+          "label": "10A PTC #3",
+          "x": -460.0,
+          "y": 340.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "IN",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "OUT",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "tripAmps": 10.0,
+            "autoReset": 1.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "chg_d3",
+          "type": "DIODE",
+          "label": "CHG DIODE #3",
+          "x": -220.0,
+          "y": 340.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "A",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "K",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "measuredAmps": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
           "id": "m4",
           "type": "DC_VOLTAGE",
           "label": "MAKITA 18-20V #4",
@@ -5787,6 +5997,76 @@
           "params": {
             "vfVolts": 0.03,
             "maxAmps": 60.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "chg_ptc4",
+          "type": "PTC_BREAKER",
+          "label": "10A PTC #4",
+          "x": -460.0,
+          "y": 490.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "IN",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "OUT",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "tripAmps": 10.0,
+            "autoReset": 1.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "chg_d4",
+          "type": "DIODE",
+          "label": "CHG DIODE #4",
+          "x": -220.0,
+          "y": 490.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "A",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "K",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
             "measuredAmps": 0.0
           },
           "boolState": false,
@@ -5901,6 +6181,76 @@
           "ledBrightness": 0.0
         },
         {
+          "id": "chg_ptc5",
+          "type": "PTC_BREAKER",
+          "label": "10A PTC #5",
+          "x": -460.0,
+          "y": 640.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "IN",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "OUT",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "tripAmps": 10.0,
+            "autoReset": 1.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "chg_d5",
+          "type": "DIODE",
+          "label": "CHG DIODE #5",
+          "x": -220.0,
+          "y": 640.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "A",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "K",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "measuredAmps": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
           "id": "m6",
           "type": "DC_VOLTAGE",
           "label": "MAKITA 18-20V #6",
@@ -5999,6 +6349,76 @@
           "params": {
             "vfVolts": 0.03,
             "maxAmps": 60.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "chg_ptc6",
+          "type": "PTC_BREAKER",
+          "label": "10A PTC #6",
+          "x": -460.0,
+          "y": 790.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "IN",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "OUT",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "tripAmps": 10.0,
+            "autoReset": 1.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "chg_d6",
+          "type": "DIODE",
+          "label": "CHG DIODE #6",
+          "x": -220.0,
+          "y": 790.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "A",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "K",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
             "measuredAmps": 0.0
           },
           "boolState": false,
@@ -6113,6 +6533,76 @@
           "ledBrightness": 0.0
         },
         {
+          "id": "chg_ptc7",
+          "type": "PTC_BREAKER",
+          "label": "10A PTC #7",
+          "x": -460.0,
+          "y": 940.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "IN",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "OUT",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "tripAmps": 10.0,
+            "autoReset": 1.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "chg_d7",
+          "type": "DIODE",
+          "label": "CHG DIODE #7",
+          "x": -220.0,
+          "y": 940.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "A",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "K",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "measuredAmps": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
           "id": "m8",
           "type": "DC_VOLTAGE",
           "label": "MAKITA 18-20V #8",
@@ -6211,6 +6701,76 @@
           "params": {
             "vfVolts": 0.03,
             "maxAmps": 60.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "chg_ptc8",
+          "type": "PTC_BREAKER",
+          "label": "10A PTC #8",
+          "x": -460.0,
+          "y": 1090.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "IN",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "OUT",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "tripAmps": 10.0,
+            "autoReset": 1.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "chg_d8",
+          "type": "DIODE",
+          "label": "CHG DIODE #8",
+          "x": -220.0,
+          "y": 1090.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "A",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "K",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
             "measuredAmps": 0.0
           },
           "boolState": false,
@@ -6325,6 +6885,76 @@
           "ledBrightness": 0.0
         },
         {
+          "id": "chg_ptc9",
+          "type": "PTC_BREAKER",
+          "label": "10A PTC #9",
+          "x": -460.0,
+          "y": 1240.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "IN",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "OUT",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "tripAmps": 10.0,
+            "autoReset": 1.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "chg_d9",
+          "type": "DIODE",
+          "label": "CHG DIODE #9",
+          "x": -220.0,
+          "y": 1240.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "A",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "K",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "measuredAmps": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
           "id": "m10",
           "type": "DC_VOLTAGE",
           "label": "MAKITA 18-20V #10",
@@ -6423,6 +7053,76 @@
           "params": {
             "vfVolts": 0.03,
             "maxAmps": 60.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": false,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "chg_ptc10",
+          "type": "PTC_BREAKER",
+          "label": "10A PTC #10",
+          "x": -460.0,
+          "y": 1390.0,
+          "pins": [
+            {
+              "id": "A",
+              "name": "IN",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "B",
+              "name": "OUT",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "tripAmps": 10.0,
+            "autoReset": 1.0,
+            "measuredAmps": 0.0
+          },
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
+          "id": "chg_d10",
+          "type": "DIODE",
+          "label": "CHG DIODE #10",
+          "x": -220.0,
+          "y": 1390.0,
+          "pins": [
+            {
+              "id": "ANODE",
+              "name": "A",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "CATHODE",
+              "name": "K",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
             "measuredAmps": 0.0
           },
           "boolState": false,
@@ -6912,6 +7612,62 @@
           "ledBrightness": 0.0
         },
         {
+          "id": "chg",
+          "type": "BUCK_CONVERTER",
+          "label": "21V CC/CV CHARGER",
+          "x": -860.0,
+          "y": 650.0,
+          "pins": [
+            {
+              "id": "VIN_P",
+              "name": "VIN+",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "GND",
+              "name": "GND",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 1,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "VOUT_P",
+              "name": "VOUT+",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 0,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
+              "id": "OUT_N",
+              "name": "OUT-",
+              "isInput": false,
+              "side": "RIGHT",
+              "relativeIndex": 1,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            }
+          ],
+          "params": {
+            "outVolts": 21.0,
+            "efficiencyPct": 94.0,
+            "maxAmps": 50.0,
+            "measuredAmps": 0.0,
+            "measuredWatts": 0.0
+          },
+          "boolState": true,
+          "subCircuitId": null,
+          "chipColorHex": "",
+          "ledBrightness": 0.0
+        },
+        {
           "id": "starter",
           "type": "LOAD_MOTOR",
           "label": "STARTER MOTOR",
@@ -7006,6 +7762,48 @@
           "busMode": "VIA_BUS"
         },
         {
+          "id": "cw_b1",
+          "fromComponentId": "chg",
+          "fromPinId": "VOUT_P",
+          "toComponentId": "chg_ptc1",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": "charge_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "cw_pd1",
+          "fromComponentId": "chg_ptc1",
+          "fromPinId": "B",
+          "toComponentId": "chg_d1",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "cw_dm1",
+          "fromComponentId": "chg_d1",
+          "fromPinId": "CATHODE",
+          "toComponentId": "m1",
+          "toPinId": "POS",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
           "id": "mw_g2",
           "fromComponentId": "m2",
           "fromPinId": "NEG",
@@ -7060,6 +7858,48 @@
           "colorHex": "#EF5350",
           "busZoneId": "makita_bus",
           "busMode": "VIA_BUS"
+        },
+        {
+          "id": "cw_b2",
+          "fromComponentId": "chg",
+          "fromPinId": "VOUT_P",
+          "toComponentId": "chg_ptc2",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": "charge_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "cw_pd2",
+          "fromComponentId": "chg_ptc2",
+          "fromPinId": "B",
+          "toComponentId": "chg_d2",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "cw_dm2",
+          "fromComponentId": "chg_d2",
+          "fromPinId": "CATHODE",
+          "toComponentId": "m2",
+          "toPinId": "POS",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": null,
+          "busMode": "DIRECT"
         },
         {
           "id": "mw_g3",
@@ -7118,6 +7958,48 @@
           "busMode": "VIA_BUS"
         },
         {
+          "id": "cw_b3",
+          "fromComponentId": "chg",
+          "fromPinId": "VOUT_P",
+          "toComponentId": "chg_ptc3",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": "charge_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "cw_pd3",
+          "fromComponentId": "chg_ptc3",
+          "fromPinId": "B",
+          "toComponentId": "chg_d3",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "cw_dm3",
+          "fromComponentId": "chg_d3",
+          "fromPinId": "CATHODE",
+          "toComponentId": "m3",
+          "toPinId": "POS",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
           "id": "mw_g4",
           "fromComponentId": "m4",
           "fromPinId": "NEG",
@@ -7172,6 +8054,48 @@
           "colorHex": "#EF5350",
           "busZoneId": "makita_bus",
           "busMode": "VIA_BUS"
+        },
+        {
+          "id": "cw_b4",
+          "fromComponentId": "chg",
+          "fromPinId": "VOUT_P",
+          "toComponentId": "chg_ptc4",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": "charge_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "cw_pd4",
+          "fromComponentId": "chg_ptc4",
+          "fromPinId": "B",
+          "toComponentId": "chg_d4",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "cw_dm4",
+          "fromComponentId": "chg_d4",
+          "fromPinId": "CATHODE",
+          "toComponentId": "m4",
+          "toPinId": "POS",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": null,
+          "busMode": "DIRECT"
         },
         {
           "id": "mw_g5",
@@ -7230,6 +8154,48 @@
           "busMode": "VIA_BUS"
         },
         {
+          "id": "cw_b5",
+          "fromComponentId": "chg",
+          "fromPinId": "VOUT_P",
+          "toComponentId": "chg_ptc5",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": "charge_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "cw_pd5",
+          "fromComponentId": "chg_ptc5",
+          "fromPinId": "B",
+          "toComponentId": "chg_d5",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "cw_dm5",
+          "fromComponentId": "chg_d5",
+          "fromPinId": "CATHODE",
+          "toComponentId": "m5",
+          "toPinId": "POS",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
           "id": "mw_g6",
           "fromComponentId": "m6",
           "fromPinId": "NEG",
@@ -7284,6 +8250,48 @@
           "colorHex": "#EF5350",
           "busZoneId": "makita_bus",
           "busMode": "VIA_BUS"
+        },
+        {
+          "id": "cw_b6",
+          "fromComponentId": "chg",
+          "fromPinId": "VOUT_P",
+          "toComponentId": "chg_ptc6",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": "charge_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "cw_pd6",
+          "fromComponentId": "chg_ptc6",
+          "fromPinId": "B",
+          "toComponentId": "chg_d6",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "cw_dm6",
+          "fromComponentId": "chg_d6",
+          "fromPinId": "CATHODE",
+          "toComponentId": "m6",
+          "toPinId": "POS",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": null,
+          "busMode": "DIRECT"
         },
         {
           "id": "mw_g7",
@@ -7342,6 +8350,48 @@
           "busMode": "VIA_BUS"
         },
         {
+          "id": "cw_b7",
+          "fromComponentId": "chg",
+          "fromPinId": "VOUT_P",
+          "toComponentId": "chg_ptc7",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": "charge_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "cw_pd7",
+          "fromComponentId": "chg_ptc7",
+          "fromPinId": "B",
+          "toComponentId": "chg_d7",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "cw_dm7",
+          "fromComponentId": "chg_d7",
+          "fromPinId": "CATHODE",
+          "toComponentId": "m7",
+          "toPinId": "POS",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
           "id": "mw_g8",
           "fromComponentId": "m8",
           "fromPinId": "NEG",
@@ -7396,6 +8446,48 @@
           "colorHex": "#EF5350",
           "busZoneId": "makita_bus",
           "busMode": "VIA_BUS"
+        },
+        {
+          "id": "cw_b8",
+          "fromComponentId": "chg",
+          "fromPinId": "VOUT_P",
+          "toComponentId": "chg_ptc8",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": "charge_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "cw_pd8",
+          "fromComponentId": "chg_ptc8",
+          "fromPinId": "B",
+          "toComponentId": "chg_d8",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "cw_dm8",
+          "fromComponentId": "chg_d8",
+          "fromPinId": "CATHODE",
+          "toComponentId": "m8",
+          "toPinId": "POS",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": null,
+          "busMode": "DIRECT"
         },
         {
           "id": "mw_g9",
@@ -7454,6 +8546,48 @@
           "busMode": "VIA_BUS"
         },
         {
+          "id": "cw_b9",
+          "fromComponentId": "chg",
+          "fromPinId": "VOUT_P",
+          "toComponentId": "chg_ptc9",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": "charge_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "cw_pd9",
+          "fromComponentId": "chg_ptc9",
+          "fromPinId": "B",
+          "toComponentId": "chg_d9",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "cw_dm9",
+          "fromComponentId": "chg_d9",
+          "fromPinId": "CATHODE",
+          "toComponentId": "m9",
+          "toPinId": "POS",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
           "id": "mw_g10",
           "fromComponentId": "m10",
           "fromPinId": "NEG",
@@ -7508,6 +8642,48 @@
           "colorHex": "#EF5350",
           "busZoneId": "makita_bus",
           "busMode": "VIA_BUS"
+        },
+        {
+          "id": "cw_b10",
+          "fromComponentId": "chg",
+          "fromPinId": "VOUT_P",
+          "toComponentId": "chg_ptc10",
+          "toPinId": "A",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": "charge_bus",
+          "busMode": "VIA_BUS"
+        },
+        {
+          "id": "cw_pd10",
+          "fromComponentId": "chg_ptc10",
+          "fromPinId": "B",
+          "toComponentId": "chg_d10",
+          "toPinId": "ANODE",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": null,
+          "busMode": "DIRECT"
+        },
+        {
+          "id": "cw_dm10",
+          "fromComponentId": "chg_d10",
+          "fromPinId": "CATHODE",
+          "toComponentId": "m10",
+          "toPinId": "POS",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#26C6DA",
+          "busZoneId": null,
+          "busMode": "DIRECT"
         },
         {
           "id": "mw_cb_dc",
@@ -7830,6 +9006,48 @@
           "colorHex": "#EF5350",
           "busZoneId": null,
           "busMode": "DIRECT"
+        },
+        {
+          "id": "cw_chg_vin",
+          "fromComponentId": "alt",
+          "fromPinId": "POS",
+          "toComponentId": "chg",
+          "toPinId": "VIN_P",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#FFA726",
+          "busZoneId": null,
+          "busMode": "AUTO"
+        },
+        {
+          "id": "cw_chg_g1",
+          "fromComponentId": "chg",
+          "fromPinId": "GND",
+          "toComponentId": "gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#90A4AE",
+          "busZoneId": null,
+          "busMode": "AUTO"
+        },
+        {
+          "id": "cw_chg_g2",
+          "fromComponentId": "chg",
+          "fromPinId": "OUT_N",
+          "toComponentId": "gnd",
+          "toPinId": "GND",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "gaugeAwg": null,
+          "colorHex": "#90A4AE",
+          "busZoneId": null,
+          "busMode": "AUTO"
         }
       ],
       "busZones": [
@@ -7842,6 +9060,17 @@
           "height": 1480.0,
           "orientation": "VERTICAL",
           "attractByDefault": true,
+          "laneSpacing": 18.0
+        },
+        {
+          "id": "charge_bus",
+          "label": "21.0V CC/CV CHARGE BUS",
+          "x": -640.0,
+          "y": 40.0,
+          "width": 120.0,
+          "height": 1480.0,
+          "orientation": "VERTICAL",
+          "attractByDefault": false,
           "laneSpacing": 18.0
         }
       ]
