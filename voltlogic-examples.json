@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 16,
+  "schemaVersion": 17,
   "presets": [
     {
       "id": "preset_300a_relay_interlock",
@@ -3005,6 +3005,15 @@
               "currentMa": 0.0
             },
             {
+              "id": "ENG",
+              "name": "ENG BELT",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 1,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
               "id": "POS",
               "name": "B+",
               "isInput": false,
@@ -3018,7 +3027,8 @@
             "voltage": 14.4,
             "internalOhms": 0.015,
             "maxAmps": 120.0,
-            "measuredAmps": 0.0
+            "measuredAmps": 0.0,
+            "engineStartedLatched": 0.0
           },
           "boolState": true,
           "subCircuitId": null,
@@ -7406,7 +7416,10 @@
             }
           ],
           "params": {
-            "position": 2.0
+            "position": 2.0,
+            "crankSeconds": 2.0,
+            "crankElapsedSec": 0.0,
+            "hasAutoStarted": 0.0
           },
           "boolState": true,
           "subCircuitId": null,
@@ -7555,6 +7568,15 @@
               "currentMa": 0.0
             },
             {
+              "id": "ENG",
+              "name": "ENG BELT",
+              "isInput": true,
+              "side": "LEFT",
+              "relativeIndex": 1,
+              "voltage": 0.0,
+              "currentMa": 0.0
+            },
+            {
               "id": "POS",
               "name": "B+",
               "isInput": false,
@@ -7568,7 +7590,8 @@
             "voltage": 14.4,
             "internalOhms": 0.015,
             "maxAmps": 120.0,
-            "measuredAmps": 0.0
+            "measuredAmps": 0.0,
+            "engineStartedLatched": 0.0
           },
           "boolState": false,
           "subCircuitId": null,
@@ -9048,6 +9071,21 @@
           "colorHex": "#90A4AE",
           "busZoneId": null,
           "busMode": "AUTO"
+        },
+        {
+          "id": "mw_ign_st_alt_eng",
+          "fromComponentId": "ign",
+          "fromPinId": "ST",
+          "toComponentId": "alt",
+          "toPinId": "ENG",
+          "voltage": 0.0,
+          "currentMa": 0.0,
+          "particlePhase": 0.0,
+          "userSelectedGaugeId": null,
+          "lengthMeters": 1.2,
+          "busMode": "DIRECT",
+          "busZoneId": null,
+          "colorHex": "#FF9800"
         }
       ],
       "busZones": [
